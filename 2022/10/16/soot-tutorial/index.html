@@ -1,0 +1,821 @@
+
+
+<!DOCTYPE html>
+<html lang="zh-CN" data-default-color-scheme=auto>
+
+
+
+<head>
+  <meta charset="UTF-8">
+  <link rel="apple-touch-icon" sizes="76x76" href="/img/fluid.png">
+  <link rel="icon" href="/img/icon1.jpg">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, shrink-to-fit=no">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  
+  <meta name="theme-color" content="#2f4154">
+  <meta name="author" content="Zhechong Huang">
+  <meta name="keywords" content="">
+  
+    <meta name="description" content="SOOT 学习笔记 安装 默认装好了Java环境，JDK版本最好是1.8。然后可以分为两种方式来安装SOOT：   命令行使用SOOT： 直接访问 soot-4.3.0来下载jar文件,然后将其放在项目之中的某个目录之下。例如项目目录叫做soot-learn（之后默认在这个目录之下敲命令），就可以将其放于soot-learn\jar这个目录之下。当然也可以将这个jar文件重命名，比如我为了方便就直">
+<meta property="og:type" content="article">
+<meta property="og:title" content="soot-tutorial">
+<meta property="og:url" content="https://cudraniatrec.github.io/2022/10/16/soot-tutorial/index.html">
+<meta property="og:site_name" content="Cudrania">
+<meta property="og:description" content="SOOT 学习笔记 安装 默认装好了Java环境，JDK版本最好是1.8。然后可以分为两种方式来安装SOOT：   命令行使用SOOT： 直接访问 soot-4.3.0来下载jar文件,然后将其放在项目之中的某个目录之下。例如项目目录叫做soot-learn（之后默认在这个目录之下敲命令），就可以将其放于soot-learn\jar这个目录之下。当然也可以将这个jar文件重命名，比如我为了方便就直">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://cudraniatrec.github.io/2022/10/16/soot-tutorial/image-20221015154045209.png">
+<meta property="og:image" content="https://cudraniatrec.github.io/2022/10/16/soot-tutorial/image-20221015161132102.png">
+<meta property="og:image" content="https://cudraniatrec.github.io/2022/10/16/soot-tutorial/image-20221015185552278.png">
+<meta property="og:image" content="https://cudraniatrec.github.io/2022/10/16/soot-tutorial/image-20221015190435280.png">
+<meta property="og:image" content="https://cudraniatrec.github.io/2022/10/16/soot-tutorial/image-20221015204917254.png">
+<meta property="og:image" content="https://cudraniatrec.github.io/2022/10/16/soot-tutorial/soot-tutorial/image-20221015221856454.png">
+<meta property="article:published_time" content="2022-10-16T03:00:43.000Z">
+<meta property="article:modified_time" content="2022-10-16T03:02:14.998Z">
+<meta property="article:author" content="Zhechong Huang">
+<meta property="article:tag" content="soot tutorial">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://cudraniatrec.github.io/2022/10/16/soot-tutorial/image-20221015154045209.png">
+  
+  
+  
+  <title>soot-tutorial - Cudrania</title>
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/twitter-bootstrap/4.6.1/css/bootstrap.min.css" />
+
+
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/github-markdown-css/4.0.0/github-markdown.min.css" />
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/hint.css/2.7.0/hint.min.css" />
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/fancybox/3.5.7/jquery.fancybox.min.css" />
+
+
+
+<!-- 主题依赖的图标库，不要自行修改 -->
+<!-- Do not modify the link that theme dependent icons -->
+
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1749284_hj8rtnfg7um.css">
+
+
+
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1736178_lbnruvf0jn.css">
+
+
+<link  rel="stylesheet" href="/css/main.css" />
+
+
+  <link id="highlight-css" rel="stylesheet" href="/css/highlight.css" />
+  
+    <link id="highlight-css-dark" rel="stylesheet" href="/css/highlight-dark.css" />
+  
+
+
+
+
+  <script id="fluid-configs">
+    var Fluid = window.Fluid || {};
+    Fluid.ctx = Object.assign({}, Fluid.ctx)
+    var CONFIG = {"hostname":"cudraniatrec.github.io","root":"/","version":"1.9.3","typing":{"enable":true,"typeSpeed":50,"cursorChar":"_","loop":false,"scope":[]},"anchorjs":{"enable":true,"element":"h1,h2,h3,h4,h5,h6","placement":"left","visible":"hover","icon":""},"progressbar":{"enable":true,"height_px":3,"color":"#29d","options":{"showSpinner":false,"trickleSpeed":100}},"code_language":{"enable":true,"default":"TEXT"},"copy_btn":true,"image_caption":{"enable":true},"image_zoom":{"enable":true,"img_url_replace":["",""]},"toc":{"enable":true,"placement":"right","headingSelector":"h1,h2,h3,h4,h5,h6","collapseDepth":0},"lazyload":{"enable":true,"loading_img":"/img/loading.gif","onlypost":false,"offset_factor":2},"web_analytics":{"enable":false,"follow_dnt":true,"baidu":null,"google":null,"gtag":null,"tencent":{"sid":null,"cid":null},"woyaola":null,"cnzz":null,"leancloud":{"app_id":null,"app_key":null,"server_url":null,"path":"window.location.pathname","ignore_local":false}},"search_path":"/local-search.xml"};
+
+    if (CONFIG.web_analytics.follow_dnt) {
+      var dntVal = navigator.doNotTrack || window.doNotTrack || navigator.msDoNotTrack;
+      Fluid.ctx.dnt = dntVal && (dntVal.startsWith('1') || dntVal.startsWith('yes') || dntVal.startsWith('on'));
+    }
+  </script>
+  <script  src="/js/utils.js" ></script>
+  <script  src="/js/color-schema.js" ></script>
+  
+
+
+  
+<meta name="generator" content="Hexo 5.4.2"></head>
+
+
+<body>
+  
+
+  <header>
+    
+
+<div class="header-inner" style="height: 70vh;">
+  <nav id="navbar" class="navbar fixed-top  navbar-expand-lg navbar-dark scrolling-navbar">
+  <div class="container">
+    <a class="navbar-brand" href="/">
+      <strong>Cudrania</strong>
+    </a>
+
+    <button id="navbar-toggler-btn" class="navbar-toggler" type="button" data-toggle="collapse"
+            data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <div class="animated-icon"><span></span><span></span><span></span></div>
+    </button>
+
+    <!-- Collapsible content -->
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav ml-auto text-center">
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/">
+                <i class="iconfont icon-home-fill"></i>
+                首页
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/archives/">
+                <i class="iconfont icon-archive-fill"></i>
+                归档
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/categories/">
+                <i class="iconfont icon-category-fill"></i>
+                分类
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/tags/">
+                <i class="iconfont icon-tags-fill"></i>
+                标签
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/about/">
+                <i class="iconfont icon-user-fill"></i>
+                关于
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/links/">
+                <i class="iconfont icon-link-fill"></i>
+                友链
+              </a>
+            </li>
+          
+        
+        
+          <li class="nav-item" id="search-btn">
+            <a class="nav-link" target="_self" href="javascript:;" data-toggle="modal" data-target="#modalSearch" aria-label="Search">
+              &nbsp;<i class="iconfont icon-search"></i>&nbsp;
+            </a>
+          </li>
+          
+        
+        
+          <li class="nav-item" id="color-toggle-btn">
+            <a class="nav-link" target="_self" href="javascript:;" aria-label="Color Toggle">&nbsp;<i
+                class="iconfont icon-dark" id="color-toggle-icon"></i>&nbsp;</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+</nav>
+
+  
+
+<div id="banner" class="banner" parallax=true
+     style="background: url('/img/default.png') no-repeat center center; background-size: cover;">
+  <div class="full-bg-img">
+    <div class="mask flex-center" style="background-color: rgba(0, 0, 0, 0.3)">
+      <div class="banner-text text-center fade-in-up">
+        <div class="h2">
+          
+            <span id="subtitle" data-typed-text="soot-tutorial"></span>
+          
+        </div>
+
+        
+          
+  <div class="mt-3">
+    
+    
+      <span class="post-meta">
+        <i class="iconfont icon-date-fill" aria-hidden="true"></i>
+        <time datetime="2022-10-16 11:00" pubdate>
+          2022年10月16日 上午
+        </time>
+      </span>
+    
+  </div>
+
+  <div class="mt-1">
+    
+      <span class="post-meta mr-2">
+        <i class="iconfont icon-chart"></i>
+        
+          10k 字
+        
+      </span>
+    
+
+    
+      <span class="post-meta mr-2">
+        <i class="iconfont icon-clock-fill"></i>
+        
+        
+        
+          84 分钟
+        
+      </span>
+    
+
+    
+    
+  </div>
+
+
+        
+      </div>
+
+      
+    </div>
+  </div>
+</div>
+
+</div>
+
+  </header>
+
+  <main>
+    
+      
+
+<div class="container-fluid nopadding-x">
+  <div class="row nomargin-x">
+    <div class="side-col d-none d-lg-block col-lg-2">
+      
+
+    </div>
+
+    <div class="col-lg-8 nopadding-x-md">
+      <div class="container nopadding-x-md" id="board-ctn">
+        <div id="board">
+          <article class="post-content mx-auto">
+            <!-- SEO header -->
+            <h1 style="display: none">soot-tutorial</h1>
+            
+            
+              <div class="markdown-body">
+                
+                <h2 id="SOOT-学习笔记">SOOT 学习笔记</h2>
+<h4 id="安装">安装</h4>
+<p>默认装好了Java环境，JDK版本最好是1.8。然后可以分为两种方式来安装SOOT：</p>
+<ol>
+<li>
+<p>命令行使用SOOT：</p>
+<p>直接访问 <a target="_blank" rel="noopener" href="https://repo1.maven.org/maven2/org/soot-oss/soot/4.3.0/soot-4.3.0-jar-with-dependencies.jar">soot-4.3.0</a>来下载jar文件,然后将其放在项目之中的某个目录之下。例如项目目录叫做soot-learn（之后默认在这个目录之下敲命令），就可以将其放于<strong>soot-learn\jar</strong>这个目录之下。当然也可以将这个jar文件重命名，比如我为了方便就直接换成soot.jar。</p>
+<img src="/2022/10/16/soot-tutorial/image-20221015154045209.png" srcset="/img/loading.gif" lazyload class="" title="image-20221015154045209">
+</li>
+<li>
+<p>maven包管理工具添加</p>
+<p>安装与配置maven环境可以查阅网上教程，如<a target="_blank" rel="noopener" href="https://www.cnblogs.com/pengpengdeyuan/p/14217772.html">maven安装教程</a>，然后新建或打开maven项目，在pom.xml之中的dependencies标签之内再添加</p>
+<figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><code class="hljs xml"><span class="hljs-tag">&lt;<span class="hljs-name">dependency</span>&gt;</span><br>      <span class="hljs-tag">&lt;<span class="hljs-name">groupId</span>&gt;</span>org.soot-oss<span class="hljs-tag">&lt;/<span class="hljs-name">groupId</span>&gt;</span><br>      <span class="hljs-tag">&lt;<span class="hljs-name">artifactId</span>&gt;</span>soot<span class="hljs-tag">&lt;/<span class="hljs-name">artifactId</span>&gt;</span><br>      <span class="hljs-tag">&lt;<span class="hljs-name">version</span>&gt;</span>4.2.1<span class="hljs-tag">&lt;/<span class="hljs-name">version</span>&gt;</span><br><span class="hljs-tag">&lt;/<span class="hljs-name">dependency</span>&gt;</span><br></code></pre></td></tr></table></figure>
+<p>从而将soot代码导入项目。</p>
+</li>
+</ol>
+<h4 id="简单运行">简单运行</h4>
+<p>以下默认在soot-learn目录下操作：</p>
+<ol>
+<li>
+<p>输入</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs shell">java -cp jar\soot.jar soot.Main --help  <br></code></pre></td></tr></table></figure>
+<p>获得可选参数的信息。</p>
+</li>
+<li>
+<p>在src目录下新建一个helloWorld.java，写一个“稍显复杂一点”的helloworld</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><code class="hljs java"><span class="hljs-keyword">public</span> <span class="hljs-keyword">class</span> <span class="hljs-title class_">helloWorld</span> &#123;<br>    <span class="hljs-keyword">public</span> <span class="hljs-type">int</span> <span class="hljs-title function_">add10</span><span class="hljs-params">(<span class="hljs-type">int</span> x)</span>&#123;<br>        <span class="hljs-keyword">return</span> x+<span class="hljs-number">10</span>;<br>    &#125;<br>    <span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title function_">main</span><span class="hljs-params">(String[] args)</span> &#123;<br>        <span class="hljs-type">int</span> a=<span class="hljs-number">10</span>;<br>        <span class="hljs-type">int</span> b=<span class="hljs-number">2</span>*a;<br>        helloWorld h=<span class="hljs-keyword">new</span> <span class="hljs-title class_">helloWorld</span>();<br>        <span class="hljs-type">int</span> c=h.add10(b);<br>        System.out.println(<span class="hljs-string">&quot;hello world&quot;</span>);<br>    &#125;<br>&#125;<br></code></pre></td></tr></table></figure>
+</li>
+<li>
+<p>输入</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs shell">javac src\helloWorld.java<br></code></pre></td></tr></table></figure>
+<p>利用javac将其编译为.class文件。</p>
+</li>
+<li>
+<p>输入</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs shell">java -cp jar/soot.jar soot.Main -pp -f J -cp .\src helloWorld <br></code></pre></td></tr></table></figure>
+<p>即可完成soot的运行,其中-f J表示我们想要得到jimple类型的文件，第二个-cp是指定要解析的.class文件的路径。soot的工作需要<code>java.lang.Object</code>，使用-pp参数可以自动包含所需的jar文件。运行完之后在当前目录之下生成了sootOutput文件夹，其中有一个helloWorld.jimple文件。</p>
+</li>
+<li>
+<p>打开这个文件，看到</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br></pre></td><td class="code"><pre><code class="hljs java"><span class="hljs-keyword">public</span> <span class="hljs-keyword">class</span> <span class="hljs-title class_">helloWorld</span> <span class="hljs-keyword">extends</span> <span class="hljs-title class_">java</span>.lang.Object<br>&#123;<br>    <span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> &lt;init&gt;()<br>    &#123;<br>        helloWorld r0;<br>        r0 := <span class="hljs-meta">@this</span>: helloWorld;<br>        specialinvoke r0.&lt;java.lang.Object: <span class="hljs-keyword">void</span> &lt;init&gt;()&gt;();<br>        <span class="hljs-keyword">return</span>;<br>    &#125;<br>    <span class="hljs-keyword">public</span> <span class="hljs-type">int</span> <span class="hljs-title function_">add10</span><span class="hljs-params">(<span class="hljs-type">int</span>)</span><br>    &#123;<br>        <span class="hljs-type">int</span> i0, $i1;<br>        helloWorld r0;<br>        r0 := <span class="hljs-meta">@this</span>: helloWorld;<br>        i0 := <span class="hljs-meta">@parameter0</span>: <span class="hljs-type">int</span>;<br>        $i1 = i0 + <span class="hljs-number">10</span>;<br>        <span class="hljs-keyword">return</span> $i1;<br>    &#125;<br>    <span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title function_">main</span><span class="hljs-params">(java.lang.String[])</span><br>    &#123;<br>        java.io.PrintStream $r1;<br>        java.lang.String[] r2;<br>        helloWorld $r0;<br>        r2 := <span class="hljs-meta">@parameter0</span>: java.lang.String[];<br>        $r0 = <span class="hljs-keyword">new</span> <span class="hljs-title class_">helloWorld</span>;<br>        specialinvoke $r0.&lt;helloWorld: <span class="hljs-keyword">void</span> &lt;init&gt;()&gt;();<br>        virtualinvoke $r0.&lt;helloWorld: <span class="hljs-type">int</span> <span class="hljs-title function_">add10</span><span class="hljs-params">(<span class="hljs-type">int</span>)</span>&gt;(<span class="hljs-number">20</span>);<br>        $r1 = &lt;java.lang.System: java.io.PrintStream out&gt;;<br>        virtualinvoke $r1.&lt;java.io.PrintStream: <span class="hljs-keyword">void</span> <span class="hljs-title function_">println</span><span class="hljs-params">(java.lang.String)</span>&gt;(<span class="hljs-string">&quot;hello world&quot;</span>);<br>        <span class="hljs-keyword">return</span>;<br>    &#125;<br>&#125;<br></code></pre></td></tr></table></figure>
+<p>可以看到soot已经帮助我们把原来的代码变成了jimple格式的代码，其中jimple即java simple。仔细阅读可以发现代码逻辑与我们之前写的helloworld是一致的（这不废话吗），只是将代码变成了<strong>三地址码</strong>的形式。特别的，有如下几点可以注意：</p>
+<ul>
+<li>
+<p>变量名字之前带有$的就是soot额外引入的，帮助构建三地址码的变量，其他则是原程序之中的变量</p>
+</li>
+<li>
+<p>method的参数以及this指针会用@来修饰。</p>
+</li>
+<li>
+<p>对于函数调用会有不用类型的invoke前缀来修饰，共有如下三种。(图片摘自https://spa-book.pblo.gq/ch2/ch2)</p>
+<img src="/2022/10/16/soot-tutorial/image-20221015161132102.png" srcset="/img/loading.gif" lazyload class="" title="image-20221015161132102">
+</li>
+</ul>
+</li>
+</ol>
+<h4 id="Soot-框架使用">Soot 框架使用</h4>
+<p>以下大部分内容取自<a target="_blank" rel="noopener" href="https://www.brics.dk/SootGuide/">sootGuide</a>，但是这个资料已经是有点年岁了。。。所以部分内容有点过时。</p>
+<p>code例子大部分取自<a target="_blank" rel="noopener" href="https://xiongyingfei.github.io/SA/2021/demo.zip">soot-demo</a>或稍加修改。</p>
+<h5 id="soot的4种IR">soot的4种IR</h5>
+<p>soot一共支持4种IR（imtermediate representation），分别是:</p>
+<ul>
+<li>Baf:一种streamlined stack-based representation of bytecode</li>
+<li>Jimple:（我只会一点这个）</li>
+<li>Shimple: SSA(static single assignment )形式的jimple</li>
+<li>Grimp: Jimple的另一种变种，不再要求表达式树线性排布（也就是按照三地址码一条一条写下来），因此减少了一些中间变量，同时也引入了new这个operator</li>
+</ul>
+<h5 id="soot的执行流程">soot的执行流程</h5>
+<p>首先从<strong>过程内分析</strong>看起</p>
+<img src="/2022/10/16/soot-tutorial/image-20221015185552278.png" srcset="/img/loading.gif" lazyload class="" title="image-20221015185552278">
+<p>这张图展示了Jimple代码的转化过程。soot是通过施加一系列的转换函数（也可以称为Pack）来将代码进行不断地变化，直到生成最后的目标结果。</p>
+<p>每个Pack的命名都是有据可循的，第一个字母代表IR类型，例如j就表示jimple。第二个字母表示Pack在整个分析过程之中所扮演的角色，例如b代表body creation,o代表optimization,<strong>t代表user-defined transformation</strong>,a代表annotation。最后一个字母p通常表示这是一个Pack。</p>
+<p>图中黑色的线条是默认打开的，而红色的线条是通过添加编译选项可以打开的。我们可以通过添加自己定义的transformation函数来执行分析，例如在jtp之中添加一个pack，输出程序之中所有class 和method的名字等。</p>
+<p>然后是<strong>过程间分析</strong>的流程,注意，我们需要添加编译选项-w来让soot启用这一流程：</p>
+<img src="/2022/10/16/soot-tutorial/image-20221015190435280.png" srcset="/img/loading.gif" lazyload class="" title="image-20221015190435280">
+<p>这个流程与之前的稍有不同，首先是获取所有class的jimple body，然后依次调用几个新的pack:</p>
+<ul>
+<li>cg (call-graph generation)</li>
+<li>wjtp (whole Jimple transformation pack)</li>
+<li>wjap (whole Jimple annotation pack)</li>
+<li>wjop (whole Jimple optimization pack)，添加内联函数等优化，需要额外添加编译选项-W来启用</li>
+</ul>
+<p>类似的我们也可以自定义分析方法wjtp添加到过程之中，并通过编译选项启用或停用某个pack。例如通过</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs shell">java -cp jar/soot.jar soot.Main -p jtp enabled:false MyClass<br></code></pre></td></tr></table></figure>
+<p>来停用这个pack</p>
+<p>或者获取当前所有启用的pack:</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs shell">java -cp jar/soot.jar soot.Main -pl<br></code></pre></td></tr></table></figure>
+<p>以及获知某个pack的信息：</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs shell">java -cp jar/soot.jar soot.Main -ph jap<br></code></pre></td></tr></table></figure>
+<p>当然涉及到添加自定义的pack等操作对我来说都太复杂了，我不会在命令行之中操作，而是自己编写程序，通过</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><code class="hljs java">PackManager.v().getPack(<span class="hljs-string">&quot;wjtp&quot;</span>).add(<span class="hljs-keyword">new</span> <span class="hljs-title class_">Transform</span>(<span class="hljs-string">&quot;wjtp.mypta&quot;</span>, <span class="hljs-keyword">new</span> <span class="hljs-title class_">MyTransformer</span>()));<br>soot.Main.main(<span class="hljs-keyword">new</span> <span class="hljs-title class_">String</span>[] &#123;<br>			<span class="hljs-string">&quot;-w&quot;</span>,<br>			<span class="hljs-string">&quot;-p&quot;</span>, <span class="hljs-string">&quot;cg.spark&quot;</span>, <span class="hljs-string">&quot;enabled:true&quot;</span>,<br>			<span class="hljs-string">&quot;-p&quot;</span>, <span class="hljs-string">&quot;wjtp.mypta&quot;</span>, <span class="hljs-string">&quot;enabled:true&quot;</span>,<br>			<span class="hljs-string">&quot;-soot-class-path&quot;</span>, classpath,<br>			args[<span class="hljs-number">1</span>]				<br>		&#125;);<br></code></pre></td></tr></table></figure>
+<p>这种方式来添加对应的编译选项（因为这个过程不只是涉及启用wjtp.mypta这个pack，还涉及要将这个pack加到wjtp这个大类之下，这个操作我不知道怎么用命令行实现。。。）</p>
+<h5 id="Soot的底层数据结构">Soot的底层数据结构</h5>
+<p>以下是soot的基本数据结构：</p>
+<img src="/2022/10/16/soot-tutorial/image-20221015204917254.png" srcset="/img/loading.gif" lazyload class="" title="image-20221015204917254">
+<p>scene存储全局的信息，sootclass存储某个class的分析信息，sootfield存储其中各个分量的信息，sootmethod存储其中各个方法，而每个方法可以生成一个jimple body。</p>
+<p>特别的soot class可分为3类：</p>
+<ul>
+<li>argument class为我们自己写的程序入口，通过这个class来配置编译选项等并启动soot分析框架</li>
+<li>application class为待分析的java程序</li>
+<li>library class为soot库函数</li>
+</ul>
+<p>具体接口调用样例如下：</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><code class="hljs java"><span class="hljs-keyword">new</span> <span class="hljs-title class_">Transform</span>(<span class="hljs-string">&quot;wjtp.myanalysis&quot;</span>, <span class="hljs-keyword">new</span> <span class="hljs-title class_">SceneTransformer</span>() &#123;<br>            <span class="hljs-meta">@Override</span><br>            <span class="hljs-keyword">protected</span> <span class="hljs-keyword">void</span> <span class="hljs-title function_">internalTransform</span><span class="hljs-params">(String arg0, Map&lt;String, String&gt; arg1)</span> &#123;<br>                        Chain&lt;SootClass&gt; cs = Scene.v().getApplicationClasses();<br>                        System.out.println(<span class="hljs-string">&quot;size = &quot;</span>+cs.size());<br>                        <span class="hljs-keyword">for</span>(SootClass c : cs)&#123;<br>                            System.out.println(c.getName());<br>                            List&lt;SootMethod&gt; ms = c.getMethods();<span class="hljs-comment">//获得method</span><br>                            Chain&lt;SootField&gt; fs = c.getFields();<span class="hljs-comment">//获得field</span><br>    <br>                            <span class="hljs-keyword">for</span> (SootField f : fs) &#123;<br>                                System.out.println(f.getDeclaration());<br>                                System.out.println(f.getType());<br>                            &#125;<br>                            <span class="hljs-keyword">for</span> (SootMethod m : ms) &#123;<br>                                System.out.println(m.getDeclaration());<br>                                System.out.println(m.getReturnType());<br>                                System.out.println(m.getParameterTypes());<br>                            &#125;<br>                        &#125;<br>                    &#125;<br>                &#125;)<br></code></pre></td></tr></table></figure>
+<p>对于某个jimple body(jb)对象，我们可以调用getLocals()方法来获取其所有local变量（及之前提到的带有$前缀的变量），每个local变量的类也可以继承并重写Local类来实现。</p>
+<p>jb对象还可以调用getUnits()方法来获得所有的Unit，每个unit就是jb之中的一条语句。</p>
+<p>具体接口调用样例如下：</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><code class="hljs java"><span class="hljs-keyword">new</span> <span class="hljs-title class_">Transform</span>(<span class="hljs-string">&quot;wjtp.myanalysis&quot;</span>, <span class="hljs-keyword">new</span> <span class="hljs-title class_">SceneTransformer</span>() &#123;<br>			<span class="hljs-meta">@Override</span><br>			<span class="hljs-keyword">protected</span> <span class="hljs-keyword">void</span> <span class="hljs-title function_">internalTransform</span><span class="hljs-params">(String arg0, Map&lt;String, String&gt; arg1)</span> &#123;<br>			<span class="hljs-type">SootClass</span> <span class="hljs-variable">mainClass</span> <span class="hljs-operator">=</span> Scene.v().getMainClass();<br>			System.out.println(<span class="hljs-string">&quot;Main class is &quot;</span>+ mainClass);<br>			<span class="hljs-type">SootMethod</span> <span class="hljs-variable">mainMethod</span> <span class="hljs-operator">=</span> Scene.v().getMainMethod();<br>			System.out.println(<span class="hljs-string">&quot;Main method is &quot;</span>+ mainMethod);<br>			System.out.println(<span class="hljs-string">&quot;Super class is &quot;</span>+mainClass.getSuperclass());<br>            <span class="hljs-type">Body</span> <span class="hljs-variable">b</span> <span class="hljs-operator">=</span> mainMethod.getActiveBody();<br>			<span class="hljs-keyword">for</span> (Unit u: b.getUnits()) &#123;<span class="hljs-comment">//获得units</span><br>				System.out.println(<span class="hljs-string">&quot;Unit &quot;</span>+u);<br>			&#125;<br>            <span class="hljs-keyword">for</span>(Local l: b.getLocals())&#123;<span class="hljs-comment">//获得locals</span><br>                System.out.println(<span class="hljs-string">&quot;Local &quot;</span>+l);<br>            &#125;<br>		&#125;<br>	&#125;<br>)<br></code></pre></td></tr></table></figure>
+<p>soot为了表示data还引入了value接口，实现了这些接口的类有：</p>
+<ul>
+<li>Local 表示局部变量</li>
+<li>Constant 表示常量</li>
+<li>Expr(一类class) 表示各种运算，即给定若干value可以返回另一个value</li>
+<li>Ref(一类class) 表示各种引用，如之前提到的@parameter或者@this等</li>
+</ul>
+<p>另一个非常重要的数据类型是Box，这可以看做指向数组的指针，根据其指向数据的类型可以分为unitbox以及valuebox。例如我们可能需要知道一条代表分支语句的unit接下来会走向哪些units，这时就可以调用getUnitBoxes()接口来获取这些对象。</p>
+<p>如下是实现addExpr的一种方式：</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><code class="hljs java"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title function_">foldAdds</span><span class="hljs-params">(Unit u)</span><br>&#123;<br>    <span class="hljs-type">Iterator</span> <span class="hljs-variable">ubIt</span> <span class="hljs-operator">=</span> u.getUseBoxes().iterator();<span class="hljs-comment">//获取unit之中的所有value对象</span><br>    <span class="hljs-keyword">while</span> (ubIt.hasNext())<br>    &#123;<br>        <span class="hljs-type">ValueBox</span> <span class="hljs-variable">vb</span> <span class="hljs-operator">=</span> (ValueBox) ubIt.next();<br>        <span class="hljs-type">Value</span> <span class="hljs-variable">v</span> <span class="hljs-operator">=</span> vb.getValue();<br>        <span class="hljs-keyword">if</span> (v <span class="hljs-keyword">instanceof</span> AddExpr)<span class="hljs-comment">//如果是addExpr</span><br>        &#123;<br>            <span class="hljs-type">AddExpr</span> <span class="hljs-variable">ae</span> <span class="hljs-operator">=</span> (AddExpr) v;<br>            <span class="hljs-type">Value</span> <span class="hljs-variable">lo</span> <span class="hljs-operator">=</span> ae.getOp1(), ro = ae.getOp2();<br>            <span class="hljs-keyword">if</span> (lo <span class="hljs-keyword">instanceof</span> IntConstant &amp;&amp; ro <span class="hljs-keyword">instanceof</span> IntConstant)<br>            &#123;<br>                <span class="hljs-type">IntConstant</span> <span class="hljs-variable">l</span> <span class="hljs-operator">=</span> (IntConstant) lo,<br>                      r = (IntConstant) ro;<br>                <span class="hljs-type">int</span> <span class="hljs-variable">sum</span> <span class="hljs-operator">=</span> l.value + r.value;<br>                vb.setValue(IntConstant.v(sum));<span class="hljs-comment">//通过指针vb设置对应value对象</span><br>            &#125;<br>        &#125;<br>    &#125;<br>&#125;<br></code></pre></td></tr></table></figure>
+<p>关于这一节的内容可以见<a target="_blank" rel="noopener" href="https://github.com/soot-oss/soot/wiki/Fundamental-Soot-objects">soot-datastructures</a></p>
+<h5 id="重写soot的数据流分析框架">重写soot的数据流分析框架</h5>
+<p>前面已经提到过如何添加一个自己的transformer，实际上，我们也可以继承并重写soot的数据流分析框架，并应用到整个流程之中（即在自己重写的tranformer之中调用数据流分析框架）。</p>
+<p>soot提供了三种基本的数据流分析框架：ForwardFlowAnalysis, BackwardFlowAnalysis and ForwardBranchedFlowAnalysis，前面两种对应课上所学的前向以及后向分析，最后一种可以看做前向分析之中，每个节点流出的信息携带对应的分支信息（感觉会和路径敏感有关，不过我也不太懂。。。），除此之外，还可以直接继承并重写它们的父类AbstractFlowAnalysis (the top one), FlowAnalysis or BranchedFlowAnalysis等，但一般没必要。</p>
+<p>接下来就是依次重写各个方法，分别对应于数据流分析标准型之中的各个概念，以Live variable analysis为例：</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br></pre></td><td class="code"><pre><code class="hljs java"><span class="hljs-keyword">public</span> <span class="hljs-keyword">class</span> <span class="hljs-title class_">LivenessAnalysis</span> <span class="hljs-keyword">extends</span> <span class="hljs-title class_">BackwardFlowAnalysis</span>&lt;Unit, Set&lt;Local&gt; &gt;&#123;<br>	<span class="hljs-keyword">public</span> <span class="hljs-title function_">LivenessAnalysis</span><span class="hljs-params">(DirectedGraph&lt;Unit&gt; graph)</span> &#123;<br>		<span class="hljs-built_in">super</span>(graph);<br>		doAnalysis();<span class="hljs-comment">//调用重写的method跑数据流分析标准型</span><br>	&#125;<br>	<span class="hljs-meta">@Override</span><br>	<span class="hljs-keyword">protected</span> <span class="hljs-keyword">void</span> <span class="hljs-title function_">flowThrough</span><span class="hljs-params">(Set&lt;Local&gt; in, Unit unit, Set&lt;Local&gt; out)</span> &#123;<br>        <span class="hljs-comment">//节点转换函数</span><br>		out.clear(); out.addAll(in);<br>		<span class="hljs-keyword">for</span> (ValueBox vb : unit.getDefBoxes()) &#123;<span class="hljs-comment">//kill集合</span><br>			<span class="hljs-type">Value</span> <span class="hljs-variable">v</span> <span class="hljs-operator">=</span> vb.getValue();<br>			<span class="hljs-keyword">if</span> (v <span class="hljs-keyword">instanceof</span> Local)<br>				out.remove((Local)v);<br>		&#125;<br>		<span class="hljs-keyword">for</span> (ValueBox vb : unit.getUseBoxes()) &#123;<span class="hljs-comment">//gen集合</span><br>			<span class="hljs-type">Value</span> <span class="hljs-variable">v</span> <span class="hljs-operator">=</span> vb.getValue();<br>			<span class="hljs-keyword">if</span> (v <span class="hljs-keyword">instanceof</span> Local)<br>				out.add((Local)v);<br>		&#125;<br>	&#125;<br>	<span class="hljs-meta">@Override</span><br>	<span class="hljs-keyword">protected</span> <span class="hljs-keyword">void</span> <span class="hljs-title function_">copy</span><span class="hljs-params">(Set&lt;Local&gt; source, Set&lt;Local&gt; dest)</span> &#123;<br>        <span class="hljs-comment">//复制半格元素</span><br>		dest.clear(); dest.addAll(source);<br>	&#125;<br>	<span class="hljs-meta">@Override</span><br>	<span class="hljs-keyword">protected</span> <span class="hljs-keyword">void</span> <span class="hljs-title function_">merge</span><span class="hljs-params">(Set&lt;Local&gt; in0, Set&lt;Local&gt; in1, Set&lt;Local&gt; out)</span> &#123;<span class="hljs-comment">//交汇操作</span><br>		out.clear(); out.addAll(in0); out.addAll(in1);<br>	&#125;<br>	<span class="hljs-meta">@Override</span><br>	<span class="hljs-keyword">protected</span> Set&lt;Local&gt; <span class="hljs-title function_">newInitialFlow</span><span class="hljs-params">()</span> &#123;<span class="hljs-comment">//除了entry节点之外的节点初始值</span><br>		<span class="hljs-keyword">return</span> <span class="hljs-keyword">new</span> <span class="hljs-title class_">HashSet</span>&lt;Local&gt;();<br>	&#125;<br>	<span class="hljs-meta">@Override</span><br>	<span class="hljs-keyword">protected</span> Set&lt;Local&gt; <span class="hljs-title function_">entryInitialFlow</span><span class="hljs-params">()</span> &#123;<span class="hljs-comment">//entry节点的初始值</span><br>		<span class="hljs-keyword">return</span> newInitialFlow();<br>	&#125;<br>&#125;<br></code></pre></td></tr></table></figure>
+<p>除了重写这些框架之外，我们还可以重写半格的元素,也就是Flow Set，在上面的分析之中半格的元素就是Set&lt;Local&gt;，但是也可以实现一个类，继承BoundedFlowSet接口或者FlowSet接口（这二者的区别是我们是否知晓其包含元素的全部可能情况）</p>
+<p>soot也为我们实现了几种flow set: ArraySparseSet, ArrayPackedSet(实现了一个从int到集合元素的map,并用bitvector表示哪些集合元素是可用的), ToppedSet and DavaFlowSet可用。</p>
+<h5 id="soot提供的其它有用API">soot提供的其它有用API</h5>
+<ol>
+<li>
+<p>CFG（control flow graph）</p>
+<p>我们知道数据流分析标准型需要进行在一个图之中，所以我们需要先得到一个CFG再喂给之前的数据流分析框架。soot实现了3种构建CFG的方式：BriefUnitGraph, ExceptionalUnitGraph and TrapUnitGraph。第一种是一种简单的方式，不需要考虑exception的情况，而后两者则需要考虑这些情况，但是其具体实现上还是有一些不同之处。</p>
+</li>
+<li>
+<p>描述输出</p>
+<p>通过getFlowBefore()和getFlowAfter()方法来获得每个节点在经历数据流分析前后的结果。</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><code class="hljs java"><span class="hljs-type">Body</span> <span class="hljs-variable">b</span> <span class="hljs-operator">=</span> mainMethod.getActiveBody();<br><span class="hljs-type">BriefUnitGraph</span> <span class="hljs-variable">g</span> <span class="hljs-operator">=</span> <span class="hljs-keyword">new</span> <span class="hljs-title class_">BriefUnitGraph</span>(b);<br><span class="hljs-type">LivenessAnalysis</span> <span class="hljs-variable">la</span> <span class="hljs-operator">=</span> <span class="hljs-keyword">new</span> <span class="hljs-title class_">LivenessAnalysis</span>(g);<br><span class="hljs-keyword">for</span> (Unit u : b.getUnits()) &#123;<br>	System.out.println(u);<br>	System.out.println(<span class="hljs-string">&quot; Before: &quot;</span> + la.getFlowBefore(u));<br>	System.out.println(<span class="hljs-string">&quot; After: &quot;</span> + la.getFlowAfter(u));<br>&#125;<br></code></pre></td></tr></table></figure>
+</li>
+<li>
+<p>annotating code</p>
+<p>可以在分析框架之中调用某些API（我懒得去找了~）为一些unit等对象添加某些tag或color等形式的”注释“，这样生成出来的代码（如jimple code）在安装了对应插件之后就可以为我们显示出来对应的注释，这常用于为我们直观地展示分析的结果。</p>
+<p>下面展示的是Eclipse之中对应的插件效果。</p>
+<img src="soot-tutorial/image-20221015221856454.png" srcset="/img/loading.gif" lazyload alt="image-20221015221856454" style="zoom:67%;" />
+</li>
+<li>
+<p>CG（call graph）</p>
+<p>soot在开启了whole program mode之后，就可以允许我们获得整个程序的call graph(cg)，这里可以参见之前提到的Soot过程间分析流程,Pack cg会为我们完成分析。一种简单的方式是利用CHA(call hierarchy analysis)来获得程序的cg。</p>
+<p>cg之中的每一条边都携带了丰富的信息，例如source method/statement，target method，edge type（边的类型就是之前提到的method call的几种类型）。</p>
+<p>我们可以通过edgesInto(method), edgesOutOf(method) and edgesOutOf(statement)等接口来获得某个method/statement的出边或入边。这些接口返回一个edge的迭代器，通过类型转换可以将其指向的对象转化为我们想要的类型，如：</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><code class="hljs java"><span class="hljs-keyword">static</span> <span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title function_">printPossibleCallers</span><span class="hljs-params">(SootMethod target)</span> &#123;<br>        <span class="hljs-type">CallGraph</span> <span class="hljs-variable">cg</span> <span class="hljs-operator">=</span> Scene.v().getCallGraph();<br>        <span class="hljs-type">Iterator</span> <span class="hljs-variable">sources</span> <span class="hljs-operator">=</span> <span class="hljs-keyword">new</span> <span class="hljs-title class_">Sources</span>(cg.edgesInto(target));<br>        <span class="hljs-keyword">while</span> (sources.hasNext()) &#123;<br>            <span class="hljs-type">SootMethod</span> <span class="hljs-variable">src</span> <span class="hljs-operator">=</span> (SootMethod)sources.next();<br>            System.out.println(target + <span class="hljs-string">&quot; might be called by &quot;</span> + src);<br>        &#125;<br>    &#125;<br></code></pre></td></tr></table></figure>
+<p>可以被转换的类型共有三种：</p>
+<ul>
+<li><strong>Sources</strong> iterates over source methods of edges.</li>
+<li><strong>Units</strong> iterates over source statements of edges.</li>
+<li><strong>Targets</strong> iterates over target methods of edges.</li>
+</ul>
+<p>除此之外，还有两个方法可用：</p>
+<ul>
+<li>ReachableMethods:返回从程序入口处开始，所有可达的方法，它会返回一个listener对象作为迭代器。</li>
+<li>TransitiveTargets:可以接受一个自定义的filter函数，然后返回符合其要求的method，例如可以获得某个method出发，所有可以被其直接或间接调用的方法。</li>
+</ul>
+</li>
+<li>
+<p>指针分析</p>
+<p>soot自带了两个指针分析框架SPARK以及Paddle两种分析框架，通常而言后者会更精确一些，但是也会更慢。因为软分大作业不让直接调库，所以就没有深入研究了~</p>
+</li>
+</ol>
+
+                
+              </div>
+            
+            <hr/>
+            <div>
+              <div class="post-metas my-3">
+  
+    <div class="post-meta mr-3 d-flex align-items-center">
+      <i class="iconfont icon-category"></i>
+      
+
+<span class="category-chains">
+  
+  
+    
+      <span class="category-chain">
+        
+  <a href="/categories/notes/" class="category-chain-item">notes</a>
+  
+  
+
+      </span>
+    
+  
+</span>
+
+    </div>
+  
+  
+    <div class="post-meta">
+      <i class="iconfont icon-tags"></i>
+      
+        <a href="/tags/soot-tutorial/">#soot tutorial</a>
+      
+    </div>
+  
+</div>
+
+
+              
+  
+
+  <div class="license-box my-3">
+    <div class="license-title">
+      <div>soot-tutorial</div>
+      <div>https://cudraniatrec.github.io/2022/10/16/soot-tutorial/</div>
+    </div>
+    <div class="license-meta">
+      
+        <div class="license-meta-item">
+          <div>作者</div>
+          <div>Zhechong Huang</div>
+        </div>
+      
+      
+        <div class="license-meta-item license-meta-date">
+          <div>发布于</div>
+          <div>2022年10月16日</div>
+        </div>
+      
+      
+      
+        <div class="license-meta-item">
+          <div>许可协议</div>
+          <div>
+            
+              
+              
+                <a target="_blank" href="https://creativecommons.org/licenses/by/4.0/">
+                  <span class="hint--top hint--rounded" aria-label="BY - 署名">
+                    <i class="iconfont icon-by"></i>
+                  </span>
+                </a>
+              
+            
+          </div>
+        </div>
+      
+    </div>
+    <div class="license-icon iconfont"></div>
+  </div>
+
+
+
+              
+                <div class="post-prevnext my-3">
+                  <article class="post-prev col-6">
+                    
+                    
+                  </article>
+                  <article class="post-next col-6">
+                    
+                    
+                      <a href="/2022/10/11/ProgramSynthesis-unit2/" title="ProgramSynthesis-unit2">
+                        <span class="hidden-mobile">ProgramSynthesis-unit2</span>
+                        <span class="visible-mobile">下一篇</span>
+                        <i class="iconfont icon-arrowright"></i>
+                      </a>
+                    
+                  </article>
+                </div>
+              
+            </div>
+
+            
+          </article>
+        </div>
+      </div>
+    </div>
+
+    <div class="side-col d-none d-lg-block col-lg-2">
+      
+  <aside class="sidebar" style="margin-left: -1rem">
+    <div id="toc">
+  <p class="toc-header"><i class="iconfont icon-list"></i>&nbsp;目录</p>
+  <div class="toc-body" id="toc-body"></div>
+</div>
+
+
+
+  </aside>
+
+
+    </div>
+  </div>
+</div>
+
+
+
+
+
+  
+
+
+
+  
+
+
+
+  
+
+
+
+  
+
+
+
+  
+
+
+
+
+
+
+
+    
+
+    
+      <a id="scroll-top-button" aria-label="TOP" href="#" role="button">
+        <i class="iconfont icon-arrowup" aria-hidden="true"></i>
+      </a>
+    
+
+    
+      <div class="modal fade" id="modalSearch" tabindex="-1" role="dialog" aria-labelledby="ModalLabel"
+     aria-hidden="true">
+  <div class="modal-dialog modal-dialog-scrollable modal-lg" role="document">
+    <div class="modal-content">
+      <div class="modal-header text-center">
+        <h4 class="modal-title w-100 font-weight-bold">搜索</h4>
+        <button type="button" id="local-search-close" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body mx-3">
+        <div class="md-form mb-5">
+          <input type="text" id="local-search-input" class="form-control validate">
+          <label data-error="x" data-success="v" for="local-search-input">关键词</label>
+        </div>
+        <div class="list-group" id="local-search-result"></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+    
+
+    
+  </main>
+
+  <footer>
+    <div class="footer-inner">
+  
+    <div class="footer-content">
+       <a href="https://hexo.io" target="_blank" rel="nofollow noopener"><span>Hexo</span></a> <i class="iconfont icon-love"></i> <a href="https://github.com/fluid-dev/hexo-theme-fluid" target="_blank" rel="nofollow noopener"><span>Fluid</span></a> 
+    </div>
+  
+  
+  
+  
+</div>
+
+  </footer>
+
+  <!-- Scripts -->
+  
+  <script  src="https://lib.baomitu.com/nprogress/0.2.0/nprogress.min.js" ></script>
+  <link  rel="stylesheet" href="https://lib.baomitu.com/nprogress/0.2.0/nprogress.min.css" />
+
+  <script>
+    NProgress.configure({"showSpinner":false,"trickleSpeed":100})
+    NProgress.start()
+    window.addEventListener('load', function() {
+      NProgress.done();
+    })
+  </script>
+
+
+<script  src="https://lib.baomitu.com/jquery/3.6.0/jquery.min.js" ></script>
+<script  src="https://lib.baomitu.com/twitter-bootstrap/4.6.1/js/bootstrap.min.js" ></script>
+<script  src="/js/events.js" ></script>
+<script  src="/js/plugins.js" ></script>
+
+
+  <script  src="https://lib.baomitu.com/typed.js/2.0.12/typed.min.js" ></script>
+  <script>
+    (function (window, document) {
+      var typing = Fluid.plugins.typing;
+      var subtitle = document.getElementById('subtitle');
+      if (!subtitle || !typing) {
+        return;
+      }
+      var text = subtitle.getAttribute('data-typed-text');
+      
+        typing(text);
+      
+    })(window, document);
+  </script>
+
+
+
+
+  
+    <script  src="/js/img-lazyload.js" ></script>
+  
+
+
+
+
+  
+<script>
+  Fluid.utils.createScript('https://lib.baomitu.com/tocbot/4.18.2/tocbot.min.js', function() {
+    var toc = jQuery('#toc');
+    if (toc.length === 0 || !window.tocbot) { return; }
+    var boardCtn = jQuery('#board-ctn');
+    var boardTop = boardCtn.offset().top;
+
+    window.tocbot.init(Object.assign({
+      tocSelector     : '#toc-body',
+      contentSelector : '.markdown-body',
+      linkClass       : 'tocbot-link',
+      activeLinkClass : 'tocbot-active-link',
+      listClass       : 'tocbot-list',
+      isCollapsedClass: 'tocbot-is-collapsed',
+      collapsibleClass: 'tocbot-is-collapsible',
+      scrollSmooth    : true,
+      includeTitleTags: true,
+      headingsOffset  : -boardTop,
+    }, CONFIG.toc));
+    if (toc.find('.toc-list-item').length > 0) {
+      toc.css('visibility', 'visible');
+    }
+
+    Fluid.events.registerRefreshCallback(function() {
+      if ('tocbot' in window) {
+        tocbot.refresh();
+        var toc = jQuery('#toc');
+        if (toc.length === 0 || !tocbot) {
+          return;
+        }
+        if (toc.find('.toc-list-item').length > 0) {
+          toc.css('visibility', 'visible');
+        }
+      }
+    });
+  });
+</script>
+
+
+  <script src=https://lib.baomitu.com/clipboard.js/2.0.11/clipboard.min.js></script>
+
+  <script>Fluid.plugins.codeWidget();</script>
+
+
+  
+<script>
+  Fluid.utils.createScript('https://lib.baomitu.com/anchor-js/4.3.1/anchor.min.js', function() {
+    window.anchors.options = {
+      placement: CONFIG.anchorjs.placement,
+      visible  : CONFIG.anchorjs.visible
+    };
+    if (CONFIG.anchorjs.icon) {
+      window.anchors.options.icon = CONFIG.anchorjs.icon;
+    }
+    var el = (CONFIG.anchorjs.element || 'h1,h2,h3,h4,h5,h6').split(',');
+    var res = [];
+    for (var item of el) {
+      res.push('.markdown-body > ' + item.trim());
+    }
+    if (CONFIG.anchorjs.placement === 'left') {
+      window.anchors.options.class = 'anchorjs-link-left';
+    }
+    window.anchors.add(res.join(', '));
+
+    Fluid.events.registerRefreshCallback(function() {
+      if ('anchors' in window) {
+        anchors.removeAll();
+        var el = (CONFIG.anchorjs.element || 'h1,h2,h3,h4,h5,h6').split(',');
+        var res = [];
+        for (var item of el) {
+          res.push('.markdown-body > ' + item.trim());
+        }
+        if (CONFIG.anchorjs.placement === 'left') {
+          anchors.options.class = 'anchorjs-link-left';
+        }
+        anchors.add(res.join(', '));
+      }
+    });
+  });
+</script>
+
+
+  
+<script>
+  Fluid.utils.createScript('https://lib.baomitu.com/fancybox/3.5.7/jquery.fancybox.min.js', function() {
+    Fluid.plugins.fancyBox();
+  });
+</script>
+
+
+  <script>Fluid.plugins.imageCaption();</script>
+
+  <script  src="/js/local-search.js" ></script>
+
+
+
+
+
+<!-- 主题的启动项，将它保持在最底部 -->
+<!-- the boot of the theme, keep it at the bottom -->
+<script  src="/js/boot.js" ></script>
+
+
+  
+
+  <noscript>
+    <div class="noscript-warning">博客在允许 JavaScript 运行的环境下浏览效果更佳</div>
+  </noscript>
+</body>
+</html>
