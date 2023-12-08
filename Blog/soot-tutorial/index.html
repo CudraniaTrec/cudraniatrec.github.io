@@ -16,13 +16,15 @@
         <link rel="prev" href="../..">
       
       
+        <link rel="next" href="../ProgramSynthesis-unit1/">
+      
       
       <link rel="icon" href="../../assets/images/favicon.png">
       <meta name="generator" content="mkdocs-1.5.3, mkdocs-material-9.4.14">
     
     
       
-        <title>soot - ZhechongHuang's Homepage</title>
+        <title>soot-tutorial - ZhechongHuang's Homepage</title>
       
     
     
@@ -48,6 +50,8 @@
       
     
     
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.7/katex.min.css">
+    
     <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
       
@@ -60,12 +64,16 @@
   
     
     
+      
+    
     
     
     
     <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="deep-purple" data-md-color-accent="amber">
   
     
+    
+      <script>var palette=__md_get("__palette");if(palette&&"object"==typeof palette.color)for(var key of Object.keys(palette.color))document.body.setAttribute("data-md-color-"+key,palette.color[key])</script>
     
     <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
     <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
@@ -109,13 +117,37 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              soot
+              soot-tutorial
             
           </span>
         </div>
       </div>
     </div>
     
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: light)" data-md-color-scheme="default" data-md-color-primary="deep-purple" data-md-color-accent="amber"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_2" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 6H7c-3.31 0-6 2.69-6 6s2.69 6 6 6h10c3.31 0 6-2.69 6-6s-2.69-6-6-6zm0 10H7c-2.21 0-4-1.79-4-4s1.79-4 4-4h10c2.21 0 4 1.79 4 4s-1.79 4-4 4zM7 9c-1.66 0-3 1.34-3 3s1.34 3 3 3 3-1.34 3-3-1.34-3-3-3z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-scheme="slate" data-md-color-primary="pink" data-md-color-accent="blue"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_2">
+    
+      <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 7H7a5 5 0 0 0-5 5 5 5 0 0 0 5 5h10a5 5 0 0 0 5-5 5 5 0 0 0-5-5m0 8a3 3 0 0 1-3-3 3 3 0 0 1 3-3 3 3 0 0 1 3 3 3 3 0 0 1-3 3Z"/></svg>
+      </label>
+    
+  
+</form>
       
     
     
@@ -330,9 +362,93 @@
         <li class="md-nav__item">
   <a href="#soot" class="md-nav__link">
     <span class="md-ellipsis">
-      SOOT
+      SOOT 学习笔记
     </span>
   </a>
+  
+    <nav class="md-nav" aria-label="SOOT 学习笔记">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      安装
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      简单运行
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#soot_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      Soot 框架使用
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Soot 框架使用">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#soot4ir" class="md-nav__link">
+    <span class="md-ellipsis">
+      soot的4种IR
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#soot_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      soot的执行流程
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#soot_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      Soot的底层数据结构
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#soot_4" class="md-nav__link">
+    <span class="md-ellipsis">
+      重写soot的数据流分析框架
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#sootapi" class="md-nav__link">
+    <span class="md-ellipsis">
+      soot提供的其它有用API
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -340,6 +456,48 @@
   
 </nav>
       
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ProgramSynthesis-unit1/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Program Synthesis 1
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ProgramSynthesis-unit2/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Program Synthesis 2
+  </span>
+  
+
+      </a>
     </li>
   
 
@@ -379,9 +537,93 @@
         <li class="md-nav__item">
   <a href="#soot" class="md-nav__link">
     <span class="md-ellipsis">
-      SOOT
+      SOOT 学习笔记
     </span>
   </a>
+  
+    <nav class="md-nav" aria-label="SOOT 学习笔记">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      安装
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      简单运行
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#soot_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      Soot 框架使用
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Soot 框架使用">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#soot4ir" class="md-nav__link">
+    <span class="md-ellipsis">
+      soot的4种IR
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#soot_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      soot的执行流程
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#soot_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      Soot的底层数据结构
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#soot_4" class="md-nav__link">
+    <span class="md-ellipsis">
+      重写soot的数据流分析框架
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#sootapi" class="md-nav__link">
+    <span class="md-ellipsis">
+      soot提供的其它有用API
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -405,7 +647,352 @@
 
   <h1>soot</h1>
 
-<h2 id="soot">SOOT</h2>
+<h2 id="soot">SOOT 学习笔记<a class="headerlink" href="#soot" title="Permanent link">&para;</a></h2>
+<h4 id="_1">安装<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h4>
+<p>默认装好了Java环境，JDK版本最好是1.8。然后可以分为两种方式来安装SOOT：</p>
+<ol>
+<li>
+<p>命令行使用SOOT：</p>
+<p>直接访问 <a href="https://repo1.maven.org/maven2/org/soot-oss/soot/4.3.0/soot-4.3.0-jar-with-dependencies.jar">soot-4.3.0</a>来下载jar文件,然后将其放在项目之中的某个目录之下。例如项目目录叫做soot-learn（之后默认在这个目录之下敲命令），就可以将其放于 <strong>soot-learn\jar</strong> 这个目录之下。当然也可以将这个jar文件重命名，比如我为了方便就直接换成soot.jar。</p>
+<p><img alt="image-20221015154045209" src="image-20221015154045209.png" /></p>
+</li>
+<li>
+<p>maven包管理工具添加</p>
+<p>安装与配置maven环境可以查阅网上教程，如<a href="https://www.cnblogs.com/pengpengdeyuan/p/14217772.html">maven安装教程</a>，然后新建或打开maven项目，在pom.xml之中的dependencies标签之内再添加</p>
+<div class="language-xml highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="nt">&lt;dependency&gt;</span>
+</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="w">      </span><span class="nt">&lt;groupId&gt;</span>org.soot-oss<span class="nt">&lt;/groupId&gt;</span>
+</span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a><span class="w">      </span><span class="nt">&lt;artifactId&gt;</span>soot<span class="nt">&lt;/artifactId&gt;</span>
+</span><span id="__span-0-4"><a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a><span class="w">      </span><span class="nt">&lt;version&gt;</span>4.2.1<span class="nt">&lt;/version&gt;</span>
+</span><span id="__span-0-5"><a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a><span class="nt">&lt;/dependency&gt;</span>
+</span></code></pre></div>
+<p>从而将soot代码导入项目。</p>
+</li>
+</ol>
+<h4 id="_2">简单运行<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h4>
+<p>以下默认在soot-learn目录下操作：</p>
+<ol>
+<li>
+<p>输入</p>
+<div class="language-shell highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>java<span class="w"> </span>-cp<span class="w"> </span>jar<span class="se">\s</span>oot.jar<span class="w"> </span>soot.Main<span class="w"> </span>--help<span class="w">  </span>
+</span></code></pre></div>
+<p>获得可选参数的信息。</p>
+</li>
+<li>
+<p>在src目录下新建一个helloWorld.java，写一个“稍显复杂一点”的helloworld</p>
+<div class="language-java highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">helloWorld</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-2-2"><a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a><span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="nf">add10</span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">x</span><span class="p">){</span>
+</span><span id="__span-2-3"><a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a><span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="n">x</span><span class="o">+</span><span class="mi">10</span><span class="p">;</span>
+</span><span id="__span-2-4"><a id="__codelineno-2-4" name="__codelineno-2-4" href="#__codelineno-2-4"></a><span class="w">    </span><span class="p">}</span>
+</span><span id="__span-2-5"><a id="__codelineno-2-5" name="__codelineno-2-5" href="#__codelineno-2-5"></a><span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">main</span><span class="p">(</span><span class="n">String</span><span class="o">[]</span><span class="w"> </span><span class="n">args</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-2-6"><a id="__codelineno-2-6" name="__codelineno-2-6" href="#__codelineno-2-6"></a><span class="w">        </span><span class="kt">int</span><span class="w"> </span><span class="n">a</span><span class="o">=</span><span class="mi">10</span><span class="p">;</span>
+</span><span id="__span-2-7"><a id="__codelineno-2-7" name="__codelineno-2-7" href="#__codelineno-2-7"></a><span class="w">        </span><span class="kt">int</span><span class="w"> </span><span class="n">b</span><span class="o">=</span><span class="mi">2</span><span class="o">*</span><span class="n">a</span><span class="p">;</span>
+</span><span id="__span-2-8"><a id="__codelineno-2-8" name="__codelineno-2-8" href="#__codelineno-2-8"></a><span class="w">        </span><span class="n">helloWorld</span><span class="w"> </span><span class="n">h</span><span class="o">=</span><span class="k">new</span><span class="w"> </span><span class="n">helloWorld</span><span class="p">();</span>
+</span><span id="__span-2-9"><a id="__codelineno-2-9" name="__codelineno-2-9" href="#__codelineno-2-9"></a><span class="w">        </span><span class="kt">int</span><span class="w"> </span><span class="n">c</span><span class="o">=</span><span class="n">h</span><span class="p">.</span><span class="na">add10</span><span class="p">(</span><span class="n">b</span><span class="p">);</span>
+</span><span id="__span-2-10"><a id="__codelineno-2-10" name="__codelineno-2-10" href="#__codelineno-2-10"></a><span class="w">        </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;hello world&quot;</span><span class="p">);</span>
+</span><span id="__span-2-11"><a id="__codelineno-2-11" name="__codelineno-2-11" href="#__codelineno-2-11"></a><span class="w">    </span><span class="p">}</span>
+</span><span id="__span-2-12"><a id="__codelineno-2-12" name="__codelineno-2-12" href="#__codelineno-2-12"></a><span class="p">}</span>
+</span></code></pre></div>
+</li>
+<li>
+<p>输入</p>
+<div class="language-shell highlight"><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>javac<span class="w"> </span>src<span class="se">\h</span>elloWorld.java
+</span></code></pre></div>
+<p>利用javac将其编译为.class文件。</p>
+</li>
+<li>
+<p>输入</p>
+<div class="language-shell highlight"><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a>java<span class="w"> </span>-cp<span class="w"> </span>jar/soot.jar<span class="w"> </span>soot.Main<span class="w"> </span>-pp<span class="w"> </span>-f<span class="w"> </span>J<span class="w"> </span>-cp<span class="w"> </span>.<span class="se">\s</span>rc<span class="w"> </span>helloWorld<span class="w"> </span>
+</span></code></pre></div>
+<p>即可完成soot的运行,其中-f J表示我们想要得到jimple类型的文件，第二个-cp是指定要解析的.class文件的路径。soot的工作需要<code>java.lang.Object</code>，使用-pp参数可以自动包含所需的jar文件。运行完之后在当前目录之下生成了sootOutput文件夹，其中有一个helloWorld.jimple文件。</p>
+</li>
+<li>
+<p>打开这个文件，看到</p>
+<div class="language-java highlight"><pre><span></span><code><span id="__span-5-1"><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a><span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">helloWorld</span><span class="w"> </span><span class="kd">extends</span><span class="w"> </span><span class="n">java</span><span class="p">.</span><span class="na">lang</span><span class="p">.</span><span class="na">Object</span>
+</span><span id="__span-5-2"><a id="__codelineno-5-2" name="__codelineno-5-2" href="#__codelineno-5-2"></a><span class="p">{</span>
+</span><span id="__span-5-3"><a id="__codelineno-5-3" name="__codelineno-5-3" href="#__codelineno-5-3"></a><span class="w">   </span><span class="kd">public</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="o">&lt;</span><span class="n">init</span><span class="o">&gt;</span><span class="p">()</span>
+</span><span id="__span-5-4"><a id="__codelineno-5-4" name="__codelineno-5-4" href="#__codelineno-5-4"></a><span class="w">   </span><span class="p">{</span>
+</span><span id="__span-5-5"><a id="__codelineno-5-5" name="__codelineno-5-5" href="#__codelineno-5-5"></a><span class="w">       </span><span class="n">helloWorld</span><span class="w"> </span><span class="n">r0</span><span class="p">;</span>
+</span><span id="__span-5-6"><a id="__codelineno-5-6" name="__codelineno-5-6" href="#__codelineno-5-6"></a><span class="w">       </span><span class="n">r0</span><span class="w"> </span><span class="p">:</span><span class="o">=</span><span class="w"> </span><span class="nd">@this</span><span class="p">:</span><span class="w"> </span><span class="n">helloWorld</span><span class="p">;</span>
+</span><span id="__span-5-7"><a id="__codelineno-5-7" name="__codelineno-5-7" href="#__codelineno-5-7"></a><span class="w">       </span><span class="n">specialinvoke</span><span class="w"> </span><span class="n">r0</span><span class="p">.</span><span class="o">&lt;</span><span class="n">java</span><span class="p">.</span><span class="na">lang</span><span class="p">.</span><span class="na">Object</span><span class="p">:</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="o">&lt;</span><span class="n">init</span><span class="o">&gt;</span><span class="p">()</span><span class="o">&gt;</span><span class="p">();</span>
+</span><span id="__span-5-8"><a id="__codelineno-5-8" name="__codelineno-5-8" href="#__codelineno-5-8"></a><span class="w">       </span><span class="k">return</span><span class="p">;</span>
+</span><span id="__span-5-9"><a id="__codelineno-5-9" name="__codelineno-5-9" href="#__codelineno-5-9"></a><span class="w">   </span><span class="p">}</span>
+</span><span id="__span-5-10"><a id="__codelineno-5-10" name="__codelineno-5-10" href="#__codelineno-5-10"></a><span class="w">   </span><span class="kd">public</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="nf">add10</span><span class="p">(</span><span class="kt">int</span><span class="p">)</span>
+</span><span id="__span-5-11"><a id="__codelineno-5-11" name="__codelineno-5-11" href="#__codelineno-5-11"></a><span class="w">   </span><span class="p">{</span>
+</span><span id="__span-5-12"><a id="__codelineno-5-12" name="__codelineno-5-12" href="#__codelineno-5-12"></a><span class="w">       </span><span class="kt">int</span><span class="w"> </span><span class="n">i0</span><span class="p">,</span><span class="w"> </span><span class="n">$i1</span><span class="p">;</span>
+</span><span id="__span-5-13"><a id="__codelineno-5-13" name="__codelineno-5-13" href="#__codelineno-5-13"></a><span class="w">       </span><span class="n">helloWorld</span><span class="w"> </span><span class="n">r0</span><span class="p">;</span>
+</span><span id="__span-5-14"><a id="__codelineno-5-14" name="__codelineno-5-14" href="#__codelineno-5-14"></a><span class="w">       </span><span class="n">r0</span><span class="w"> </span><span class="p">:</span><span class="o">=</span><span class="w"> </span><span class="nd">@this</span><span class="p">:</span><span class="w"> </span><span class="n">helloWorld</span><span class="p">;</span>
+</span><span id="__span-5-15"><a id="__codelineno-5-15" name="__codelineno-5-15" href="#__codelineno-5-15"></a><span class="w">       </span><span class="n">i0</span><span class="w"> </span><span class="p">:</span><span class="o">=</span><span class="w"> </span><span class="nd">@parameter0</span><span class="p">:</span><span class="w"> </span><span class="kt">int</span><span class="p">;</span>
+</span><span id="__span-5-16"><a id="__codelineno-5-16" name="__codelineno-5-16" href="#__codelineno-5-16"></a><span class="w">       </span><span class="n">$i1</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">i0</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="mi">10</span><span class="p">;</span>
+</span><span id="__span-5-17"><a id="__codelineno-5-17" name="__codelineno-5-17" href="#__codelineno-5-17"></a><span class="w">       </span><span class="k">return</span><span class="w"> </span><span class="n">$i1</span><span class="p">;</span>
+</span><span id="__span-5-18"><a id="__codelineno-5-18" name="__codelineno-5-18" href="#__codelineno-5-18"></a><span class="w">   </span><span class="p">}</span>
+</span><span id="__span-5-19"><a id="__codelineno-5-19" name="__codelineno-5-19" href="#__codelineno-5-19"></a><span class="w">   </span><span class="kd">public</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">main</span><span class="p">(</span><span class="n">java</span><span class="p">.</span><span class="na">lang</span><span class="p">.</span><span class="na">String</span><span class="o">[]</span><span class="p">)</span>
+</span><span id="__span-5-20"><a id="__codelineno-5-20" name="__codelineno-5-20" href="#__codelineno-5-20"></a><span class="w">   </span><span class="p">{</span>
+</span><span id="__span-5-21"><a id="__codelineno-5-21" name="__codelineno-5-21" href="#__codelineno-5-21"></a><span class="w">       </span><span class="n">java</span><span class="p">.</span><span class="na">io</span><span class="p">.</span><span class="na">PrintStream</span><span class="w"> </span><span class="n">$r1</span><span class="p">;</span>
+</span><span id="__span-5-22"><a id="__codelineno-5-22" name="__codelineno-5-22" href="#__codelineno-5-22"></a><span class="w">       </span><span class="n">java</span><span class="p">.</span><span class="na">lang</span><span class="p">.</span><span class="na">String</span><span class="o">[]</span><span class="w"> </span><span class="n">r2</span><span class="p">;</span>
+</span><span id="__span-5-23"><a id="__codelineno-5-23" name="__codelineno-5-23" href="#__codelineno-5-23"></a><span class="w">       </span><span class="n">helloWorld</span><span class="w"> </span><span class="n">$r0</span><span class="p">;</span>
+</span><span id="__span-5-24"><a id="__codelineno-5-24" name="__codelineno-5-24" href="#__codelineno-5-24"></a><span class="w">       </span><span class="n">r2</span><span class="w"> </span><span class="p">:</span><span class="o">=</span><span class="w"> </span><span class="nd">@parameter0</span><span class="p">:</span><span class="w"> </span><span class="n">java</span><span class="p">.</span><span class="na">lang</span><span class="p">.</span><span class="na">String</span><span class="o">[]</span><span class="p">;</span>
+</span><span id="__span-5-25"><a id="__codelineno-5-25" name="__codelineno-5-25" href="#__codelineno-5-25"></a><span class="w">       </span><span class="n">$r0</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">helloWorld</span><span class="p">;</span>
+</span><span id="__span-5-26"><a id="__codelineno-5-26" name="__codelineno-5-26" href="#__codelineno-5-26"></a><span class="w">       </span><span class="n">specialinvoke</span><span class="w"> </span><span class="n">$r0</span><span class="p">.</span><span class="o">&lt;</span><span class="n">helloWorld</span><span class="p">:</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="o">&lt;</span><span class="n">init</span><span class="o">&gt;</span><span class="p">()</span><span class="o">&gt;</span><span class="p">();</span>
+</span><span id="__span-5-27"><a id="__codelineno-5-27" name="__codelineno-5-27" href="#__codelineno-5-27"></a><span class="w">       </span><span class="n">virtualinvoke</span><span class="w"> </span><span class="n">$r0</span><span class="p">.</span><span class="o">&lt;</span><span class="n">helloWorld</span><span class="p">:</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="nf">add10</span><span class="p">(</span><span class="kt">int</span><span class="p">)</span><span class="o">&gt;</span><span class="p">(</span><span class="mi">20</span><span class="p">);</span>
+</span><span id="__span-5-28"><a id="__codelineno-5-28" name="__codelineno-5-28" href="#__codelineno-5-28"></a><span class="w">       </span><span class="n">$r1</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="o">&lt;</span><span class="n">java</span><span class="p">.</span><span class="na">lang</span><span class="p">.</span><span class="na">System</span><span class="p">:</span><span class="w"> </span><span class="n">java</span><span class="p">.</span><span class="na">io</span><span class="p">.</span><span class="na">PrintStream</span><span class="w"> </span><span class="n">out</span><span class="o">&gt;</span><span class="p">;</span>
+</span><span id="__span-5-29"><a id="__codelineno-5-29" name="__codelineno-5-29" href="#__codelineno-5-29"></a><span class="w">       </span><span class="n">virtualinvoke</span><span class="w"> </span><span class="n">$r1</span><span class="p">.</span><span class="o">&lt;</span><span class="n">java</span><span class="p">.</span><span class="na">io</span><span class="p">.</span><span class="na">PrintStream</span><span class="p">:</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">println</span><span class="p">(</span><span class="n">java</span><span class="p">.</span><span class="na">lang</span><span class="p">.</span><span class="na">String</span><span class="p">)</span><span class="o">&gt;</span><span class="p">(</span><span class="s">&quot;hello world&quot;</span><span class="p">);</span>
+</span><span id="__span-5-30"><a id="__codelineno-5-30" name="__codelineno-5-30" href="#__codelineno-5-30"></a><span class="w">       </span><span class="k">return</span><span class="p">;</span>
+</span><span id="__span-5-31"><a id="__codelineno-5-31" name="__codelineno-5-31" href="#__codelineno-5-31"></a><span class="w">   </span><span class="p">}</span>
+</span><span id="__span-5-32"><a id="__codelineno-5-32" name="__codelineno-5-32" href="#__codelineno-5-32"></a><span class="p">}</span>
+</span></code></pre></div>
+<p>可以看到soot已经帮助我们把原来的代码变成了jimple格式的代码，其中jimple即java simple。仔细阅读可以发现代码逻辑与我们之前写的helloworld是一致的（这不废话吗），只是将代码变成了 <strong>三地址码</strong> 的形式。特别的，有如下几点可以注意：</p>
+<ul>
+<li>
+<p>变量名字之前带有$的就是soot额外引入的，帮助构建三地址码的变量，其他则是原程序之中的变量</p>
+</li>
+<li>
+<p>method的参数以及this指针会用@来修饰。</p>
+</li>
+<li>
+<p>对于函数调用会有不用类型的invoke前缀来修饰，共有如下三种。(图片摘自https://spa-book.pblo.gq/ch2/ch2)</p>
+</li>
+</ul>
+<p><img alt="image-20221015161132102" src="image-20221015161132102.png" /></p>
+</li>
+</ol>
+<h4 id="soot_1">Soot 框架使用<a class="headerlink" href="#soot_1" title="Permanent link">&para;</a></h4>
+<p>以下大部分内容取自<a href="https://www.brics.dk/SootGuide/">sootGuide</a>，但是这个资料已经是有点年岁了。。。所以部分内容有点过时。</p>
+<p>code例子大部分取自<a href="https://xiongyingfei.github.io/SA/2021/demo.zip">soot-demo</a>以及<a href="https://xiongyingfei.github.io/SA/2021/11_soot-wyq.pdf">soot-tutorial</a>或稍加修改。</p>
+<h5 id="soot4ir">soot的4种IR<a class="headerlink" href="#soot4ir" title="Permanent link">&para;</a></h5>
+<p>soot一共支持4种IR（imtermediate representation），分别是:</p>
+<ul>
+<li>Baf:一种streamlined stack-based representation of bytecode</li>
+<li>Jimple:（最常用）</li>
+<li>Shimple: SSA(static single assignment )形式的jimple</li>
+<li>Grimp: Jimple的另一种变种，不再要求表达式树线性排布（也就是按照三地址码一条一条写下来），因此减少了一些中间变量，同时也引入了new这个operator</li>
+</ul>
+<h5 id="soot_2">soot的执行流程<a class="headerlink" href="#soot_2" title="Permanent link">&para;</a></h5>
+<p>首先从 <strong>过程内分析</strong> 看起</p>
+<p><img alt="image-20221015185552278" src="image-20221015185552278.png" /></p>
+<p>这张图展示了Jimple代码的转化过程。soot是通过施加一系列的转换函数（也可以称为Pack）来将代码进行不断地变化，直到生成最后的目标结果。</p>
+<p>每个Pack的命名都是有据可循的，第一个字母代表IR类型，例如j就表示jimple。第二个字母表示Pack在整个分析过程之中所扮演的角色，例如b代表body creation,o代表optimization, <strong>t代表user-defined transformation</strong> ,a代表annotation。最后一个字母p通常表示这是一个Pack。</p>
+<p>图中黑色的线条是默认打开的，而红色的线条是通过添加编译选项可以打开的。我们可以通过添加自己定义的transformation函数来执行分析，例如在jtp之中添加一个pack，输出程序之中所有class 和method的名字等。</p>
+<p>然后是 <strong>过程间分析</strong> 的流程,注意，我们需要添加编译选项-w来让soot启用这一流程：</p>
+<p><img alt="image-20221015190435280" src="image-20221015190435280.png" /></p>
+<p>这个流程与之前的稍有不同，首先是获取所有class的jimple body，然后依次调用几个新的pack:</p>
+<ul>
+<li>cg (call-graph generation)</li>
+<li>wjtp (whole Jimple transformation pack)</li>
+<li>wjap (whole Jimple annotation pack)</li>
+<li>wjop (whole Jimple optimization pack)，添加内联函数等优化，需要额外添加编译选项-W来启用</li>
+</ul>
+<p>类似的我们也可以自定义分析方法wjtp添加到过程之中，并通过编译选项启用或停用某个pack。例如通过</p>
+<div class="language-shell highlight"><pre><span></span><code><span id="__span-6-1"><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a>java<span class="w"> </span>-cp<span class="w"> </span>jar/soot.jar<span class="w"> </span>soot.Main<span class="w"> </span>-p<span class="w"> </span>jtp<span class="w"> </span>enabled:false<span class="w"> </span>MyClass
+</span></code></pre></div>
+<p>来停用这个pack</p>
+<p>或者获取当前所有启用的pack:</p>
+<div class="language-shell highlight"><pre><span></span><code><span id="__span-7-1"><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a>java<span class="w"> </span>-cp<span class="w"> </span>jar/soot.jar<span class="w"> </span>soot.Main<span class="w"> </span>-pl
+</span></code></pre></div>
+<p>以及获知某个pack的信息：</p>
+<div class="language-shell highlight"><pre><span></span><code><span id="__span-8-1"><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a>java<span class="w"> </span>-cp<span class="w"> </span>jar/soot.jar<span class="w"> </span>soot.Main<span class="w"> </span>-ph<span class="w"> </span>jap
+</span></code></pre></div>
+<p>当然涉及到添加自定义的pack等操作对我来说都太复杂了，我不会在命令行之中操作，而是自己编写程序，通过</p>
+<div class="language-java highlight"><pre><span></span><code><span id="__span-9-1"><a id="__codelineno-9-1" name="__codelineno-9-1" href="#__codelineno-9-1"></a><span class="n">PackManager</span><span class="p">.</span><span class="na">v</span><span class="p">().</span><span class="na">getPack</span><span class="p">(</span><span class="s">&quot;wjtp&quot;</span><span class="p">).</span><span class="na">add</span><span class="p">(</span><span class="k">new</span><span class="w"> </span><span class="n">Transform</span><span class="p">(</span><span class="s">&quot;wjtp.mypta&quot;</span><span class="p">,</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">MyTransformer</span><span class="p">()));</span>
+</span><span id="__span-9-2"><a id="__codelineno-9-2" name="__codelineno-9-2" href="#__codelineno-9-2"></a><span class="n">soot</span><span class="p">.</span><span class="na">Main</span><span class="p">.</span><span class="na">main</span><span class="p">(</span><span class="k">new</span><span class="w"> </span><span class="n">String</span><span class="o">[]</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-9-3"><a id="__codelineno-9-3" name="__codelineno-9-3" href="#__codelineno-9-3"></a><span class="w">            </span><span class="s">&quot;-w&quot;</span><span class="p">,</span>
+</span><span id="__span-9-4"><a id="__codelineno-9-4" name="__codelineno-9-4" href="#__codelineno-9-4"></a><span class="w">            </span><span class="s">&quot;-p&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;wjtp.mypta&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;enabled:true&quot;</span><span class="p">,</span>
+</span><span id="__span-9-5"><a id="__codelineno-9-5" name="__codelineno-9-5" href="#__codelineno-9-5"></a><span class="w">            </span><span class="s">&quot;-soot-class-path&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">classpath</span><span class="p">,</span>
+</span><span id="__span-9-6"><a id="__codelineno-9-6" name="__codelineno-9-6" href="#__codelineno-9-6"></a><span class="w">            </span><span class="n">args</span><span class="o">[</span><span class="mi">1</span><span class="o">]</span><span class="w">             </span>
+</span><span id="__span-9-7"><a id="__codelineno-9-7" name="__codelineno-9-7" href="#__codelineno-9-7"></a><span class="w">        </span><span class="p">});</span>
+</span></code></pre></div>
+<p>这种方式来添加对应的编译选项（因为这个过程不只是涉及启用wjtp.mypta这个pack，还涉及要将这个pack加到wjtp这个大类之下，这个操作我不知道怎么用命令行实现。。。）</p>
+<h5 id="soot_3">Soot的底层数据结构<a class="headerlink" href="#soot_3" title="Permanent link">&para;</a></h5>
+<p>以下是soot的基本数据结构：</p>
+<p><img alt="image-20221015204917254" src="image-20221015204917254.png" /></p>
+<p>scene存储全局的信息，sootclass存储某个class的分析信息，sootfield存储其中各个分量的信息，sootmethod存储其中各个方法，而每个方法可以生成一个jimple body。</p>
+<p>特别的soot class可分为3类：</p>
+<ul>
+<li>argument class为我们自己写的程序入口，通过这个class来配置编译选项等并启动soot分析框架</li>
+<li>application class为待分析的java程序</li>
+<li>library class为soot库函数</li>
+</ul>
+<p>具体接口调用样例如下：</p>
+<div class="language-java highlight"><pre><span></span><code><span id="__span-10-1"><a id="__codelineno-10-1" name="__codelineno-10-1" href="#__codelineno-10-1"></a><span class="k">new</span><span class="w"> </span><span class="n">Transform</span><span class="p">(</span><span class="s">&quot;wjtp.myanalysis&quot;</span><span class="p">,</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">SceneTransformer</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-10-2"><a id="__codelineno-10-2" name="__codelineno-10-2" href="#__codelineno-10-2"></a><span class="w">            </span><span class="nd">@Override</span>
+</span><span id="__span-10-3"><a id="__codelineno-10-3" name="__codelineno-10-3" href="#__codelineno-10-3"></a><span class="w">            </span><span class="kd">protected</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">internalTransform</span><span class="p">(</span><span class="n">String</span><span class="w"> </span><span class="n">arg0</span><span class="p">,</span><span class="w"> </span><span class="n">Map</span><span class="o">&lt;</span><span class="n">String</span><span class="p">,</span><span class="w"> </span><span class="n">String</span><span class="o">&gt;</span><span class="w"> </span><span class="n">arg1</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-10-4"><a id="__codelineno-10-4" name="__codelineno-10-4" href="#__codelineno-10-4"></a><span class="w">                        </span><span class="n">Chain</span><span class="o">&lt;</span><span class="n">SootClass</span><span class="o">&gt;</span><span class="w"> </span><span class="n">cs</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">Scene</span><span class="p">.</span><span class="na">v</span><span class="p">().</span><span class="na">getApplicationClasses</span><span class="p">();</span>
+</span><span id="__span-10-5"><a id="__codelineno-10-5" name="__codelineno-10-5" href="#__codelineno-10-5"></a><span class="w">                        </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;size = &quot;</span><span class="o">+</span><span class="n">cs</span><span class="p">.</span><span class="na">size</span><span class="p">());</span>
+</span><span id="__span-10-6"><a id="__codelineno-10-6" name="__codelineno-10-6" href="#__codelineno-10-6"></a><span class="w">                        </span><span class="k">for</span><span class="p">(</span><span class="n">SootClass</span><span class="w"> </span><span class="n">c</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="n">cs</span><span class="p">){</span>
+</span><span id="__span-10-7"><a id="__codelineno-10-7" name="__codelineno-10-7" href="#__codelineno-10-7"></a><span class="w">                            </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">c</span><span class="p">.</span><span class="na">getName</span><span class="p">());</span>
+</span><span id="__span-10-8"><a id="__codelineno-10-8" name="__codelineno-10-8" href="#__codelineno-10-8"></a><span class="w">                            </span><span class="n">List</span><span class="o">&lt;</span><span class="n">SootMethod</span><span class="o">&gt;</span><span class="w"> </span><span class="n">ms</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">c</span><span class="p">.</span><span class="na">getMethods</span><span class="p">();</span><span class="c1">//获得method</span>
+</span><span id="__span-10-9"><a id="__codelineno-10-9" name="__codelineno-10-9" href="#__codelineno-10-9"></a><span class="w">                            </span><span class="n">Chain</span><span class="o">&lt;</span><span class="n">SootField</span><span class="o">&gt;</span><span class="w"> </span><span class="n">fs</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">c</span><span class="p">.</span><span class="na">getFields</span><span class="p">();</span><span class="c1">//获得field</span>
+</span><span id="__span-10-10"><a id="__codelineno-10-10" name="__codelineno-10-10" href="#__codelineno-10-10"></a>
+</span><span id="__span-10-11"><a id="__codelineno-10-11" name="__codelineno-10-11" href="#__codelineno-10-11"></a><span class="w">                            </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="n">SootField</span><span class="w"> </span><span class="n">f</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="n">fs</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-10-12"><a id="__codelineno-10-12" name="__codelineno-10-12" href="#__codelineno-10-12"></a><span class="w">                                </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">f</span><span class="p">.</span><span class="na">getDeclaration</span><span class="p">());</span>
+</span><span id="__span-10-13"><a id="__codelineno-10-13" name="__codelineno-10-13" href="#__codelineno-10-13"></a><span class="w">                                </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">f</span><span class="p">.</span><span class="na">getType</span><span class="p">());</span>
+</span><span id="__span-10-14"><a id="__codelineno-10-14" name="__codelineno-10-14" href="#__codelineno-10-14"></a><span class="w">                            </span><span class="p">}</span>
+</span><span id="__span-10-15"><a id="__codelineno-10-15" name="__codelineno-10-15" href="#__codelineno-10-15"></a><span class="w">                            </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="n">SootMethod</span><span class="w"> </span><span class="n">m</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="n">ms</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-10-16"><a id="__codelineno-10-16" name="__codelineno-10-16" href="#__codelineno-10-16"></a><span class="w">                                </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">m</span><span class="p">.</span><span class="na">getDeclaration</span><span class="p">());</span>
+</span><span id="__span-10-17"><a id="__codelineno-10-17" name="__codelineno-10-17" href="#__codelineno-10-17"></a><span class="w">                                </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">m</span><span class="p">.</span><span class="na">getReturnType</span><span class="p">());</span>
+</span><span id="__span-10-18"><a id="__codelineno-10-18" name="__codelineno-10-18" href="#__codelineno-10-18"></a><span class="w">                                </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">m</span><span class="p">.</span><span class="na">getParameterTypes</span><span class="p">());</span>
+</span><span id="__span-10-19"><a id="__codelineno-10-19" name="__codelineno-10-19" href="#__codelineno-10-19"></a><span class="w">                            </span><span class="p">}</span>
+</span><span id="__span-10-20"><a id="__codelineno-10-20" name="__codelineno-10-20" href="#__codelineno-10-20"></a><span class="w">                        </span><span class="p">}</span>
+</span><span id="__span-10-21"><a id="__codelineno-10-21" name="__codelineno-10-21" href="#__codelineno-10-21"></a><span class="w">                    </span><span class="p">}</span>
+</span><span id="__span-10-22"><a id="__codelineno-10-22" name="__codelineno-10-22" href="#__codelineno-10-22"></a><span class="w">                </span><span class="p">})</span>
+</span></code></pre></div>
+<p>对于某个jimple body(jb)对象，我们可以调用getLocals()方法来获取其所有local变量（及之前提到的带有$前缀的变量），每个local变量的类也可以继承并重写Local类来实现。</p>
+<p>jb对象还可以调用getUnits()方法来获得所有的Unit，每个unit就是jb之中的一条语句。而更细分的说，soot还可以分为15种具体的语句类型：</p>
+<p><img alt="image-20221017214921771" src="image-20221017214921771.png" /></p>
+<p>这些类型都继承了unit这个类。因此可以直接用instanceof来判断一条语句到底是identityStmt(表示变量是参数或者this等)类型，assignStmt类型(赋值语句)还是其他的什么类型。</p>
+<p>具体接口调用样例如下：</p>
+<div class="language-java highlight"><pre><span></span><code><span id="__span-11-1"><a id="__codelineno-11-1" name="__codelineno-11-1" href="#__codelineno-11-1"></a><span class="k">new</span><span class="w"> </span><span class="n">Transform</span><span class="p">(</span><span class="s">&quot;wjtp.myanalysis&quot;</span><span class="p">,</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">SceneTransformer</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-11-2"><a id="__codelineno-11-2" name="__codelineno-11-2" href="#__codelineno-11-2"></a><span class="w">            </span><span class="nd">@Override</span>
+</span><span id="__span-11-3"><a id="__codelineno-11-3" name="__codelineno-11-3" href="#__codelineno-11-3"></a><span class="w">            </span><span class="kd">protected</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">internalTransform</span><span class="p">(</span><span class="n">String</span><span class="w"> </span><span class="n">arg0</span><span class="p">,</span><span class="w"> </span><span class="n">Map</span><span class="o">&lt;</span><span class="n">String</span><span class="p">,</span><span class="w"> </span><span class="n">String</span><span class="o">&gt;</span><span class="w"> </span><span class="n">arg1</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-11-4"><a id="__codelineno-11-4" name="__codelineno-11-4" href="#__codelineno-11-4"></a><span class="w">            </span><span class="n">SootClass</span><span class="w"> </span><span class="n">mainClass</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">Scene</span><span class="p">.</span><span class="na">v</span><span class="p">().</span><span class="na">getMainClass</span><span class="p">();</span>
+</span><span id="__span-11-5"><a id="__codelineno-11-5" name="__codelineno-11-5" href="#__codelineno-11-5"></a><span class="w">            </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;Main class is &quot;</span><span class="o">+</span><span class="w"> </span><span class="n">mainClass</span><span class="p">);</span>
+</span><span id="__span-11-6"><a id="__codelineno-11-6" name="__codelineno-11-6" href="#__codelineno-11-6"></a><span class="w">            </span><span class="n">SootMethod</span><span class="w"> </span><span class="n">mainMethod</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">Scene</span><span class="p">.</span><span class="na">v</span><span class="p">().</span><span class="na">getMainMethod</span><span class="p">();</span>
+</span><span id="__span-11-7"><a id="__codelineno-11-7" name="__codelineno-11-7" href="#__codelineno-11-7"></a><span class="w">            </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;Main method is &quot;</span><span class="o">+</span><span class="w"> </span><span class="n">mainMethod</span><span class="p">);</span>
+</span><span id="__span-11-8"><a id="__codelineno-11-8" name="__codelineno-11-8" href="#__codelineno-11-8"></a><span class="w">            </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;Super class is &quot;</span><span class="o">+</span><span class="n">mainClass</span><span class="p">.</span><span class="na">getSuperclass</span><span class="p">());</span>
+</span><span id="__span-11-9"><a id="__codelineno-11-9" name="__codelineno-11-9" href="#__codelineno-11-9"></a><span class="w">            </span><span class="n">Body</span><span class="w"> </span><span class="n">b</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">mainMethod</span><span class="p">.</span><span class="na">getActiveBody</span><span class="p">();</span>
+</span><span id="__span-11-10"><a id="__codelineno-11-10" name="__codelineno-11-10" href="#__codelineno-11-10"></a><span class="w">            </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="n">Unit</span><span class="w"> </span><span class="n">u</span><span class="p">:</span><span class="w"> </span><span class="n">b</span><span class="p">.</span><span class="na">getUnits</span><span class="p">())</span><span class="w"> </span><span class="p">{</span><span class="c1">//获得units</span>
+</span><span id="__span-11-11"><a id="__codelineno-11-11" name="__codelineno-11-11" href="#__codelineno-11-11"></a><span class="w">                </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;Unit &quot;</span><span class="o">+</span><span class="n">u</span><span class="p">);</span>
+</span><span id="__span-11-12"><a id="__codelineno-11-12" name="__codelineno-11-12" href="#__codelineno-11-12"></a><span class="w">            </span><span class="p">}</span>
+</span><span id="__span-11-13"><a id="__codelineno-11-13" name="__codelineno-11-13" href="#__codelineno-11-13"></a><span class="w">            </span><span class="k">for</span><span class="p">(</span><span class="n">Local</span><span class="w"> </span><span class="n">l</span><span class="p">:</span><span class="w"> </span><span class="n">b</span><span class="p">.</span><span class="na">getLocals</span><span class="p">()){</span><span class="c1">//获得locals</span>
+</span><span id="__span-11-14"><a id="__codelineno-11-14" name="__codelineno-11-14" href="#__codelineno-11-14"></a><span class="w">                </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;Local &quot;</span><span class="o">+</span><span class="n">l</span><span class="p">);</span>
+</span><span id="__span-11-15"><a id="__codelineno-11-15" name="__codelineno-11-15" href="#__codelineno-11-15"></a><span class="w">            </span><span class="p">}</span>
+</span><span id="__span-11-16"><a id="__codelineno-11-16" name="__codelineno-11-16" href="#__codelineno-11-16"></a><span class="w">        </span><span class="p">}</span>
+</span><span id="__span-11-17"><a id="__codelineno-11-17" name="__codelineno-11-17" href="#__codelineno-11-17"></a><span class="w">    </span><span class="p">}</span>
+</span><span id="__span-11-18"><a id="__codelineno-11-18" name="__codelineno-11-18" href="#__codelineno-11-18"></a><span class="p">)</span>
+</span></code></pre></div>
+<p>soot为了表示程序之中的data还引入了value接口，实现了这些接口的类有：</p>
+<ul>
+<li>Local 表示局部变量</li>
+<li>Constant 表示常量</li>
+<li>Expr(一类class) 表示各种运算，即给定若干value可以返回另一个value</li>
+<li>Ref(一类class) 表示各种引用，如之前提到的@parameter或者@this，以及a.f等</li>
+</ul>
+<p>另一个非常重要的数据类型是Box，这可以看做指向数组的指针，根据其指向数据的类型可以分为unitbox以及valuebox。例如我们可能需要知道一条代表分支语句的unit接下来会走向哪些units，这时就可以调用getUnitBoxes()接口来获取这些对象。</p>
+<p>如下是实现addExpr的一种方式：</p>
+<div class="language-java highlight"><pre><span></span><code><span id="__span-12-1"><a id="__codelineno-12-1" name="__codelineno-12-1" href="#__codelineno-12-1"></a><span class="kd">public</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">foldAdds</span><span class="p">(</span><span class="n">Unit</span><span class="w"> </span><span class="n">u</span><span class="p">)</span>
+</span><span id="__span-12-2"><a id="__codelineno-12-2" name="__codelineno-12-2" href="#__codelineno-12-2"></a><span class="p">{</span>
+</span><span id="__span-12-3"><a id="__codelineno-12-3" name="__codelineno-12-3" href="#__codelineno-12-3"></a><span class="w">    </span><span class="n">Iterator</span><span class="w"> </span><span class="n">ubIt</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">u</span><span class="p">.</span><span class="na">getUseBoxes</span><span class="p">().</span><span class="na">iterator</span><span class="p">();</span><span class="c1">//获取unit之中的所有value对象</span>
+</span><span id="__span-12-4"><a id="__codelineno-12-4" name="__codelineno-12-4" href="#__codelineno-12-4"></a><span class="w">    </span><span class="k">while</span><span class="w"> </span><span class="p">(</span><span class="n">ubIt</span><span class="p">.</span><span class="na">hasNext</span><span class="p">())</span>
+</span><span id="__span-12-5"><a id="__codelineno-12-5" name="__codelineno-12-5" href="#__codelineno-12-5"></a><span class="w">    </span><span class="p">{</span>
+</span><span id="__span-12-6"><a id="__codelineno-12-6" name="__codelineno-12-6" href="#__codelineno-12-6"></a><span class="w">        </span><span class="n">ValueBox</span><span class="w"> </span><span class="n">vb</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">(</span><span class="n">ValueBox</span><span class="p">)</span><span class="w"> </span><span class="n">ubIt</span><span class="p">.</span><span class="na">next</span><span class="p">();</span>
+</span><span id="__span-12-7"><a id="__codelineno-12-7" name="__codelineno-12-7" href="#__codelineno-12-7"></a><span class="w">        </span><span class="n">Value</span><span class="w"> </span><span class="n">v</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">vb</span><span class="p">.</span><span class="na">getValue</span><span class="p">();</span>
+</span><span id="__span-12-8"><a id="__codelineno-12-8" name="__codelineno-12-8" href="#__codelineno-12-8"></a><span class="w">        </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">v</span><span class="w"> </span><span class="k">instanceof</span><span class="w"> </span><span class="n">AddExpr</span><span class="p">)</span><span class="c1">//如果这个value对象是addExpr</span>
+</span><span id="__span-12-9"><a id="__codelineno-12-9" name="__codelineno-12-9" href="#__codelineno-12-9"></a><span class="w">        </span><span class="p">{</span>
+</span><span id="__span-12-10"><a id="__codelineno-12-10" name="__codelineno-12-10" href="#__codelineno-12-10"></a><span class="w">            </span><span class="n">AddExpr</span><span class="w"> </span><span class="n">ae</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">(</span><span class="n">AddExpr</span><span class="p">)</span><span class="w"> </span><span class="n">v</span><span class="p">;</span>
+</span><span id="__span-12-11"><a id="__codelineno-12-11" name="__codelineno-12-11" href="#__codelineno-12-11"></a><span class="w">            </span><span class="n">Value</span><span class="w"> </span><span class="n">lo</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">ae</span><span class="p">.</span><span class="na">getOp1</span><span class="p">(),</span><span class="w"> </span><span class="n">ro</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">ae</span><span class="p">.</span><span class="na">getOp2</span><span class="p">();</span>
+</span><span id="__span-12-12"><a id="__codelineno-12-12" name="__codelineno-12-12" href="#__codelineno-12-12"></a><span class="w">            </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">lo</span><span class="w"> </span><span class="k">instanceof</span><span class="w"> </span><span class="n">IntConstant</span><span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span><span class="n">ro</span><span class="w"> </span><span class="k">instanceof</span><span class="w"> </span><span class="n">IntConstant</span><span class="p">)</span>
+</span><span id="__span-12-13"><a id="__codelineno-12-13" name="__codelineno-12-13" href="#__codelineno-12-13"></a><span class="w">            </span><span class="p">{</span>
+</span><span id="__span-12-14"><a id="__codelineno-12-14" name="__codelineno-12-14" href="#__codelineno-12-14"></a><span class="w">                </span><span class="n">IntConstant</span><span class="w"> </span><span class="n">l</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">(</span><span class="n">IntConstant</span><span class="p">)</span><span class="w"> </span><span class="n">lo</span><span class="p">,</span>
+</span><span id="__span-12-15"><a id="__codelineno-12-15" name="__codelineno-12-15" href="#__codelineno-12-15"></a><span class="w">                      </span><span class="n">r</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">(</span><span class="n">IntConstant</span><span class="p">)</span><span class="w"> </span><span class="n">ro</span><span class="p">;</span>
+</span><span id="__span-12-16"><a id="__codelineno-12-16" name="__codelineno-12-16" href="#__codelineno-12-16"></a><span class="w">                </span><span class="kt">int</span><span class="w"> </span><span class="n">sum</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">l</span><span class="p">.</span><span class="na">value</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">r</span><span class="p">.</span><span class="na">value</span><span class="p">;</span>
+</span><span id="__span-12-17"><a id="__codelineno-12-17" name="__codelineno-12-17" href="#__codelineno-12-17"></a><span class="w">                </span><span class="n">vb</span><span class="p">.</span><span class="na">setValue</span><span class="p">(</span><span class="n">IntConstant</span><span class="p">.</span><span class="na">v</span><span class="p">(</span><span class="n">sum</span><span class="p">));</span><span class="c1">//通过指针vb设置对应value对象</span>
+</span><span id="__span-12-18"><a id="__codelineno-12-18" name="__codelineno-12-18" href="#__codelineno-12-18"></a><span class="w">            </span><span class="p">}</span>
+</span><span id="__span-12-19"><a id="__codelineno-12-19" name="__codelineno-12-19" href="#__codelineno-12-19"></a><span class="w">        </span><span class="p">}</span>
+</span><span id="__span-12-20"><a id="__codelineno-12-20" name="__codelineno-12-20" href="#__codelineno-12-20"></a><span class="w">    </span><span class="p">}</span>
+</span><span id="__span-12-21"><a id="__codelineno-12-21" name="__codelineno-12-21" href="#__codelineno-12-21"></a><span class="p">}</span>
+</span></code></pre></div>
+<p>关于这一节的内容可以见<a href="https://github.com/soot-oss/soot/wiki/Fundamental-Soot-objects">soot-datastructures</a></p>
+<h5 id="soot_4">重写soot的数据流分析框架<a class="headerlink" href="#soot_4" title="Permanent link">&para;</a></h5>
+<p>前面已经提到过如何添加一个自己的transformer，实际上，我们也可以继承并重写soot的数据流分析框架，并应用到整个流程之中（即在自己重写的tranformer之中调用数据流分析框架）。</p>
+<p>soot提供了三种基本的数据流分析框架：ForwardFlowAnalysis, BackwardFlowAnalysis and ForwardBranchedFlowAnalysis，前面两种对应课上所学的前向以及后向分析，最后一种可以看做前向分析之中，每个节点流出的信息携带对应的分支信息（感觉会和路径敏感有关，不过我也不太懂。。。），除此之外，还可以直接继承并重写它们的父类AbstractFlowAnalysis (the top one), FlowAnalysis or BranchedFlowAnalysis等，但一般没必要。</p>
+<p>接下来就是依次重写各个方法，分别对应于数据流分析标准型之中的各个概念，以Live variable analysis为例：</p>
+<div class="language-java highlight"><pre><span></span><code><span id="__span-13-1"><a id="__codelineno-13-1" name="__codelineno-13-1" href="#__codelineno-13-1"></a><span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">LivenessAnalysis</span><span class="w"> </span><span class="kd">extends</span><span class="w"> </span><span class="n">BackwardFlowAnalysis</span><span class="o">&lt;</span><span class="n">Unit</span><span class="p">,</span><span class="w"> </span><span class="n">Set</span><span class="o">&lt;</span><span class="n">Local</span><span class="o">&gt;</span><span class="w"> </span><span class="o">&gt;</span><span class="p">{</span>
+</span><span id="__span-13-2"><a id="__codelineno-13-2" name="__codelineno-13-2" href="#__codelineno-13-2"></a><span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="nf">LivenessAnalysis</span><span class="p">(</span><span class="n">DirectedGraph</span><span class="o">&lt;</span><span class="n">Unit</span><span class="o">&gt;</span><span class="w"> </span><span class="n">graph</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-13-3"><a id="__codelineno-13-3" name="__codelineno-13-3" href="#__codelineno-13-3"></a><span class="w">        </span><span class="kd">super</span><span class="p">(</span><span class="n">graph</span><span class="p">);</span>
+</span><span id="__span-13-4"><a id="__codelineno-13-4" name="__codelineno-13-4" href="#__codelineno-13-4"></a><span class="w">        </span><span class="n">doAnalysis</span><span class="p">();</span><span class="c1">//调用重写的method跑数据流分析标准型</span>
+</span><span id="__span-13-5"><a id="__codelineno-13-5" name="__codelineno-13-5" href="#__codelineno-13-5"></a><span class="w">    </span><span class="p">}</span>
+</span><span id="__span-13-6"><a id="__codelineno-13-6" name="__codelineno-13-6" href="#__codelineno-13-6"></a><span class="w">    </span><span class="nd">@Override</span>
+</span><span id="__span-13-7"><a id="__codelineno-13-7" name="__codelineno-13-7" href="#__codelineno-13-7"></a><span class="w">    </span><span class="kd">protected</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">flowThrough</span><span class="p">(</span><span class="n">Set</span><span class="o">&lt;</span><span class="n">Local</span><span class="o">&gt;</span><span class="w"> </span><span class="n">in</span><span class="p">,</span><span class="w"> </span><span class="n">Unit</span><span class="w"> </span><span class="n">unit</span><span class="p">,</span><span class="w"> </span><span class="n">Set</span><span class="o">&lt;</span><span class="n">Local</span><span class="o">&gt;</span><span class="w"> </span><span class="n">out</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-13-8"><a id="__codelineno-13-8" name="__codelineno-13-8" href="#__codelineno-13-8"></a><span class="w">        </span><span class="c1">//节点转换函数</span>
+</span><span id="__span-13-9"><a id="__codelineno-13-9" name="__codelineno-13-9" href="#__codelineno-13-9"></a><span class="w">        </span><span class="n">out</span><span class="p">.</span><span class="na">clear</span><span class="p">();</span><span class="w"> </span><span class="n">out</span><span class="p">.</span><span class="na">addAll</span><span class="p">(</span><span class="n">in</span><span class="p">);</span>
+</span><span id="__span-13-10"><a id="__codelineno-13-10" name="__codelineno-13-10" href="#__codelineno-13-10"></a><span class="w">        </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="n">ValueBox</span><span class="w"> </span><span class="n">vb</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="n">unit</span><span class="p">.</span><span class="na">getDefBoxes</span><span class="p">())</span><span class="w"> </span><span class="p">{</span><span class="c1">//kill集合</span>
+</span><span id="__span-13-11"><a id="__codelineno-13-11" name="__codelineno-13-11" href="#__codelineno-13-11"></a><span class="w">            </span><span class="n">Value</span><span class="w"> </span><span class="n">v</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">vb</span><span class="p">.</span><span class="na">getValue</span><span class="p">();</span>
+</span><span id="__span-13-12"><a id="__codelineno-13-12" name="__codelineno-13-12" href="#__codelineno-13-12"></a><span class="w">            </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">v</span><span class="w"> </span><span class="k">instanceof</span><span class="w"> </span><span class="n">Local</span><span class="p">)</span>
+</span><span id="__span-13-13"><a id="__codelineno-13-13" name="__codelineno-13-13" href="#__codelineno-13-13"></a><span class="w">                </span><span class="n">out</span><span class="p">.</span><span class="na">remove</span><span class="p">((</span><span class="n">Local</span><span class="p">)</span><span class="n">v</span><span class="p">);</span>
+</span><span id="__span-13-14"><a id="__codelineno-13-14" name="__codelineno-13-14" href="#__codelineno-13-14"></a><span class="w">        </span><span class="p">}</span>
+</span><span id="__span-13-15"><a id="__codelineno-13-15" name="__codelineno-13-15" href="#__codelineno-13-15"></a><span class="w">        </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="n">ValueBox</span><span class="w"> </span><span class="n">vb</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="n">unit</span><span class="p">.</span><span class="na">getUseBoxes</span><span class="p">())</span><span class="w"> </span><span class="p">{</span><span class="c1">//gen集合</span>
+</span><span id="__span-13-16"><a id="__codelineno-13-16" name="__codelineno-13-16" href="#__codelineno-13-16"></a><span class="w">            </span><span class="n">Value</span><span class="w"> </span><span class="n">v</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">vb</span><span class="p">.</span><span class="na">getValue</span><span class="p">();</span>
+</span><span id="__span-13-17"><a id="__codelineno-13-17" name="__codelineno-13-17" href="#__codelineno-13-17"></a><span class="w">            </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">v</span><span class="w"> </span><span class="k">instanceof</span><span class="w"> </span><span class="n">Local</span><span class="p">)</span>
+</span><span id="__span-13-18"><a id="__codelineno-13-18" name="__codelineno-13-18" href="#__codelineno-13-18"></a><span class="w">                </span><span class="n">out</span><span class="p">.</span><span class="na">add</span><span class="p">((</span><span class="n">Local</span><span class="p">)</span><span class="n">v</span><span class="p">);</span>
+</span><span id="__span-13-19"><a id="__codelineno-13-19" name="__codelineno-13-19" href="#__codelineno-13-19"></a><span class="w">        </span><span class="p">}</span>
+</span><span id="__span-13-20"><a id="__codelineno-13-20" name="__codelineno-13-20" href="#__codelineno-13-20"></a><span class="w">    </span><span class="p">}</span>
+</span><span id="__span-13-21"><a id="__codelineno-13-21" name="__codelineno-13-21" href="#__codelineno-13-21"></a><span class="w">    </span><span class="nd">@Override</span>
+</span><span id="__span-13-22"><a id="__codelineno-13-22" name="__codelineno-13-22" href="#__codelineno-13-22"></a><span class="w">    </span><span class="kd">protected</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">copy</span><span class="p">(</span><span class="n">Set</span><span class="o">&lt;</span><span class="n">Local</span><span class="o">&gt;</span><span class="w"> </span><span class="n">source</span><span class="p">,</span><span class="w"> </span><span class="n">Set</span><span class="o">&lt;</span><span class="n">Local</span><span class="o">&gt;</span><span class="w"> </span><span class="n">dest</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-13-23"><a id="__codelineno-13-23" name="__codelineno-13-23" href="#__codelineno-13-23"></a><span class="w">        </span><span class="c1">//复制半格元素</span>
+</span><span id="__span-13-24"><a id="__codelineno-13-24" name="__codelineno-13-24" href="#__codelineno-13-24"></a><span class="w">        </span><span class="n">dest</span><span class="p">.</span><span class="na">clear</span><span class="p">();</span><span class="w"> </span><span class="n">dest</span><span class="p">.</span><span class="na">addAll</span><span class="p">(</span><span class="n">source</span><span class="p">);</span>
+</span><span id="__span-13-25"><a id="__codelineno-13-25" name="__codelineno-13-25" href="#__codelineno-13-25"></a><span class="w">    </span><span class="p">}</span>
+</span><span id="__span-13-26"><a id="__codelineno-13-26" name="__codelineno-13-26" href="#__codelineno-13-26"></a><span class="w">    </span><span class="nd">@Override</span>
+</span><span id="__span-13-27"><a id="__codelineno-13-27" name="__codelineno-13-27" href="#__codelineno-13-27"></a><span class="w">    </span><span class="kd">protected</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">merge</span><span class="p">(</span><span class="n">Set</span><span class="o">&lt;</span><span class="n">Local</span><span class="o">&gt;</span><span class="w"> </span><span class="n">in0</span><span class="p">,</span><span class="w"> </span><span class="n">Set</span><span class="o">&lt;</span><span class="n">Local</span><span class="o">&gt;</span><span class="w"> </span><span class="n">in1</span><span class="p">,</span><span class="w"> </span><span class="n">Set</span><span class="o">&lt;</span><span class="n">Local</span><span class="o">&gt;</span><span class="w"> </span><span class="n">out</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="c1">//交汇操作</span>
+</span><span id="__span-13-28"><a id="__codelineno-13-28" name="__codelineno-13-28" href="#__codelineno-13-28"></a><span class="w">        </span><span class="n">out</span><span class="p">.</span><span class="na">clear</span><span class="p">();</span><span class="w"> </span><span class="n">out</span><span class="p">.</span><span class="na">addAll</span><span class="p">(</span><span class="n">in0</span><span class="p">);</span><span class="w"> </span><span class="n">out</span><span class="p">.</span><span class="na">addAll</span><span class="p">(</span><span class="n">in1</span><span class="p">);</span>
+</span><span id="__span-13-29"><a id="__codelineno-13-29" name="__codelineno-13-29" href="#__codelineno-13-29"></a><span class="w">    </span><span class="p">}</span>
+</span><span id="__span-13-30"><a id="__codelineno-13-30" name="__codelineno-13-30" href="#__codelineno-13-30"></a><span class="w">    </span><span class="nd">@Override</span>
+</span><span id="__span-13-31"><a id="__codelineno-13-31" name="__codelineno-13-31" href="#__codelineno-13-31"></a><span class="w">    </span><span class="kd">protected</span><span class="w"> </span><span class="n">Set</span><span class="o">&lt;</span><span class="n">Local</span><span class="o">&gt;</span><span class="w"> </span><span class="nf">newInitialFlow</span><span class="p">()</span><span class="w"> </span><span class="p">{</span><span class="c1">//除了entry节点之外的节点初始值</span>
+</span><span id="__span-13-32"><a id="__codelineno-13-32" name="__codelineno-13-32" href="#__codelineno-13-32"></a><span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">HashSet</span><span class="o">&lt;</span><span class="n">Local</span><span class="o">&gt;</span><span class="p">();</span>
+</span><span id="__span-13-33"><a id="__codelineno-13-33" name="__codelineno-13-33" href="#__codelineno-13-33"></a><span class="w">    </span><span class="p">}</span>
+</span><span id="__span-13-34"><a id="__codelineno-13-34" name="__codelineno-13-34" href="#__codelineno-13-34"></a><span class="w">    </span><span class="nd">@Override</span>
+</span><span id="__span-13-35"><a id="__codelineno-13-35" name="__codelineno-13-35" href="#__codelineno-13-35"></a><span class="w">    </span><span class="kd">protected</span><span class="w"> </span><span class="n">Set</span><span class="o">&lt;</span><span class="n">Local</span><span class="o">&gt;</span><span class="w"> </span><span class="nf">entryInitialFlow</span><span class="p">()</span><span class="w"> </span><span class="p">{</span><span class="c1">//entry节点的初始值</span>
+</span><span id="__span-13-36"><a id="__codelineno-13-36" name="__codelineno-13-36" href="#__codelineno-13-36"></a><span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="n">newInitialFlow</span><span class="p">();</span>
+</span><span id="__span-13-37"><a id="__codelineno-13-37" name="__codelineno-13-37" href="#__codelineno-13-37"></a><span class="w">    </span><span class="p">}</span>
+</span><span id="__span-13-38"><a id="__codelineno-13-38" name="__codelineno-13-38" href="#__codelineno-13-38"></a><span class="p">}</span>
+</span></code></pre></div>
+<p>除了重写这些框架之外，我们还可以重写半格的元素,也就是Flow Set，在上面的分析之中半格的元素就是Set\&lt;Local&gt;，但是也可以实现一个类，继承BoundedFlowSet接口或者FlowSet接口（这二者的区别是我们是否知晓其所包含元素的全部可能情况）</p>
+<p>soot也为我们实现了几种flow set: ArraySparseSet, ArrayPackedSet(实现了一个从int到集合元素的map,并用bitvector表示哪些集合元素是可用的), ToppedSet and DavaFlowSet可用。</p>
+<h5 id="sootapi">soot提供的其它有用API<a class="headerlink" href="#sootapi" title="Permanent link">&para;</a></h5>
+<ol>
+<li>
+<p>CFG（control flow graph）</p>
+<p>我们知道数据流分析标准型需要进行在一个图之中，所以我们需要先得到一个CFG再喂给之前的数据流分析框架。soot实现了3种构建CFG的方式：BriefUnitGraph, ExceptionalUnitGraph and TrapUnitGraph。第一种是一种简单的方式，不需要考虑exception的情况，而后两者则需要考虑这些情况，但是其具体实现上还是有一些不同之处。</p>
+</li>
+<li>
+<p>描述输出</p>
+<p>通过getFlowBefore()和getFlowAfter()方法来获得每个节点在经历数据流分析前后的结果。</p>
+<div class="language-java highlight"><pre><span></span><code><span id="__span-14-1"><a id="__codelineno-14-1" name="__codelineno-14-1" href="#__codelineno-14-1"></a><span class="w">    </span><span class="n">Body</span><span class="w"> </span><span class="n">b</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">mainMethod</span><span class="p">.</span><span class="na">getActiveBody</span><span class="p">();</span>
+</span><span id="__span-14-2"><a id="__codelineno-14-2" name="__codelineno-14-2" href="#__codelineno-14-2"></a><span class="w">    </span><span class="n">BriefUnitGraph</span><span class="w"> </span><span class="n">g</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">BriefUnitGraph</span><span class="p">(</span><span class="n">b</span><span class="p">);</span><span class="c1">//构建CFG</span>
+</span><span id="__span-14-3"><a id="__codelineno-14-3" name="__codelineno-14-3" href="#__codelineno-14-3"></a><span class="w">    </span><span class="n">LivenessAnalysis</span><span class="w"> </span><span class="n">la</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">LivenessAnalysis</span><span class="p">(</span><span class="n">g</span><span class="p">);</span><span class="c1">//将CFG传给之前重写的活跃变量分析</span>
+</span><span id="__span-14-4"><a id="__codelineno-14-4" name="__codelineno-14-4" href="#__codelineno-14-4"></a><span class="w">    </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="n">Unit</span><span class="w"> </span><span class="n">u</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="n">b</span><span class="p">.</span><span class="na">getUnits</span><span class="p">())</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-14-5"><a id="__codelineno-14-5" name="__codelineno-14-5" href="#__codelineno-14-5"></a><span class="w">        </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">u</span><span class="p">);</span>
+</span><span id="__span-14-6"><a id="__codelineno-14-6" name="__codelineno-14-6" href="#__codelineno-14-6"></a><span class="w">        </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot; Before: &quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">la</span><span class="p">.</span><span class="na">getFlowBefore</span><span class="p">(</span><span class="n">u</span><span class="p">));</span>
+</span><span id="__span-14-7"><a id="__codelineno-14-7" name="__codelineno-14-7" href="#__codelineno-14-7"></a><span class="w">        </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot; After: &quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">la</span><span class="p">.</span><span class="na">getFlowAfter</span><span class="p">(</span><span class="n">u</span><span class="p">));</span>
+</span><span id="__span-14-8"><a id="__codelineno-14-8" name="__codelineno-14-8" href="#__codelineno-14-8"></a><span class="w">    </span><span class="p">}</span>
+</span></code></pre></div>
+</li>
+<li>
+<p>annotating code</p>
+<p>可以在分析框架之中调用某些API（我懒得去找了~）为一些unit等对象添加某些tag或color等形式的”注释“，这样生成出来的代码（如jimple code）在安装了对应插件之后就可以为我们显示出来对应的注释，这常用于为我们直观地展示分析的结果。</p>
+<p>这一过程通常对应于上文提到的jap等pack。</p>
+<p>下面展示的是Eclipse之中对应的插件效果。</p>
+<p><img alt="image-20221015221856454" src="image-20221015221856454.png" /></p>
+</li>
+<li>
+<p>CG（call graph）</p>
+<p>soot在开启了whole program mode之后，就可以允许我们获得整个程序的call graph(cg)，这里可以参见之前提到的Soot过程间分析流程,Pack cg会为我们完成这个分析。一种简单的方式是利用CHA(call hierarchy analysis)来获得程序的cg。</p>
+<p>cg之中的每一条边都携带了丰富的信息，例如source method/statement，target method，edge type（边的类型就是之前提到的method call的几种类型）。</p>
+<p>我们可以通过edgesInto(method), edgesOutOf(method) and edgesOutOf(statement)等接口来获得某个method/statement的出边或入边。这些接口返回一个edge的迭代器，通过类型转换可以将其指向的对象转化为我们想要的类型，如：</p>
+<div class="language-java highlight"><pre><span></span><code><span id="__span-15-1"><a id="__codelineno-15-1" name="__codelineno-15-1" href="#__codelineno-15-1"></a><span class="kd">static</span><span class="w"> </span><span class="kd">public</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">printPossibleCallers</span><span class="p">(</span><span class="n">SootMethod</span><span class="w"> </span><span class="n">target</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-15-2"><a id="__codelineno-15-2" name="__codelineno-15-2" href="#__codelineno-15-2"></a><span class="w">       </span><span class="n">CallGraph</span><span class="w"> </span><span class="n">cg</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">Scene</span><span class="p">.</span><span class="na">v</span><span class="p">().</span><span class="na">getCallGraph</span><span class="p">();</span>
+</span><span id="__span-15-3"><a id="__codelineno-15-3" name="__codelineno-15-3" href="#__codelineno-15-3"></a><span class="w">       </span><span class="n">Iterator</span><span class="w"> </span><span class="n">sources</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">Sources</span><span class="p">(</span><span class="n">cg</span><span class="p">.</span><span class="na">edgesInto</span><span class="p">(</span><span class="n">target</span><span class="p">));</span><span class="c1">//获取当前method的所有入边，也就是它的caller</span>
+</span><span id="__span-15-4"><a id="__codelineno-15-4" name="__codelineno-15-4" href="#__codelineno-15-4"></a><span class="w">       </span><span class="k">while</span><span class="w"> </span><span class="p">(</span><span class="n">sources</span><span class="p">.</span><span class="na">hasNext</span><span class="p">())</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-15-5"><a id="__codelineno-15-5" name="__codelineno-15-5" href="#__codelineno-15-5"></a><span class="w">           </span><span class="n">SootMethod</span><span class="w"> </span><span class="n">src</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">(</span><span class="n">SootMethod</span><span class="p">)</span><span class="n">sources</span><span class="p">.</span><span class="na">next</span><span class="p">();</span>
+</span><span id="__span-15-6"><a id="__codelineno-15-6" name="__codelineno-15-6" href="#__codelineno-15-6"></a><span class="w">           </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">target</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="s">&quot; might be called by &quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">src</span><span class="p">);</span>
+</span><span id="__span-15-7"><a id="__codelineno-15-7" name="__codelineno-15-7" href="#__codelineno-15-7"></a><span class="w">       </span><span class="p">}</span>
+</span><span id="__span-15-8"><a id="__codelineno-15-8" name="__codelineno-15-8" href="#__codelineno-15-8"></a><span class="w">   </span><span class="p">}</span>
+</span></code></pre></div>
+<p>迭代器所指向的对象可以被转换的类型共有三种：</p>
+<ul>
+<li><strong>Sources</strong> iterates over source methods of edges.</li>
+<li><strong>Units</strong> iterates over source statements of edges. </li>
+<li><strong>Targets</strong> iterates over target methods of edges.</li>
+</ul>
+<p>除此之外，还有两个method可用：</p>
+<ul>
+<li>ReachableMethods:返回从程序入口处开始，所有可达的方法，它会返回一个listener对象作为迭代器。</li>
+<li>TransitiveTargets:可以接受一个自定义的filter函数，然后返回符合其要求的method，例如可以获得某个method出发，所有可以被其直接或间接调用的方法。</li>
+</ul>
+</li>
+<li>
+<p>指针分析</p>
+<p>soot自带了两个指针分析框架SPARK以及Paddle两种分析框架，通常而言后者会更精确一些，但是也会更慢。因为软分大作业不让直接调库，所以就没有深入研究了~</p>
+</li>
+</ol>
 
 
 
@@ -448,6 +1035,12 @@
     
     
       <script src="../../assets/javascripts/bundle.cd18aaf1.min.js"></script>
+      
+        <script src="../../javascripts/katex.js"></script>
+      
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.7/katex.min.js"></script>
+      
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.7/contrib/auto-render.min.js"></script>
       
     
   </body>

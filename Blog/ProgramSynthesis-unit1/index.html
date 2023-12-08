@@ -1,0 +1,1003 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+        <meta name="author" content="ZhechongHuang">
+      
+      
+        <link rel="canonical" href="https://cudraniatrec.github.io/Blog/ProgramSynthesis-unit1/">
+      
+      
+        <link rel="prev" href="../soot-tutorial/">
+      
+      
+        <link rel="next" href="../ProgramSynthesis-unit2/">
+      
+      
+      <link rel="icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.5.3, mkdocs-material-9.4.14">
+    
+    
+      
+        <title>ProgramSynthesis-unit1 - ZhechongHuang's Homepage</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.fad675c6.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.356b1318.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.7/katex.min.css">
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="deep-purple" data-md-color-accent="amber">
+  
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&"object"==typeof palette.color)for(var key of Object.keys(palette.color))document.body.setAttribute("data-md-color-"+key,palette.color[key])</script>
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#introduction-to-program-synthesis" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../.." title="ZhechongHuang&#39;s Homepage" class="md-header__button md-logo" aria-label="ZhechongHuang's Homepage" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            ZhechongHuang's Homepage
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              ProgramSynthesis-unit1
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: light)" data-md-color-scheme="default" data-md-color-primary="deep-purple" data-md-color-accent="amber"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_2" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 6H7c-3.31 0-6 2.69-6 6s2.69 6 6 6h10c3.31 0 6-2.69 6-6s-2.69-6-6-6zm0 10H7c-2.21 0-4-1.79-4-4s1.79-4 4-4h10c2.21 0 4 1.79 4 4s-1.79 4-4 4zM7 9c-1.66 0-3 1.34-3 3s1.34 3 3 3 3-1.34 3-3-1.34-3-3-3z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-scheme="slate" data-md-color-primary="pink" data-md-color-accent="blue"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_2">
+    
+      <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 7H7a5 5 0 0 0-5 5 5 5 0 0 0 5 5h10a5 5 0 0 0 5-5 5 5 0 0 0-5-5m0 8a3 3 0 0 1-3-3 3 3 0 0 1 3-3 3 3 0 0 1 3 3 3 3 0 0 1-3 3Z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/CudraniaTrec/cudraniatrec.github.io/" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="ZhechongHuang&#39;s Homepage" class="md-nav__button md-logo" aria-label="ZhechongHuang's Homepage" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+
+    </a>
+    ZhechongHuang's Homepage
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/CudraniaTrec/cudraniatrec.github.io/" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        
+  
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 2A10 10 0 0 0 2 12a10 10 0 0 0 10 10 10 10 0 0 0 10-10A10 10 0 0 0 12 2M7 9.5C7 8.7 7.7 8 8.5 8s1.5.7 1.5 1.5S9.3 11 8.5 11 7 10.3 7 9.5m5 7.73c-1.75 0-3.29-.73-4.19-1.81L9.23 14c.45.72 1.52 1.23 2.77 1.23s2.32-.51 2.77-1.23l1.42 1.42c-.9 1.08-2.44 1.81-4.19 1.81M15.5 11c-.8 0-1.5-.7-1.5-1.5S14.7 8 15.5 8s1.5.7 1.5 1.5-.7 1.5-1.5 1.5Z"/></svg>
+  
+  <span class="md-ellipsis">
+    Home
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Blog
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            Blog
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../soot-tutorial/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    soot
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    Program Synthesis 1
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  <span class="md-ellipsis">
+    Program Synthesis 1
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#lecture-1" class="md-nav__link">
+    <span class="md-ellipsis">
+      Lecture 1
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#lecture-2-introduction-to-inductive-synthesis" class="md-nav__link">
+    <span class="md-ellipsis">
+      Lecture 2: Introduction to Inductive Synthesis
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#lecture-3-bottom-up-explicit-search" class="md-nav__link">
+    <span class="md-ellipsis">
+      Lecture 3: Bottom Up Explicit Search
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#lecture-4-top-down-and-type-directed-explicit-search" class="md-nav__link">
+    <span class="md-ellipsis">
+      Lecture 4: Top Down and Type directed Explicit Search
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#lecture-5-inductive-synthesis-with-stochastic-search" class="md-nav__link">
+    <span class="md-ellipsis">
+      Lecture 5: Inductive Synthesis with Stochastic Search
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#lecture-6-version-space-algebras-from-smartedit-to-flashfill" class="md-nav__link">
+    <span class="md-ellipsis">
+      Lecture 6: Version Space Algebras from SMARTedit to FlashFill
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#lecture-7-constraint-based-synthesis-with-sketch" class="md-nav__link">
+    <span class="md-ellipsis">
+      Lecture 7: Constraint-based Synthesis with Sketch.
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#lecture-8-constraint-based-inductive-synthesis-and-sat" class="md-nav__link">
+    <span class="md-ellipsis">
+      Lecture 8: Constraint based inductive synthesis and SAT
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#lecture-9-solving-constraints" class="md-nav__link">
+    <span class="md-ellipsis">
+      Lecture 9: Solving Constraints.
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ProgramSynthesis-unit2/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Program Synthesis 2
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#lecture-1" class="md-nav__link">
+    <span class="md-ellipsis">
+      Lecture 1
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#lecture-2-introduction-to-inductive-synthesis" class="md-nav__link">
+    <span class="md-ellipsis">
+      Lecture 2: Introduction to Inductive Synthesis
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#lecture-3-bottom-up-explicit-search" class="md-nav__link">
+    <span class="md-ellipsis">
+      Lecture 3: Bottom Up Explicit Search
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#lecture-4-top-down-and-type-directed-explicit-search" class="md-nav__link">
+    <span class="md-ellipsis">
+      Lecture 4: Top Down and Type directed Explicit Search
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#lecture-5-inductive-synthesis-with-stochastic-search" class="md-nav__link">
+    <span class="md-ellipsis">
+      Lecture 5: Inductive Synthesis with Stochastic Search
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#lecture-6-version-space-algebras-from-smartedit-to-flashfill" class="md-nav__link">
+    <span class="md-ellipsis">
+      Lecture 6: Version Space Algebras from SMARTedit to FlashFill
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#lecture-7-constraint-based-synthesis-with-sketch" class="md-nav__link">
+    <span class="md-ellipsis">
+      Lecture 7: Constraint-based Synthesis with Sketch.
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#lecture-8-constraint-based-inductive-synthesis-and-sat" class="md-nav__link">
+    <span class="md-ellipsis">
+      Lecture 8: Constraint based inductive synthesis and SAT
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#lecture-9-solving-constraints" class="md-nav__link">
+    <span class="md-ellipsis">
+      Lecture 9: Solving Constraints.
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+  
+  
+
+
+<h1 id="introduction-to-program-synthesis">Introduction to Program Synthesis<a class="headerlink" href="#introduction-to-program-synthesis" title="Permanent link">&para;</a></h1>
+<h4 id="lecture-1">Lecture 1<a class="headerlink" href="#lecture-1" title="Permanent link">&para;</a></h4>
+<ol>
+<li>
+<p>程序合成与编译，机器学习都具有生成新程序的功能与目标。</p>
+</li>
+<li>
+<p>程序合成与编译的区别在于后者更强调直接将语言进行翻译，而前者更类似于“声明式编程”或者说“逻辑式编程”，即提供一些high level 的抽象，然后让synthesizer自己去寻找如何进行实现，当然现在编译优化等工作也致力于此目标。</p>
+</li>
+</ol>
+<p>当然程序合成与“声明式编程”或者说“逻辑式编程”也有区别，后者更加强调与实现更通用的求解算法，而程序合成通常只需要关注与domain specific的算法即可。</p>
+<p>最后是程序合成与机器学习：机器学习可以看做是spec的形式以input与output呈现出的一种程序合成，但是机器学习的程序形式通常已经被充分的预定义好了——我们只需要找到合适的参数填入程序中，在这个程度上，它的变化没有那么丰富。程序合成领域向机器学习逐渐靠拢的一个趋势是开始注重对于有污点的数据(错误的spec)也要有正确的输出。</p>
+<ol>
+<li>程序合成的定义</li>
+</ol>
+<blockquote>
+<p>Program Synthesis correspond to a class of techniques that are able to generate a program from a collection of artifacts that establish semantic and syntactic requirements for the generated code.</p>
+</blockquote>
+<p>​   这里面着重强调：generation，即让程序合成走向更通用的应用，向"logic programming"靠拢；以及semantic and syntactic requirements，即为程序合成提供语义和语法上面的约束，也就是说灵活性也不能太高，这就要求synthesis system需要建立合适的类型系统以及规定合理的program space等。</p>
+<ol>
+<li>程序合成的发展现状</li>
+</ol>
+<p>程序合成可以着眼于算法的合成，或者应用级的开发，例如excel的Flashfill。除此之外程序合成还可以用于逆向工程，即从一个implementation求出其high level的spec。然后以此为基础来进行程序分析或者合成更有效的程序。</p>
+<p>程序合成与AI领域也有深度的结合，例如可以用AI的学习来辅助合成一个程序，或者应用程序合成方法来帮助AI在可用数据较少的情况下完成目标或者生成可解释性更强的模型。</p>
+<ol>
+<li>
+<p>程序合成的挑战</p>
+</li>
+<li>
+<p>intention：如何明白用户想要生成什么程序，是通过input-output来推断还是建立合适的synthesis system以及spec语言使得用户能够给出问题的描述。并且在用户的描述是under-specification的时候也要尽力生成正确的程序。</p>
+</li>
+<li>invention：如何从用户给出的spec来找到合适的implementation</li>
+<li>adaptation：需要将合成的程序与现实的软件开发相结合，最终的implementation要以某种现实中的编程语言来呈现，而非停留在伪代码或者IR的阶段。</li>
+</ol>
+<h4 id="lecture-2-introduction-to-inductive-synthesis">Lecture 2: Introduction to Inductive Synthesis<a class="headerlink" href="#lecture-2-introduction-to-inductive-synthesis" title="Permanent link">&para;</a></h4>
+<ol>
+<li>inductive synthesis，即归纳式的程序合成，就是通过给定input-output来合成对应的程序，通常可以分为PBE（programming by example）与PBD（~ demonstration）前者只需要给定input-output，而后者还需要给定简单的演示。一个简单的PBD的例子就是"Pygmalion"，可以记住人们在编辑器之中的操作，并自动提示类似的操作。</li>
+</ol>
+<p>但是发展到现在，很多PBD与PBE的工作都已经被机器学习所取代，不过FlashFill等系统仍然是PBE的成功应用。</p>
+<ol>
+<li>PBD,PBE通常面临着两大问题：如何找到符合要求的程序，以及如何确定找到的程序就是用户想要的（毕竟现实情况几乎总是under-specification）。机器学习通常着眼于后者：neural network因为其自身极具表达能力，可以尽力符合所有的input-output，而SVM则对空间进行了限制，以此排除那些不需要的解。</li>
+</ol>
+<p>PBE同样需要对于程序的空间进行限制，早期的PBE甚至只提供仅仅一列程序来供选择，当然现在随着搜索技术的逐渐完善，人们可以更高效的搜索更大的空间，以此来确保正确性。</p>
+<ol>
+<li>描述一个问题就需要一种适当的语言</li>
+</ol>
+<blockquote>
+<p>In general, describing a program requires a notation, a <em>programming language</em> that allows you to describe many different computations by composing individual syntactic elements each with well defined meaning.</p>
+</blockquote>
+<p>​   通常我们需要预定义一种更加narrow的DSL来限制程序的语法或语义，以及我们的搜索空间。同时我们也会希望这个DSL有着其他一些特性以便于我们分析，例如无副作用性，以及简洁（表达性强）</p>
+<ol>
+<li>
+<p>我们可以通过建立抽象语法树(Abstract syntax tree,AST)来表示一个程序，而AST又通常可以基于上下文无关文法来表示。</p>
+</li>
+<li>
+<p>对于inductive synthesis,可以采用以下几种搜索策略：</p>
+</li>
+<li>
+<p>explicit enumeration：采用top-down或者bottom-up的形式枚举并建立AST,并检查其是否满足observation。这里的关键在于如何剪枝来避免枚举出一些根本不可能的程序或者相同的程序。</p>
+</li>
+<li>
+<p>symbolic search：相较于前者希望自己找出符合要求的程序，这个更倾向于通过某种符号变换来得到程序，这里又分为Version Space Algebras以及Constraint Systems两大分支。</p>
+</li>
+<li>
+<p>explicit enumeration期望将程序用AST表示，并且这个AST是基于一种简单的DSL来实现，这样既方便与我们的枚举过程，又便于对于程序空间进行限制，以此找出更加简洁并符合要求的程序。</p>
+</li>
+</ol>
+<p>而symbolic search则希望将程序的空间通过参量化的方式来表达，不同的编码与表达方式可以轻易的对于程序的形式或长度等进行限制。</p>
+<ol>
+<li>另外定义程序空间时需要注意减少对称性，因为对称性会带来更多重复的程序。部分基于constraint或enumeration的合成方式会对此非常敏感。</li>
+</ol>
+<h4 id="lecture-3-bottom-up-explicit-search">Lecture 3: Bottom Up Explicit Search<a class="headerlink" href="#lecture-3-bottom-up-explicit-search" title="Permanent link">&para;</a></h4>
+<ol>
+<li>简易的bottom-up search</li>
+</ol>
+<p>我们可以轻易得到一个非常简单的bottom-up search算法，即从terminal(终止节点)出发，不断通过AST所规定的语法扩充程序，并消除重复程序（这里特指*observationally equivalent*，即只在给定输入上有相同输出）。知道找出第一个符合output的程序。</p>
+<div class="language-c highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="n">Synthesize</span><span class="p">(</span><span class="n">inputs</span><span class="p">,</span><span class="w"> </span><span class="n">outputs</span><span class="p">)</span><span class="o">:</span>
+</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="w"> </span><span class="nl">plist</span><span class="w"> </span><span class="p">:</span><span class="o">=</span><span class="w"> </span><span class="n">set</span><span class="w"> </span><span class="n">of</span><span class="w"> </span><span class="n">all</span><span class="w"> </span><span class="n">terminals</span>
+</span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a><span class="w"> </span><span class="k">while</span><span class="p">(</span><span class="nb">true</span><span class="p">)</span><span class="o">:</span>
+</span><span id="__span-0-4"><a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a><span class="w">     </span><span class="nl">plist</span><span class="w"> </span><span class="p">:</span><span class="o">=</span><span class="w"> </span><span class="n">grow</span><span class="p">(</span><span class="n">plist</span><span class="p">);</span>
+</span><span id="__span-0-5"><a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a><span class="w">     </span><span class="nl">plist</span><span class="w"> </span><span class="p">:</span><span class="o">=</span><span class="w"> </span><span class="n">elimEquvalents</span><span class="p">(</span><span class="n">plist</span><span class="p">,</span><span class="w"> </span><span class="n">inputs</span><span class="p">);</span>
+</span><span id="__span-0-6"><a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a><span class="w">     </span><span class="n">forall</span><span class="p">(</span><span class="w"> </span><span class="n">p</span><span class="w"> </span><span class="n">in</span><span class="w"> </span><span class="n">plist</span><span class="p">)</span>
+</span><span id="__span-0-7"><a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a><span class="w">         </span><span class="k">if</span><span class="p">(</span><span class="n">isCorrect</span><span class="p">(</span><span class="n">p</span><span class="p">,</span><span class="w"> </span><span class="n">inputs</span><span class="p">,</span><span class="w"> </span><span class="n">outputs</span><span class="p">))</span><span class="o">:</span><span class="w"> </span><span class="k">return</span><span class="w"> </span><span class="n">p</span><span class="p">;</span>
+</span></code></pre></div>
+<p>这里优点有：</p>
+<ol>
+<li>优先找出更短的程序，还可以通过为grow以及elimEquvalents函数添加启发式的方法来指导找出更符合我们需求的函数。</li>
+<li>对于程序的building block只有黑盒的要求，不用知道组成细节，只需要知道给定输入，程序的输出结果</li>
+<li>自动解决symmetry的问题（消除了observationally equivalent）</li>
+</ol>
+<p>但是也有缺点：</p>
+<ol>
+<li>难以估计运行效率</li>
+<li>试图合适的常数的枚举过程很困难</li>
+<li>
+<p>当目标语言是上下文相关的时候不适用</p>
+</li>
+<li>
+<p>Synthesis through Unification (STUN)</p>
+</li>
+</ol>
+<p>我们可以通过将两种次优的程序结合起来组成一个更好的程序。<img alt="3-1" src="3-1.png" />
+   例如这个算法，如果现有的算法无法满足所有的input-output,那么可以选择（1)挑选一个failed case,然后对于现有程序改进，让它满足这个case。（2)或者对于错误的case递归调用原算法，找出一个符合这些case的程序，随后通过分支等方式将这二者结合起来。</p>
+<p>这二者的选择可以基于启发式的方式，比如随机挑选一个case如果这个通过就执行(2),因为此时可能大部分case都已经通过了，原程序已经没有什么优化的空间了，反之则执行（1）。</p>
+<ol>
+<li>
+<p>top-level-branch：dsl语言先天提供了分支功能，可以在表达式之间进行选择。但是有时DSL语言本身不提供这一选项，所以只能用antiunify技术来实现，即在两个表达式之间尽量抽取出一样的部分（通过搜索的限制来实现），使得只有某个变量不一样，然后只需要对于这个变量进行选择就可以了。</p>
+</li>
+<li>
+<p>STUN可以看做将搜索过程拆分成了几个小部分，而这种拆分也可以作用于搜索的结构之上。比如一个搜索有目标A,B，我们可以先找出尽量符合目标A的所有程序，并要求这些程序至少包含目标B的超集。这样下一步就是从这些程序之中在搜索选出尽量符合B的程序。这样分层次的搜索即**Hierarchical Search**</p>
+</li>
+</ol>
+<h4 id="lecture-4-top-down-and-type-directed-explicit-search">Lecture 4: Top Down and Type directed Explicit Search<a class="headerlink" href="#lecture-4-top-down-and-type-directed-explicit-search" title="Permanent link">&para;</a></h4>
+<ol>
+<li>除了自底向上，我们还可以通过自顶向下的方式来实现搜索，这通常是从一个简单函数开始，其中有很多暂时未知的"洞"，我们需要不断填充这些洞并使得程序逐渐符合要求。这种合成方法对于函数式的编程常常有奇效。</li>
+</ol>
+<p>除此之外，还可以在搜索的过程之中引入类型系统来进一步排除不符合要求的程序。</p>
+<ol>
+<li>下面是一个简单的语言</li>
+</ol>
+<p><img alt="4-1" src="4-1.png" /></p>
+<p>我们希望在其上合成出一个程序，其读入一个列表的列表，并对于其中的每一个列表，消除掉其中的最小元素，这可以形式化的被表示为</p>
+<p><img alt="4-2" src="4-2.png" /></p>
+<ol>
+<li>我们可以应用类型系统来对于搜索分支进行检查，例如</li>
+</ol>
+<p><img alt="4-3" src="4-3.png" /></p>
+<p>当我们发现某种程序的输出一定不可能为[[Int]]类型的话，就可以将这个分支给剪掉，否则就继续展开subexpression直到找到合适的程序。</p>
+<ol>
+<li>除了应用类型系统之外，还可以添加各种先验知识来辅助剪枝或者推断，比如map要求input和output具有相同的长度。</li>
+</ol>
+<p>类型系统还可以为我们进一步提供信息，例如我们在第一步选择了filter,那么可以进一步知道其input和output的元素都是[Int]类型的这就可以知道我们进一步利用类型系统剪枝。</p>
+<h4 id="lecture-5-inductive-synthesis-with-stochastic-search">Lecture 5: Inductive Synthesis with Stochastic Search<a class="headerlink" href="#lecture-5-inductive-synthesis-with-stochastic-search" title="Permanent link">&para;</a></h4>
+<ol>
+<li>
+<p>这一节的主题是通过著名的Markov Chain Monte Carlo (MCMC)方法来指导搜索的过程</p>
+</li>
+<li>
+<p>首先假设马尔科夫状态转移只依赖于上一步的结果，那么我们就可以写出一个状态转移矩阵K，同时假设这个矩阵K满足一些"technical requirments"（例如要求可以在任意两个状态之间转移）,就可以求出一个stationary distribution <span class="arithmatex">\(\pi\)</span>, 使得从任意初始状态出发，经过足够长的时间之后，到达状态x的概率都是<span class="arithmatex">\(\pi(x)\)</span>。</p>
+</li>
+<li>
+<p>应用上述原理，我们尝试找出一个状态转移矩阵K，使得其stationary distribution <span class="arithmatex">\(\pi\)</span>满足更优的程序权重更高。而找出这样的矩阵K通常可以采用Metropolis-Hastings（HM）算法。</p>
+</li>
+<li>
+<p>其思路为首先从一个初始矩阵J出发，（J是一个状态转移矩阵并且<span class="arithmatex">\(J(x,y),J(y,x)\)</span>要么同时为零，要么同时为正）。
+   然后可以定义<span class="arithmatex">\(A(x, y)=\frac{\pi(y) * J(y, x)}{\pi(x) * J(x, y)}\)</span>，由此定义状态转移矩阵为：
+   $$
+   K(x, y)=\begin{cases}
+   J(x, y) &amp; \text { if } x \neq y \text { and } A(x, y) \geq 1 \\
+   J(x, y) * A(x, y) &amp; \text { if } x \neq y \text { and } A(x, y)&lt;1 \\
+   J(x, y)+\sum_{z: A(x, z)&lt;1} J(x, z)(1-A(x, z)) &amp; \text { if } x=y
+   \end{cases}
+   $$</p>
+</li>
+</ol>
+<p>显然K也是一个状态转移矩阵，并且我们可以对<span class="arithmatex">\(A(x,y)\)</span>分类讨论得出重要性质：<span class="arithmatex">\(\pi(x,y)\cdot K(x,y)=\pi(y)\cdot K(y,x)\)</span>，由此可以算出<span class="arithmatex">\(\pi\cdot K=\pi\)</span>,即我们得到了desired stationary distribution。</p>
+<ol>
+<li>
+<p>在实际之中，可以取J为uniform distribution，即在任意两个状态之间的转换都有着相同的概率。但是选择合适的J对于算法的速度有着很大的影响。而实际上困难之处在于如何为程序找到合理的<span class="arithmatex">\(\pi\)</span>, 我们希望首先不能出现0，以免出现除0的问题，其次这个<span class="arithmatex">\(\pi\)</span>能够使得输出越靠近标准输出的程序，则其概率就越大。</p>
+</li>
+<li>
+<p>下面通过一个Schkufza, Sharma and Aiken系统来举例。这是一个系统，目的是给定一个candidate program,合成总长度有限制的汇编代码使得其输出一致并且效率更高。</p>
+</li>
+<li>
+<p>proposal distribution J:</p>
+<p>引入五个参数，分别表示对于一个程序进行各种操作的概率</p>
+<p><img alt="5-1" src="5-1.png" /></p>
+<p>依次为基础，给定某个程序，就可以根据以上概率随机选择一种变换，并随机生成一个合法的程序，因此就得到了任意两个程序之间转换的概率。</p>
+</li>
+<li>
+<p>stationary distribution:</p>
+<p>R是candidate program，令eq, perf为当前程序T与R相比而计算出的正确性函数与效率函数, 并引入权重参数<span class="arithmatex">\(\beta\)</span>以及归一化因子Z，可以定义以下权重公式：</p>
+<p><span class="arithmatex">\(\pi(\mathcal{T})=\frac{1}{Z}(\exp (-\beta(e q(\mathcal{R}, \mathcal{T})+\operatorname{perf}(\mathcal{R}, \mathcal{T}))))\)</span></p>
+</li>
+<li>
+<p>Additional embellishments：</p>
+<p>可以将整个搜索分为两个phase来辅助搜索，我们希望搜索进行在一个cluster上，其中的程序输出正确但是与原程序非常不同。但是转移到这个cluster的path较少，因此我们首先忽视perf权重，使得更加容易地转移到一些性能大相径庭的程序上。然后再引入这个参数，在我们的理想cluster上搜索高性能程序。</p>
+</li>
+<li>
+<p>我们还可以举另外一个例子来说明MH方法对于大搜索空间问题的应用，例如直接进行在AST树上应用MH方法。</p>
+</li>
+<li>
+<p>定义proposal distribution如下：对于程序e，在它的AST树上随机找到一个节点v，然后记<span class="arithmatex">\(e_v\)</span>为这颗AST树从v处截断，以v为根的子树。然后将<span class="arithmatex">\(e_v\)</span>随机更换为一个相同大小的树，生成另外一个程序<span class="arithmatex">\(e'\)</span>对应的AST树，这个随机选取过程的概率就是e转移到<span class="arithmatex">\(e'\)</span>的概率。</p>
+</li>
+<li>
+<p>然后定义stationary distribution为<span class="arithmatex">\(\pi(e)=\frac{1}{Z} \exp (-\beta C(e))\)</span>,其中函数C表述当前程序与所要求的input-output有多少个是不一样的。这样就可以应用MH方法进行MCMC搜索了。</p>
+</li>
+<li>
+<p>但是注意到这个方法实际上效果不尽如人意，原因可能有：</p>
+<ol>
+<li>函数C对于程序正确性的估计比较粗糙，可能有个程序在所有input之上都只差一点，但优先度仍然很低。</li>
+<li>proposal distribution的程序转化，一次就替换一整棵子树，跨度过大了，会导致搜索的精度不够，容易跨过最优解。</li>
+</ol>
+</li>
+</ol>
+<h4 id="lecture-6-version-space-algebras-from-smartedit-to-flashfill">Lecture 6: Version Space Algebras from SMARTedit to FlashFill<a class="headerlink" href="#lecture-6-version-space-algebras-from-smartedit-to-flashfill" title="Permanent link">&para;</a></h4>
+<ol>
+<li>
+<p>从这里开始，就要尝试着接触基于***symbolic* representations**来进行的搜索了。这种方法希望通过符号表示来对于搜索空间进行高效的限制与表达，并且可以一次排除掉一大堆不可能的程序。之前提到过的top-down方法之中我们首先对于谓词用hole来替代，这实际上就是一种symbolic representation的思想。</p>
+</li>
+<li>
+<p>Version Space:
+   给定input与output,所有从定义域映射到值域的函数就是hypothesis space,而其中符合特定input-output对的要求的就是version space</p>
+</li>
+<li>
+<p>我们可以通过格来表示version space,例如定义<span class="arithmatex">\(lub:=\vee,glb:=\wedge\)</span>为格上的基本运算，<span class="arithmatex">\([p,q]:=\{x|p\leq x\leq q\}\)</span>为由p,q之间的一段空间。如果hypothesis space 是一个格并且version space 可以被表示为<span class="arithmatex">\([S,G]\)</span>,我们就可以说这个version space是*Boundary Set Representable*的，其中S通常代表最 secific的函数而G则是最general的。
+   同时可以定义<span class="arithmatex">\([al,ah]∩[bl,bh]=[lub(al,bl),glb(ah,bh)]\)</span></p>
+</li>
+<li>
+<p>version space algrbra
+   我们可以在version space的基础之上进行一系列的操作与变换，例如union操作可以将两个vesion space并到一起，而join操作则定义为
+   $$
+   VS_{H1,D1}⋈VS_{H2,D2}={(h1,h2)|h1∈VS_{H1,D1},h2∈VS_{H2,D2},C((h1,h2),D)}\\
+   where\;D={(d<sup>i_1,d</sup>i_2)}\; given D1={d<sup>i_1} and D2={d</sup>i_2}.
+   $$</p>
+</li>
+</ol>
+<p>其中C通常用于一致性检测，选择哪一些product是需要的。
+   这个操作通常可以表示将一系列操作序列聚合在一起。
+   在version space algrbra这里面，我们可以也定义一些AST树，但是这些并不再表示我们需要搜索的函数，而是各种representation的变换。</p>
+<ol>
+<li>
+<p>FlashFill原理</p>
+</li>
+<li>
+<p>text manipulation语言，flashfill定义了自己的语言：
+      <img alt="6-1" src="6-1.png" />
+      同时还引入了STUN的思想，提供了表达控制的语句
+      <img alt="6-2" src="6-2.png" />
+      此处switch表示找到第一个值为真的<span class="arithmatex">\(b_i\)</span>，并输出对应的<span class="arithmatex">\(e_i\)</span>，而match 则表示<span class="arithmatex">\(v_i\)</span>之中是否有至少k个符合模式r的子串。通过这些信息我们就可以提供top-level-branch。</p>
+</li>
+<li>
+<p>e-graph:
+      e-garph试图将指数级的程序空间用一个压缩图来表示，使得有着相同效果的表达式被压缩在一起，并且从图的起点走到终点就可以对应着一个完整的程序。
+      <img alt="6-3" src="6-3.png" />
+      例如在上图之中，我们想要学习到如何从Rob Miller(图中未显示)这个字符串转移到Mr. Rob这个串，然后我们可以首先学习到一些简单的atomic expression,例如<span class="arithmatex">\(\gamma_1='M',\gamma_{50}=SubStr(Pos('',Word,1),Pos(Word,'',1))\)</span>表示找到第1个单词Rob，它们分别能够成功生成目标串的一部分，我们只需要找到一条从0-7的path，就可以将不同的表达式concatenate起来，生成一个符合要求的函数（不一定是最终要的，但是符合这一个例子的要求）。进一步的我们可以用union操作将相同效果的操作<span class="arithmatex">\(\gamma_1,\gamma_8\)</span>给压缩在一起。
+      值得一提的是atomic expression也可以由loop（见语言的定义），这时我们一般通过尽力寻找loop之中各个表达式的共同之处，然后使用antiunification来将其合并成一个更加通用的表达式。</p>
+</li>
+<li>
+<p>为何从符合单个样例的程序合成一个普适性的程序，我们最重要的就是如何将两个这样的程序合并起来，
+      在这里可以采取之前提到的join方法，即对两个e-graph做一个积图</p>
+<p><span class="arithmatex">\(<span class="arithmatex">\(G_1=\{N_1,E_1\},G_2=\{N_2,E_2\},E_i=\{(s_i,d_i,\gamma_i)\},\\\\
+  \text{E是边的集合，表示图中两个点s,d之间对应的表达式}\\\\
+  \begin{aligned}
+  G_1 \cap G_2 &amp;=(N, G) \text { where } \\
+  N &amp;=N_1 \times N_2 \\
+  G &amp;=\left\{\left(\left(s_1^t, s_2^v\right),\left(d_1^t, d_2^v\right), \gamma_1^t \cup \gamma_2^v\right) \mid\left(s_1^t, d_1^t, \gamma_1^t\right) \in E_1 \wedge\left(s_2^v, d_2^v, \gamma_2^v\right) \in E_2\right\}
+  \end{aligned}\)</span>\)</span></p>
+<p>例如下图成功由两个图之中提取出了一个更加通用的表达式</p>
+<p><img alt="6-4" src="6-4.png" /></p>
+<p>给定足够多的样例，就可以学习到目标函数。</p>
+</li>
+</ol>
+<h4 id="lecture-7-constraint-based-synthesis-with-sketch">Lecture 7: Constraint-based Synthesis with Sketch.<a class="headerlink" href="#lecture-7-constraint-based-synthesis-with-sketch" title="Permanent link">&para;</a></h4>
+<p>在这一节之中，通过sketch为例子，说明了利用参数化的程序来让整个程序合成过程变得更加"symbolic"。</p>
+<ol>
+<li>
+<p>为了达到这一目标，我们由三个需要解决的问题，即如何定义参数化的程序用以表示整个空间，如何表示对于参数化程序的限制关系，以及如何高效的求解这样的限制关系。</p>
+</li>
+<li>
+<p>目前有两种较为出名的方法来定义参数化程序，一是syGus solver，在这里由用户来提供一系列的程序组件，他们通常是以上下文无关文法来编写，由solver来找到如何构建出想要的程序。</p>
+</li>
+<li>
+<p>另外一种方法是Sketch,这是一门涉及完备的编程语言， <a href="http://people.csail.mit.edu/asolar/manual.pdf">Sketch Manual</a> ,其和其他编程语言最主要不同是可以用？？表示未知，让程序自行推断。我们可以将??嵌入到某一段程序之中，作为generator function</p>
+</li>
+</ol>
+<div class="language-c highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="n">generator</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">legen</span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">i</span><span class="p">,</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">j</span><span class="p">){</span>
+</span><span id="__span-1-2"><a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a><span class="w"> </span><span class="k">return</span><span class="w"> </span><span class="o">??*</span><span class="n">i</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="o">??*</span><span class="n">j</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="o">??</span><span class="p">;</span>
+</span><span id="__span-1-3"><a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a><span class="p">}</span>
+</span></code></pre></div>
+<p>然后通过harness测试来对于函数进行限制</p>
+<div class="language-c highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="n">harness</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="n">main</span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">x</span><span class="p">,</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">y</span><span class="p">){</span>
+</span><span id="__span-2-2"><a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a><span class="w"> </span><span class="n">assert</span><span class="w"> </span><span class="nf">legen</span><span class="p">(</span><span class="n">x</span><span class="p">,</span><span class="w"> </span><span class="n">y</span><span class="p">)</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="mi">2</span><span class="o">*</span><span class="n">x</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="mi">3</span><span class="p">;</span>
+</span><span id="__span-2-3"><a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a><span class="w"> </span><span class="n">assert</span><span class="w"> </span><span class="nf">legen</span><span class="p">(</span><span class="n">x</span><span class="p">,</span><span class="w"> </span><span class="n">y</span><span class="p">)</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="mi">3</span><span class="o">*</span><span class="n">x</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="mi">2</span><span class="o">*</span><span class="n">y</span><span class="p">;</span>
+</span><span id="__span-2-4"><a id="__codelineno-2-4" name="__codelineno-2-4" href="#__codelineno-2-4"></a><span class="p">}</span>
+</span></code></pre></div>
+<p>这样solver便会对应的生成出相应的常数填入？?之中</p>
+<div class="language-c highlight"><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="kt">void</span><span class="w"> </span><span class="nf">_main</span><span class="w"> </span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">x</span><span class="p">,</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">y</span><span class="p">){</span>
+</span><span id="__span-3-2"><a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a><span class="w"> </span><span class="n">assert</span><span class="w"> </span><span class="p">((((</span><span class="mi">2</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">x</span><span class="p">)</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="p">(</span><span class="mi">0</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">y</span><span class="p">))</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="mi">3</span><span class="p">)</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="p">((</span><span class="mi">2</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">x</span><span class="p">)</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="mi">3</span><span class="p">));</span>
+</span><span id="__span-3-3"><a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a><span class="w"> </span><span class="n">assert</span><span class="w"> </span><span class="p">(((</span><span class="mi">3</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">x</span><span class="p">)</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="p">(</span><span class="mi">2</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">y</span><span class="p">))</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="p">((</span><span class="mi">3</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">x</span><span class="p">)</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="p">(</span><span class="mi">2</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">y</span><span class="p">)));</span>
+</span><span id="__span-3-4"><a id="__codelineno-3-4" name="__codelineno-3-4" href="#__codelineno-3-4"></a><span class="p">}</span>
+</span></code></pre></div>
+<p>除了这个简单的例子之外，generator function也可以被用于更多高级的程序操作之中，例如递归调用，或者作为参数传递给另外的程序使用。</p>
+<ol>
+<li>由此，当用户利用sketch编写完成了一段程序之后，我们就可以利用所有的??作为参数来对于程序空间进行定义，即所有的??取定之后，自然也就生成了一段对应的满足harness                                                                                                                                                                                                                                                                                                                                                                                                                                                      的目标程序。</li>
+</ol>
+<p>通常可以用<span class="arithmatex">\(\phi\)</span>来表示所有参数的取值，理想情况下<span class="arithmatex">\(\phi\)</span>可以看做一张表格，每个??对应着一个常数，但是由于generator可以被反复递归调用，并且sketch支持不同的上下文对应生成不同的??值，因此<span class="arithmatex">\(\phi\)</span>还必须要考虑到上下文的影响，因此记上下文为g,<span class="arithmatex">\(\phi\)</span>可以定义为<span class="arithmatex">\(\phi(g_i,??_j)\)</span>表示在某个上下文之下某个??的取值。</p>
+<p>由于可能有一个generator调用另外一个generator,因此上下文可能出现嵌套，例如<span class="arithmatex">\(\phi(g_ig_j,??_k)\)</span>。但这样下去有可能出现无限嵌套的情况，因此sketch对于嵌套调用的深度作出了限制，使得<span class="arithmatex">\(\phi\)</span>的定义域再次回归到有限的状态之中。</p>
+<h4 id="lecture-8-constraint-based-inductive-synthesis-and-sat">Lecture 8: Constraint based inductive synthesis and SAT<a class="headerlink" href="#lecture-8-constraint-based-inductive-synthesis-and-sat" title="Permanent link">&para;</a></h4>
+<ol>
+<li>
+<p>为了解决从一段用户输入程序到最终输出的问题,sketch大致采取如下的策略来生成限制并且求解:<img alt="8-1" src="8-1.png" /></p>
+</li>
+<li>
+<p>首先我们需要定义一段程序的语义，可以定义<span class="arithmatex">\(A[expr]:\Sigma\rightarrow value\)</span>表示给定一个状态，可以将其映射到某个value，类似的<span class="arithmatex">\(C[cmd]:\Sigma\rightarrow\Sigma\)</span>表示给定一个状态，这回将其映射到另外一个状态之中。每个状态就是当前时刻程序之中所有变量名到其对应的值的映射关系。</p>
+</li>
+<li>
+<p>sketch的符号执行与之稍有不同，因为hole的存在，我们只能得到??参数的限制而非真实值。此时上式之中的value应该被替换为从参数取值<span class="arithmatex">\(\phi\)</span>到整数的映射。例如<img alt="8-2" src="8-2.png" /></p>
+</li>
+</ol>
+<p>类似的，对于cmd的映射也需要维护所有可行的<span class="arithmatex">\(\phi\)</span>函数</p>
+<p><img alt="10-3" src="10-3.png" /></p>
+<ol>
+<li>我们可以把一个集合表示为一个谓词，例如<span class="arithmatex">\(\Phi:=P_\Phi(\phi)\)</span>表示某个<span class="arithmatex">\(\phi\)</span>是否在这个集合之中，由此可以通过谓词来表示程序之中各个节点之中所有可能的参数取值，并且利用<span class="arithmatex">\(P_\Phi(\phi)\wedge f(\phi)\)</span>就可以引入新的限制关系，<span class="arithmatex">\(P_{\Phi_1}(\phi)\vee P_{\Phi_2}(\phi)\)</span>就可以表达or这样的逻辑关系。</li>
+<li>我们可以将一个sketch程序的限制关系如下来表示</li>
+</ol>
+<p><img alt="8-4" src="8-4.png" /></p>
+<p>通过之前所述的谓词运算，就可以得到一个完整的限制关系以供约束求解。同时，我们可以将这个结构进行简化，例如结构哈希（将一个限制关系树之中结构完全相同的子树合并为一个节点，以供后续使用）以及代数简化（在之前的基础之上识别出代数等价的表达式也合并为一个节点)。这样可以将树重新组织为DAG，提高了中间变量的可复用性，使得运算与求解更加简洁。</p>
+<h4 id="lecture-9-solving-constraints">Lecture 9: Solving Constraints.<a class="headerlink" href="#lecture-9-solving-constraints" title="Permanent link">&para;</a></h4>
+<ol>
+<li>sketch主要利用将限制转化为conjunction normal form(CNF,合取范式)，并利用SAT来求解。一个布尔表达式可以很轻松的转换为CNF，因为我们可以首先将这个布尔表达式拆分为若干个<span class="arithmatex">\(x_1\wedge x_2\cdots x_i\Rightarrow x_j\)</span>，其中<span class="arithmatex">\(x_k\)</span>是字面量，表示某个变量或者其反。然后利用<span class="arithmatex">\(a\Rightarrow b\)</span>等价于<span class="arithmatex">\(\neg a\vee b\)</span>将其转化为若干析取范式的和取式。</li>
+</ol>
+<p><img alt="9-1" src="9-1.png" /></p>
+<ol>
+<li>sketch将所有变量的可能取值通过one-hot来编码，即用一个list来表示某个变量的是所有可能取值以及其indicator，可以定义基本运算的编码转换规则，例如下图所示</li>
+</ol>
+<p><img alt="9-2" src="9-2.png" /></p>
+<p>这样做之后，就可以用之前所述的布尔运算转为CNF来将整个程序转化为一个SAT求解问题。求解完毕之后逐层利用indicator就可以倒推哪些变量的取值是可行的。</p>
+<ol>
+<li>现代的SAT求解器大多数都是基于DPLL算法来实现的，这个算法的核心是当我们为某个变量赋值之后，需要检查所有和这个变量相关的析取表达式，如果某个表达式已经只剩最后一个变量没有赋值，并且前面的所有字面量都已经为否，那么就可以推出最后一个变量的值。</li>
+</ol>
+<p>但是其他更多更高效的求解器还引入了其他的优化方法，例如（1）当发现冲突之后，寻找到某个导致冲突的从句，并且将其加入到所有要求满足的析取范式之中，eg:CDCL；（2）<em>two literal watching</em>：为每个析取表达式维护两个观察字面量，如果这两个字面量都还没修改，那么我们就不必检查这个析取表达式，反之判断是否还有其他字面量没被赋值（并更换观察字面量）或者推导出最后一个变量的赋值；（3）为每个变量维护一个value，表达其在冲突之中的出现次数（这个value也会随着时间衰减），并据此选择接下来将要赋值的变量。</p>
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    <script id="__config" type="application/json">{"base": "../..", "features": [], "search": "../../assets/javascripts/workers/search.f886a092.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.cd18aaf1.min.js"></script>
+      
+        <script src="../../javascripts/katex.js"></script>
+      
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.7/katex.min.js"></script>
+      
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.7/contrib/auto-render.min.js"></script>
+      
+    
+  </body>
+</html>
