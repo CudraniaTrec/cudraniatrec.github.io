@@ -578,9 +578,9 @@
 <h2 id="_1">基本环境<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h2>
 <ol>
 <li>系统：Linux（Win，MAC 类似）</li>
-<li>Conda：Miniconda
-miniconda 是anaconda的简化版，移除了一些自带的包，但同时安装配置更加轻量化，所有命令几乎一致。</li>
+<li>Conda：Miniconda</li>
 </ol>
+<p>miniconda 是anaconda的简化版，移除了一些自带的包，但同时安装配置更加轻量化，所有命令几乎一致。</p>
 <h2 id="miniconda">miniconda安装<a class="headerlink" href="#miniconda" title="Permanent link">&para;</a></h2>
 <p>在服务器上直接运行
 <div class="language-shell highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="c1"># step 1: 获取安装shell脚本文件</span>
@@ -592,14 +592,16 @@ miniconda 是anaconda的简化版，移除了一些自带的包，但同时安�
 </span><span id="__span-0-7"><a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a><span class="c1"># step 3: 激活</span>
 </span><span id="__span-0-8"><a id="__codelineno-0-8" name="__codelineno-0-8" href="#__codelineno-0-8"></a><span class="nb">source</span><span class="w"> </span>~/.bashrc
 </span></code></pre></div>
-参考<a href="https://blog.csdn.net/qq_41795565/article/details/114181048">miniconda安装</a>。
-可以一路回车，但是注意其中第二步的时候有许多配置可以自行修改，比如安装的地址（放到一个空间较多的盘）以及是否自动修改bashrc（建议选是，否则还要自己手动改bashrc，添加环境变量）</p>
+参考<a href="https://blog.csdn.net/qq_41795565/article/details/114181048">miniconda安装</a>。</p>
+<p>可以一路回车，但是注意其中第二步的时候有许多配置可以自行修改，比如安装的地址（放到一个空间较多的盘）以及是否自动修改bashrc（建议选是，否则还要自己手动改bashrc，添加环境变量）</p>
 <h2 id="conda">conda配置<a class="headerlink" href="#conda" title="Permanent link">&para;</a></h2>
-<p>conda 的配置文件一般在<code>~/.condarc</code>，可以手动修改可以通过<code>conda config ...</code>修改。
-其中比较重要的有三个配置：
-1. envs_dirs：所有虚拟环境存放的目录
-2. pkgs_dirs：所有python包存放的目录（conda 会对包统一管理，如果当前 pkgs_dirs里面已经有某个包了再次<code>conda install</code>的时候基本不会重新下载）
-3. channels：下载包时从哪个频道下载，可以添加国内的源</p>
+<p>conda 的配置文件一般在<code>~/.condarc</code>，可以手动修改可以通过<code>conda config ...</code>修改。</p>
+<p>其中比较重要的有三个配置：</p>
+<ol>
+<li>envs_dirs：所有虚拟环境存放的目录</li>
+<li>pkgs_dirs：所有python包存放的目录（conda 会对包统一管理，如果当前 pkgs_dirs里面已经有某个包了再次<code>conda install</code>的时候基本不会重新下载）</li>
+<li>channels：下载包时从哪个频道下载，可以添加国内的源</li>
+</ol>
 <p>例如输入类似下面的代码完成配置：
 <div class="language-shell highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="c1">#添加清华源</span>
 </span><span id="__span-1-2"><a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a>conda<span class="w"> </span>config<span class="w"> </span>--add<span class="w"> </span>channels<span class="w"> </span>https://mirrors.tuna.tsinghua.edu.cn/anaconda/pkgs/free/
@@ -642,8 +644,8 @@ miniconda 是anaconda的简化版，移除了一些自带的包，但同时安�
 </span><span id="__span-2-21"><a id="__codelineno-2-21" name="__codelineno-2-21" href="#__codelineno-2-21"></a><span class="c1">#查看所有的包</span>
 </span><span id="__span-2-22"><a id="__codelineno-2-22" name="__codelineno-2-22" href="#__codelineno-2-22"></a>conda<span class="w"> </span>list
 </span></code></pre></div>
-注意安装包建议使用<code>conda install</code>，这样的包可以被 conda 统一管理与重复利用，pip安装的包只能用于当前环境。
-更多 conda 命令参见<a href="https://docs.conda.io/projects/conda/en/latest/commands/index.html">conda</a></p>
+注意安装包建议使用<code>conda install</code>，这样的包可以被 conda 统一管理与重复利用，pip安装的包只能用于当前环境。</p>
+<p>更多 conda 命令参见<a href="https://docs.conda.io/projects/conda/en/latest/commands/index.html">conda</a></p>
 
 
 

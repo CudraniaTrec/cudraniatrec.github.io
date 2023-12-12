@@ -646,9 +646,9 @@
 <li>python版本：3.11</li>
 <li>cuda版本：12.3</li>
 <li>cudnn版本：8.9.6.50-1+cuda12.2</li>
-<li>pytorch版本： py3.11_cuda12.1_cudnn8.9.2_0
-不难发现这里面还有许多小版本是没完全对上的，<code>pytorch &lt; cudnn &lt; cuda</code> 版本（因为我都是安装的官网最新版，有些包更新不及时，希望以后不要出事）</li>
+<li>pytorch版本： py3.11_cuda12.1_cudnn8.9.2_0</li>
 </ul>
+<p>不难发现这里面还有许多小版本是没完全对上的，<code>pytorch &lt; cudnn &lt; cuda</code> 版本（因为我都是安装的官网最新版，有些包更新不及时，希望以后不要出事）</p>
 <h2 id="_2">基本环境<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h2>
 <p>win11+wsl2+ubuntu+python+anaconda安装不再赘述</p>
 <h2 id="_3">开始安装<a class="headerlink" href="#_3" title="Permanent link">&para;</a></h2>
@@ -675,11 +675,11 @@
 确认已经安装好了cuda编译环境以及获取相应版本信息。</p>
 <p>参考了<a href="https://zhuanlan.zhihu.com/p/670666871">CUDA on WSL2安装记录 - 知乎 (zhihu.com)</a></p>
 <h3 id="cudnn">cuDNN<a class="headerlink" href="#cudnn" title="Permanent link">&para;</a></h3>
-<p>cudnn是一个深度神经网络的加速库，最好也安装。
-要从网上下载安装包可以去<a href="https://developer.nvidia.com/rdp/cudnn-archive">cuDNN Archive | NVIDIA Developer</a>下载（可能要先注册登录），例如我选择：
+<p>cudnn是一个深度神经网络的加速库，最好也安装。</p>
+<p>要从网上下载安装包可以去<a href="https://developer.nvidia.com/rdp/cudnn-archive">cuDNN Archive | NVIDIA Developer</a>下载（可能要先注册登录），例如我选择：
 <img alt="" src="../assets/Pasted%20image%2020231211221944.png" />
-先用本机浏览器下载到本地，然后再用<code>cp</code>命令拷贝到wsl里的工作目录来安装。
-具体安装流程参考<a href="https://docs.nvidia.com/deeplearning/cudnn/install-guide/index.html#installlinux-deb">Installation Guide - NVIDIA Docs</a>比如我的命令是：</p>
+先用本机浏览器下载到本地，然后再用<code>cp</code>命令拷贝到wsl里的工作目录来安装。</p>
+<p>具体安装流程参考<a href="https://docs.nvidia.com/deeplearning/cudnn/install-guide/index.html#installlinux-deb">Installation Guide - NVIDIA Docs</a>比如我的命令是：</p>
 <p><div class="language-shell highlight"><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a>cp<span class="w"> </span>/mnt/d/wsl/cudnn-local-repo-ubuntu2204-8.9.6.50_1.0-1_amd64.deb<span class="w"> </span>cudnn.deb
 </span><span id="__span-4-2"><a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a>sudo<span class="w"> </span>dpkg<span class="w"> </span>-i<span class="w"> </span>cudnn.deb
 </span><span id="__span-4-3"><a id="__codelineno-4-3" name="__codelineno-4-3" href="#__codelineno-4-3"></a>sudo<span class="w"> </span>cp<span class="w"> </span>/var/cudnn-local-repo-ubuntu2204-8.9.6.50/cudnn-local-1998375D-keyring.gpg<span class="w"> </span>/usr/share/keyrings/
