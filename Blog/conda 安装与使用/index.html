@@ -10,11 +10,13 @@
         <meta name="author" content="ZhechongHuang">
       
       
-        <link rel="canonical" href="https://cudraniatrec.github.io/Blog/Linux%28wsl2%29%2Bcuda%2Bcudnn%2Bpytorch%E5%AE%89%E8%A3%85/">
+        <link rel="canonical" href="https://cudraniatrec.github.io/Blog/conda%20%E5%AE%89%E8%A3%85%E4%B8%8E%E4%BD%BF%E7%94%A8/">
       
       
-        <link rel="prev" href="../conda%20%E5%AE%89%E8%A3%85%E4%B8%8E%E4%BD%BF%E7%94%A8/">
+        <link rel="prev" href="../ProgramSynthesis-unit2/">
       
+      
+        <link rel="next" href="../Linux%28wsl2%29%2Bcuda%2Bcudnn%2Bpytorch%E5%AE%89%E8%A3%85/">
       
       
       <link rel="icon" href="../../assets/images/favicon.png">
@@ -22,7 +24,7 @@
     
     
       
-        <title>cuda+cudnn+pytorch install - ZhechongHuang's Homepage</title>
+        <title>conda install - ZhechongHuang's Homepage</title>
       
     
     
@@ -115,7 +117,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              cuda+cudnn+pytorch install
+              conda install
             
           </span>
         </div>
@@ -376,27 +378,6 @@
                 
   
   
-  
-  
-    <li class="md-nav__item">
-      <a href="../conda%20%E5%AE%89%E8%A3%85%E4%B8%8E%E4%BD%BF%E7%94%A8/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    conda install
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
     
   
   
@@ -411,7 +392,7 @@
           
   
   <span class="md-ellipsis">
-    cuda+cudnn+pytorch install
+    conda install
   </span>
   
 
@@ -422,7 +403,7 @@
         
   
   <span class="md-ellipsis">
-    cuda+cudnn+pytorch install
+    conda install
   </span>
   
 
@@ -444,15 +425,6 @@
         <li class="md-nav__item">
   <a href="#_1" class="md-nav__link">
     <span class="md-ellipsis">
-      整体概览
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#_2" class="md-nav__link">
-    <span class="md-ellipsis">
       基本环境
     </span>
   </a>
@@ -460,53 +432,29 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#_3" class="md-nav__link">
+  <a href="#miniconda" class="md-nav__link">
     <span class="md-ellipsis">
-      开始安装
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="开始安装">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#cuda" class="md-nav__link">
-    <span class="md-ellipsis">
-      CUDA
+      miniconda安装
     </span>
   </a>
   
 </li>
-        
-          <li class="md-nav__item">
-  <a href="#cudnn" class="md-nav__link">
+      
+        <li class="md-nav__item">
+  <a href="#conda" class="md-nav__link">
     <span class="md-ellipsis">
-      cuDNN
+      conda配置
     </span>
   </a>
   
 </li>
-        
-          <li class="md-nav__item">
-  <a href="#pytorch" class="md-nav__link">
+      
+        <li class="md-nav__item">
+  <a href="#conda_1" class="md-nav__link">
     <span class="md-ellipsis">
-      pytorch
+      conda使用
     </span>
   </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#_4" class="md-nav__link">
-    <span class="md-ellipsis">
-      测试
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
   
 </li>
       
@@ -514,6 +462,27 @@
   
 </nav>
       
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Linux%28wsl2%29%2Bcuda%2Bcudnn%2Bpytorch%E5%AE%89%E8%A3%85/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    cuda+cudnn+pytorch install
+  </span>
+  
+
+      </a>
     </li>
   
 
@@ -553,15 +522,6 @@
         <li class="md-nav__item">
   <a href="#_1" class="md-nav__link">
     <span class="md-ellipsis">
-      整体概览
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#_2" class="md-nav__link">
-    <span class="md-ellipsis">
       基本环境
     </span>
   </a>
@@ -569,53 +529,29 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#_3" class="md-nav__link">
+  <a href="#miniconda" class="md-nav__link">
     <span class="md-ellipsis">
-      开始安装
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="开始安装">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#cuda" class="md-nav__link">
-    <span class="md-ellipsis">
-      CUDA
+      miniconda安装
     </span>
   </a>
   
 </li>
-        
-          <li class="md-nav__item">
-  <a href="#cudnn" class="md-nav__link">
+      
+        <li class="md-nav__item">
+  <a href="#conda" class="md-nav__link">
     <span class="md-ellipsis">
-      cuDNN
+      conda配置
     </span>
   </a>
   
 </li>
-        
-          <li class="md-nav__item">
-  <a href="#pytorch" class="md-nav__link">
+      
+        <li class="md-nav__item">
+  <a href="#conda_1" class="md-nav__link">
     <span class="md-ellipsis">
-      pytorch
+      conda使用
     </span>
   </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#_4" class="md-nav__link">
-    <span class="md-ellipsis">
-      测试
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
   
 </li>
       
@@ -637,86 +573,77 @@
   
 
 
-  <h1>cuda+cudnn+pytorch install</h1>
+  <h1>conda install</h1>
 
-<h2 id="_1">整体概览<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h2>
-<ul>
-<li>时间：2023.12</li>
-<li>wsl2版本：Ubuntu22.04</li>
-<li>python版本：3.11</li>
-<li>cuda版本：12.3</li>
-<li>cudnn版本：8.9.6.50-1+cuda12.2</li>
-<li>pytorch版本： py3.11_cuda12.1_cudnn8.9.2_0
-不难发现这里面还有许多小版本是没完全对上的，<code>pytorch &lt; cudnn &lt; cuda</code> 版本（因为我都是安装的官网最新版，有些包更新不及时，希望以后不要出事）</li>
-</ul>
-<h2 id="_2">基本环境<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h2>
-<p>win11+wsl2+ubuntu+python+anaconda安装不再赘述</p>
-<h2 id="_3">开始安装<a class="headerlink" href="#_3" title="Permanent link">&para;</a></h2>
-<h3 id="cuda">CUDA<a class="headerlink" href="#cuda" title="Permanent link">&para;</a></h3>
-<p>wsl2的GPU以及驱动是直接用的本机的（比如我的显卡是4070m），可以直接运行
-<div class="language-shell highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>nvidia-smi
+<h2 id="_1">基本环境<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h2>
+<ol>
+<li>系统：Linux（Win，MAC 类似）</li>
+<li>Conda：Miniconda
+miniconda 是anaconda的简化版，移除了一些自带的包，但同时安装配置更加轻量化，所有命令几乎一致。</li>
+</ol>
+<h2 id="miniconda">miniconda安装<a class="headerlink" href="#miniconda" title="Permanent link">&para;</a></h2>
+<p>在服务器上直接运行
+<div class="language-shell highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="c1"># step 1: 获取安装shell脚本文件</span>
+</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>wget<span class="w"> </span>https://repo.continuum.io/miniconda/Miniconda3-latest-Linux-x86_64.sh
+</span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>
+</span><span id="__span-0-4"><a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a><span class="c1"># step 2: 执行脚本文件安装</span>
+</span><span id="__span-0-5"><a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a>bash<span class="w"> </span>Miniconda3-latest-Linux-x86_64.sh
+</span><span id="__span-0-6"><a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a>
+</span><span id="__span-0-7"><a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a><span class="c1"># step 3: 激活</span>
+</span><span id="__span-0-8"><a id="__codelineno-0-8" name="__codelineno-0-8" href="#__codelineno-0-8"></a><span class="nb">source</span><span class="w"> </span>~/.bashrc
 </span></code></pre></div>
-命令，查看当前驱动所支持的最高cuda版本（如果不够高可以去下载最新的驱动安装即可）
-<img alt="" src="../assets/Pasted%20image%2020231211215646.png" />
-然后直接去<a href="https://developer.nvidia.com/cuda-downloads?target_os=Linux&amp;target_arch=x86_64&amp;Distribution=WSL-Ubuntu&amp;target_version=2.0&amp;target_type=runfile_local">CUDA Toolkit 12.3 Update 1 Downloads | NVIDIA Developer</a>上面查看最新的安装命令。例如：
-<img alt="" src="../assets/Pasted%20image%2020231211220113.png" />
-可以直接本地输入</p>
-<p><div class="language-shell highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>wget<span class="w"> </span>https://developer.download.nvidia.com/compute/cuda/12.3.1/local_installers/cuda_12.3.1_545.23.08_linux.run
-</span><span id="__span-1-2"><a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a>sudo<span class="w"> </span>sh<span class="w"> </span>cuda_12.3.1_545.23.08_linux.run
+参考<a href="https://blog.csdn.net/qq_41795565/article/details/114181048">miniconda安装</a>。
+可以一路回车，但是注意其中第二步的时候有许多配置可以自行修改，比如安装的地址（放到一个空间较多的盘）以及是否自动修改bashrc（建议选是，否则还要自己手动改bashrc，添加环境变量）</p>
+<h2 id="conda">conda配置<a class="headerlink" href="#conda" title="Permanent link">&para;</a></h2>
+<p>conda 的配置文件一般在<code>~/.condarc</code>，可以手动修改可以通过<code>conda config ...</code>修改。
+其中比较重要的有三个配置：
+1. envs_dirs：所有虚拟环境存放的目录
+2. pkgs_dirs：所有python包存放的目录（conda 会对包统一管理，如果当前 pkgs_dirs里面已经有某个包了再次<code>conda install</code>的时候基本不会重新下载）
+3. channels：下载包时从哪个频道下载，可以添加国内的源</p>
+<p>例如输入类似下面的代码完成配置：
+<div class="language-shell highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="c1">#添加清华源</span>
+</span><span id="__span-1-2"><a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a>conda<span class="w"> </span>config<span class="w"> </span>--add<span class="w"> </span>channels<span class="w"> </span>https://mirrors.tuna.tsinghua.edu.cn/anaconda/pkgs/free/
+</span><span id="__span-1-3"><a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a>
+</span><span id="__span-1-4"><a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a><span class="c1">#显示频道的具体 url</span>
+</span><span id="__span-1-5"><a id="__codelineno-1-5" name="__codelineno-1-5" href="#__codelineno-1-5"></a>conda<span class="w"> </span>config<span class="w"> </span>--set<span class="w"> </span>show_channel_urls<span class="w"> </span>yes
+</span><span id="__span-1-6"><a id="__codelineno-1-6" name="__codelineno-1-6" href="#__codelineno-1-6"></a>
+</span><span id="__span-1-7"><a id="__codelineno-1-7" name="__codelineno-1-7" href="#__codelineno-1-7"></a><span class="c1">#添加服务器上别人的环境与包，可存在多个</span>
+</span><span id="__span-1-8"><a id="__codelineno-1-8" name="__codelineno-1-8" href="#__codelineno-1-8"></a>conda<span class="w"> </span>config<span class="w"> </span>--add<span class="w"> </span>pkgs_dirs<span class="w"> </span>/home/alice/miniconda3/pkgs
+</span><span id="__span-1-9"><a id="__codelineno-1-9" name="__codelineno-1-9" href="#__codelineno-1-9"></a>conda<span class="w"> </span>config<span class="w"> </span>--add<span class="w"> </span>envs_dirs<span class="w"> </span>/home/alice/miniconda3/envs
+</span><span id="__span-1-10"><a id="__codelineno-1-10" name="__codelineno-1-10" href="#__codelineno-1-10"></a>
+</span><span id="__span-1-11"><a id="__codelineno-1-11" name="__codelineno-1-11" href="#__codelineno-1-11"></a><span class="c1">#删除配置</span>
+</span><span id="__span-1-12"><a id="__codelineno-1-12" name="__codelineno-1-12" href="#__codelineno-1-12"></a>conda<span class="w"> </span>config<span class="w"> </span>--remove<span class="w"> </span>envs_dirs<span class="w"> </span>/home/alice/miniconda3/envs
+</span><span id="__span-1-13"><a id="__codelineno-1-13" name="__codelineno-1-13" href="#__codelineno-1-13"></a>
+</span><span id="__span-1-14"><a id="__codelineno-1-14" name="__codelineno-1-14" href="#__codelineno-1-14"></a><span class="c1">#查看当前配置</span>
+</span><span id="__span-1-15"><a id="__codelineno-1-15" name="__codelineno-1-15" href="#__codelineno-1-15"></a>conda<span class="w"> </span>config<span class="w"> </span>--show
 </span></code></pre></div>
-然后跟着导引一路默认设置即可。<mark>注意最后一定要配置环境变量</mark>，例如在<code>~/.bashrc</code>最后添加：
-<div class="language-text highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>export CUDA_INSTALL_PATH=&quot;/usr/local/cuda-12.3&quot;
-</span><span id="__span-2-2"><a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a>export PATH=$CUDA_INSTALL_PATH/bin:$PATH
-</span><span id="__span-2-3"><a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a>export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/usr/local/cuda-12.3/lib64
+更多conda config命令可参见<a href="https://docs.conda.io/projects/conda/en/latest/commands/config.html">conda-config</a></p>
+<h2 id="conda_1">conda使用<a class="headerlink" href="#conda_1" title="Permanent link">&para;</a></h2>
+<p><div class="language-shell highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="c1"># 创建环境, []内部是可选内容，可指定python版本以及自带的包</span>
+</span><span id="__span-2-2"><a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a>conda<span class="w"> </span>create<span class="w"> </span>-n<span class="w"> </span>your-name<span class="w"> </span><span class="o">[</span><span class="nv">python</span><span class="o">=</span><span class="m">3</span>.11<span class="o">]</span><span class="w"> </span><span class="o">[</span>pytorch<span class="w"> </span>numpy<span class="w"> </span>...<span class="o">]</span>
+</span><span id="__span-2-3"><a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a>
+</span><span id="__span-2-4"><a id="__codelineno-2-4" name="__codelineno-2-4" href="#__codelineno-2-4"></a><span class="c1">#激活</span>
+</span><span id="__span-2-5"><a id="__codelineno-2-5" name="__codelineno-2-5" href="#__codelineno-2-5"></a>conda<span class="w"> </span>activate<span class="w"> </span>your-name
+</span><span id="__span-2-6"><a id="__codelineno-2-6" name="__codelineno-2-6" href="#__codelineno-2-6"></a>
+</span><span id="__span-2-7"><a id="__codelineno-2-7" name="__codelineno-2-7" href="#__codelineno-2-7"></a><span class="c1">#返回默认环境</span>
+</span><span id="__span-2-8"><a id="__codelineno-2-8" name="__codelineno-2-8" href="#__codelineno-2-8"></a>conda<span class="w"> </span>deactivate
+</span><span id="__span-2-9"><a id="__codelineno-2-9" name="__codelineno-2-9" href="#__codelineno-2-9"></a>
+</span><span id="__span-2-10"><a id="__codelineno-2-10" name="__codelineno-2-10" href="#__codelineno-2-10"></a><span class="c1">#删除环境</span>
+</span><span id="__span-2-11"><a id="__codelineno-2-11" name="__codelineno-2-11" href="#__codelineno-2-11"></a>conda<span class="w"> </span>remove<span class="w"> </span>-n<span class="w"> </span>your-name<span class="w"> </span>--all
+</span><span id="__span-2-12"><a id="__codelineno-2-12" name="__codelineno-2-12" href="#__codelineno-2-12"></a>
+</span><span id="__span-2-13"><a id="__codelineno-2-13" name="__codelineno-2-13" href="#__codelineno-2-13"></a><span class="c1">#查看当前所有环境(二选一)</span>
+</span><span id="__span-2-14"><a id="__codelineno-2-14" name="__codelineno-2-14" href="#__codelineno-2-14"></a>conda<span class="w"> </span>env<span class="w"> </span>list
+</span><span id="__span-2-15"><a id="__codelineno-2-15" name="__codelineno-2-15" href="#__codelineno-2-15"></a>conda<span class="w"> </span>info<span class="w"> </span>--env
+</span><span id="__span-2-16"><a id="__codelineno-2-16" name="__codelineno-2-16" href="#__codelineno-2-16"></a>
+</span><span id="__span-2-17"><a id="__codelineno-2-17" name="__codelineno-2-17" href="#__codelineno-2-17"></a><span class="c1">#安装包（二选一）</span>
+</span><span id="__span-2-18"><a id="__codelineno-2-18" name="__codelineno-2-18" href="#__codelineno-2-18"></a>conda<span class="w"> </span>install<span class="w"> </span>package-name
+</span><span id="__span-2-19"><a id="__codelineno-2-19" name="__codelineno-2-19" href="#__codelineno-2-19"></a>pip<span class="w"> </span>install<span class="w"> </span>package-name
+</span><span id="__span-2-20"><a id="__codelineno-2-20" name="__codelineno-2-20" href="#__codelineno-2-20"></a>
+</span><span id="__span-2-21"><a id="__codelineno-2-21" name="__codelineno-2-21" href="#__codelineno-2-21"></a><span class="c1">#查看所有的包</span>
+</span><span id="__span-2-22"><a id="__codelineno-2-22" name="__codelineno-2-22" href="#__codelineno-2-22"></a>conda<span class="w"> </span>list
 </span></code></pre></div>
-最后可以运行
-<div class="language-shell highlight"><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>nvcc<span class="w"> </span>--version
-</span></code></pre></div>
-确认已经安装好了cuda编译环境以及获取相应版本信息。</p>
-<p>参考了<a href="https://zhuanlan.zhihu.com/p/670666871">CUDA on WSL2安装记录 - 知乎 (zhihu.com)</a></p>
-<h3 id="cudnn">cuDNN<a class="headerlink" href="#cudnn" title="Permanent link">&para;</a></h3>
-<p>cudnn是一个深度神经网络的加速库，最好也安装。
-要从网上下载安装包可以去<a href="https://developer.nvidia.com/rdp/cudnn-archive">cuDNN Archive | NVIDIA Developer</a>下载（可能要先注册登录），例如我选择：
-<img alt="" src="../assets/Pasted%20image%2020231211221944.png" />
-先用本机浏览器下载到本地，然后再用<code>cp</code>命令拷贝到wsl里的工作目录来安装。
-具体安装流程参考<a href="https://docs.nvidia.com/deeplearning/cudnn/install-guide/index.html#installlinux-deb">Installation Guide - NVIDIA Docs</a>比如我的命令是：</p>
-<p><div class="language-shell highlight"><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a>cp<span class="w"> </span>/mnt/d/wsl/cudnn-local-repo-ubuntu2204-8.9.6.50_1.0-1_amd64.deb<span class="w"> </span>cudnn.deb
-</span><span id="__span-4-2"><a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a>sudo<span class="w"> </span>dpkg<span class="w"> </span>-i<span class="w"> </span>cudnn.deb
-</span><span id="__span-4-3"><a id="__codelineno-4-3" name="__codelineno-4-3" href="#__codelineno-4-3"></a>sudo<span class="w"> </span>cp<span class="w"> </span>/var/cudnn-local-repo-ubuntu2204-8.9.6.50/cudnn-local-1998375D-keyring.gpg<span class="w"> </span>/usr/share/keyrings/
-</span><span id="__span-4-4"><a id="__codelineno-4-4" name="__codelineno-4-4" href="#__codelineno-4-4"></a>sudo<span class="w"> </span>apt-get<span class="w"> </span>update
-</span><span id="__span-4-5"><a id="__codelineno-4-5" name="__codelineno-4-5" href="#__codelineno-4-5"></a>sudo<span class="w"> </span>apt-get<span class="w"> </span>install<span class="w"> </span><span class="nv">libcudnn8</span><span class="o">=</span><span class="m">8</span>.9.6.50-1+cuda12.2
-</span><span id="__span-4-6"><a id="__codelineno-4-6" name="__codelineno-4-6" href="#__codelineno-4-6"></a>sudo<span class="w"> </span>apt-get<span class="w"> </span>install<span class="w"> </span>libcudnn8-dev<span class="o">=</span><span class="m">8</span>.9.6.50-1+cuda12.2
-</span><span id="__span-4-7"><a id="__codelineno-4-7" name="__codelineno-4-7" href="#__codelineno-4-7"></a>sudo<span class="w"> </span>apt-get<span class="w"> </span>install<span class="w"> </span>libcudnn8-samples<span class="o">=</span><span class="m">8</span>.9.6.50-1+cuda12.2
-</span></code></pre></div>
-这里有个小问题是<a href="https://blog.csdn.net/weixin_45628358/article/details/130481720">【记录】cudnn安装时Version ‘8.x.x.x-1+cudaxx.x‘ for ‘libcudnn8‘ was not found-CSDN博客</a>注意cudnn的cuda版本和本机的是否一致。</p>
-<h3 id="pytorch">pytorch<a class="headerlink" href="#pytorch" title="Permanent link">&para;</a></h3>
-<p>直接访问官网<a href="https://pytorch.org/get-started/locally/">Start Locally | PyTorch</a>查询不同系统版本的安装命令，（pytorch官方还没更新到cuda12.3但是大版本一致暂时也没出错）例如我的：
-<img alt="" src="../assets/Pasted%20image%2020231211223003.png" />
-直接输入
-<div class="language-shell highlight"><pre><span></span><code><span id="__span-5-1"><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a>conda<span class="w"> </span>activate<span class="w"> </span>xxx
-</span><span id="__span-5-2"><a id="__codelineno-5-2" name="__codelineno-5-2" href="#__codelineno-5-2"></a>conda<span class="w"> </span>install<span class="w"> </span>pytorch<span class="w"> </span>torchvision<span class="w"> </span>torchaudio<span class="w"> </span>pytorch-cuda<span class="o">=</span><span class="m">12</span>.1<span class="w"> </span>-c<span class="w"> </span>pytorch<span class="w"> </span>-c<span class="w"> </span>nvidia
-</span></code></pre></div>
-注意这里如果命令不对或者源在国内可能不小心安装成CPU版本的pytorch。。。</p>
-<h3 id="_4">测试<a class="headerlink" href="#_4" title="Permanent link">&para;</a></h3>
-<p>创建<code>test_gpu.py</code>输入
-<div class="language-Python highlight"><pre><span></span><code><span id="__span-6-1"><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a><span class="kn">import</span> <span class="nn">torch</span>
-</span><span id="__span-6-2"><a id="__codelineno-6-2" name="__codelineno-6-2" href="#__codelineno-6-2"></a><span class="n">flag</span> <span class="o">=</span> <span class="n">torch</span><span class="o">.</span><span class="n">cuda</span><span class="o">.</span><span class="n">is_available</span><span class="p">()</span>
-</span><span id="__span-6-3"><a id="__codelineno-6-3" name="__codelineno-6-3" href="#__codelineno-6-3"></a><span class="nb">print</span><span class="p">(</span><span class="n">flag</span><span class="p">)</span>
-</span><span id="__span-6-4"><a id="__codelineno-6-4" name="__codelineno-6-4" href="#__codelineno-6-4"></a>
-</span><span id="__span-6-5"><a id="__codelineno-6-5" name="__codelineno-6-5" href="#__codelineno-6-5"></a><span class="n">ngpu</span><span class="o">=</span> <span class="mi">1</span>
-</span><span id="__span-6-6"><a id="__codelineno-6-6" name="__codelineno-6-6" href="#__codelineno-6-6"></a><span class="c1"># Decide which device we want to run on</span>
-</span><span id="__span-6-7"><a id="__codelineno-6-7" name="__codelineno-6-7" href="#__codelineno-6-7"></a><span class="n">device</span> <span class="o">=</span> <span class="n">torch</span><span class="o">.</span><span class="n">device</span><span class="p">(</span><span class="s2">&quot;cuda:0&quot;</span> <span class="k">if</span> <span class="p">(</span><span class="n">torch</span><span class="o">.</span><span class="n">cuda</span><span class="o">.</span><span class="n">is_available</span><span class="p">()</span> <span class="ow">and</span> <span class="n">ngpu</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">)</span> <span class="k">else</span> <span class="s2">&quot;cpu&quot;</span><span class="p">)</span>
-</span><span id="__span-6-8"><a id="__codelineno-6-8" name="__codelineno-6-8" href="#__codelineno-6-8"></a><span class="nb">print</span><span class="p">(</span><span class="n">device</span><span class="p">)</span>
-</span><span id="__span-6-9"><a id="__codelineno-6-9" name="__codelineno-6-9" href="#__codelineno-6-9"></a><span class="nb">print</span><span class="p">(</span><span class="n">torch</span><span class="o">.</span><span class="n">cuda</span><span class="o">.</span><span class="n">get_device_name</span><span class="p">(</span><span class="mi">0</span><span class="p">))</span>
-</span></code></pre></div>
-如果
-<div class="language-shell highlight"><pre><span></span><code><span id="__span-7-1"><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a>python<span class="w"> </span>gpu_test.py
-</span></code></pre></div>
-输出类似下面的内容，即代表安装成功
-<div class="language-text highlight"><pre><span></span><code><span id="__span-8-1"><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a>True
-</span><span id="__span-8-2"><a id="__codelineno-8-2" name="__codelineno-8-2" href="#__codelineno-8-2"></a>cuda:0
-</span><span id="__span-8-3"><a id="__codelineno-8-3" name="__codelineno-8-3" href="#__codelineno-8-3"></a>NVIDIA GeForce RTX 4070 Laptop GPU
-</span></code></pre></div></p>
+注意安装包建议使用<code>conda install</code>，这样的包可以被 conda 统一管理与重复利用，pip安装的包只能用于当前环境。
+更多 conda 命令参见<a href="https://docs.conda.io/projects/conda/en/latest/commands/index.html">conda</a></p>
 
 
 
