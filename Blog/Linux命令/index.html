@@ -6,32 +6,32 @@
       <meta charset="utf-8">
       <meta name="viewport" content="width=device-width,initial-scale=1">
       
-        <meta name="description" content="My Personal Homepage">
-      
       
         <meta name="author" content="ZhechongHuang">
       
       
-        <link rel="canonical" href="https://cudraniatrec.github.io/">
+        <link rel="canonical" href="https://cudraniatrec.github.io/Blog/Linux%E5%91%BD%E4%BB%A4/">
       
       
+        <link rel="prev" href="../Linux%28wsl2%29%2Bcuda%2Bcudnn%2Bpytorch%E5%AE%89%E8%A3%85/">
       
-        <link rel="next" href="Blog/soot-tutorial/">
+      
+        <link rel="next" href="../%E6%9C%8D%E5%8A%A1%E5%99%A8%E9%87%8D%E8%A3%85/">
       
       
-      <link rel="icon" href="assets/images/favicon.png">
+      <link rel="icon" href="../../assets/images/favicon.png">
       <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.5.34">
     
     
       
-        <title>HomePage - ZhechongHuang's Homepage</title>
+        <title>linux command - ZhechongHuang's Homepage</title>
       
     
     
-      <link rel="stylesheet" href="assets/stylesheets/main.35f28582.min.css">
+      <link rel="stylesheet" href="../../assets/stylesheets/main.35f28582.min.css">
       
         
-        <link rel="stylesheet" href="assets/stylesheets/palette.06af60db.min.css">
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.06af60db.min.css">
       
       
 
@@ -52,7 +52,7 @@
     
       <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.7/katex.min.css">
     
-    <script>__md_scope=new URL(".",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
       
 
@@ -78,7 +78,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#about-me" class="md-skip">
+        <a href="#linux" class="md-skip">
           Skip to content
         </a>
       
@@ -94,7 +94,7 @@
 
 <header class="md-header md-header--shadow" data-md-component="header">
   <nav class="md-header__inner md-grid" aria-label="Header">
-    <a href="." title="ZhechongHuang&#39;s Homepage" class="md-header__button md-logo" aria-label="ZhechongHuang's Homepage" data-md-component="logo">
+    <a href="../.." title="ZhechongHuang&#39;s Homepage" class="md-header__button md-logo" aria-label="ZhechongHuang's Homepage" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
@@ -114,7 +114,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              HomePage
+              linux command
             
           </span>
         </div>
@@ -227,7 +227,7 @@
 
 <nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
-    <a href="." title="ZhechongHuang&#39;s Homepage" class="md-nav__button md-logo" aria-label="ZhechongHuang's Homepage" data-md-component="logo">
+    <a href="../.." title="ZhechongHuang&#39;s Homepage" class="md-nav__button md-logo" aria-label="ZhechongHuang's Homepage" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
@@ -254,30 +254,10 @@
       
   
   
-    
   
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          
-  
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 2A10 10 0 0 0 2 12a10 10 0 0 0 10 10 10 10 0 0 0 10-10A10 10 0 0 0 12 2M7 9.5C7 8.7 7.7 8 8.5 8s1.5.7 1.5 1.5S9.3 11 8.5 11 7 10.3 7 9.5m5 7.73c-1.75 0-3.29-.73-4.19-1.81L9.23 14c.45.72 1.52 1.23 2.77 1.23s2.32-.51 2.77-1.23l1.42 1.42c-.9 1.08-2.44 1.81-4.19 1.81M15.5 11c-.8 0-1.5-.7-1.5-1.5S14.7 8 15.5 8s1.5.7 1.5 1.5-.7 1.5-1.5 1.5"/></svg>
-  
-  <span class="md-ellipsis">
-    Home
-  </span>
-  
-
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="." class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
         
   
     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 2A10 10 0 0 0 2 12a10 10 0 0 0 10 10 10 10 0 0 0 10-10A10 10 0 0 0 12 2M7 9.5C7 8.7 7.7 8 8.5 8s1.5.7 1.5 1.5S9.3 11 8.5 11 7 10.3 7 9.5m5 7.73c-1.75 0-3.29-.73-4.19-1.81L9.23 14c.45.72 1.52 1.23 2.77 1.23s2.32-.51 2.77-1.23l1.42 1.42c-.9 1.08-2.44 1.81-4.19 1.81M15.5 11c-.8 0-1.5-.7-1.5-1.5S14.7 8 15.5 8s1.5.7 1.5 1.5-.7 1.5-1.5 1.5"/></svg>
@@ -288,102 +268,6 @@
   
 
       </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
-  
-  
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#about-me" class="md-nav__link">
-    <span class="md-ellipsis">
-      About Me
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#education" class="md-nav__link">
-    <span class="md-ellipsis">
-      Education
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#publication" class="md-nav__link">
-    <span class="md-ellipsis">
-      Publication
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#award" class="md-nav__link">
-    <span class="md-ellipsis">
-      Award
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Award">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#2021" class="md-nav__link">
-    <span class="md-ellipsis">
-      2021
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#2022" class="md-nav__link">
-    <span class="md-ellipsis">
-      2022
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#2023" class="md-nav__link">
-    <span class="md-ellipsis">
-      2023
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#2024" class="md-nav__link">
-    <span class="md-ellipsis">
-      2024
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
     </li>
   
 
@@ -430,7 +314,7 @@
   
   
     <li class="md-nav__item">
-      <a href="Blog/soot-tutorial/" class="md-nav__link">
+      <a href="../soot-tutorial/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -451,7 +335,7 @@
   
   
     <li class="md-nav__item">
-      <a href="Blog/ProgramSynthesis-unit1/" class="md-nav__link">
+      <a href="../ProgramSynthesis-unit1/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -472,7 +356,7 @@
   
   
     <li class="md-nav__item">
-      <a href="Blog/ProgramSynthesis-unit2/" class="md-nav__link">
+      <a href="../ProgramSynthesis-unit2/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -493,7 +377,7 @@
   
   
     <li class="md-nav__item">
-      <a href="Blog/Python%E5%AD%A6%E4%B9%A0/" class="md-nav__link">
+      <a href="../Python%E5%AD%A6%E4%B9%A0/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -518,17 +402,19 @@
       
   
   
+    
   
   
+  
     
     
     
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" checked>
         
           
           <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
@@ -542,7 +428,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_3">
             <span class="md-nav__icon md-icon"></span>
             Tutorial
@@ -556,7 +442,7 @@
   
   
     <li class="md-nav__item">
-      <a href="Blog/conda%20%E5%AE%89%E8%A3%85%E4%B8%8E%E4%BD%BF%E7%94%A8/" class="md-nav__link">
+      <a href="../conda%20%E5%AE%89%E8%A3%85%E4%B8%8E%E4%BD%BF%E7%94%A8/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -577,7 +463,7 @@
   
   
     <li class="md-nav__item">
-      <a href="Blog/Linux%28wsl2%29%2Bcuda%2Bcudnn%2Bpytorch%E5%AE%89%E8%A3%85/" class="md-nav__link">
+      <a href="../Linux%28wsl2%29%2Bcuda%2Bcudnn%2Bpytorch%E5%AE%89%E8%A3%85/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -595,10 +481,30 @@
                 
   
   
+    
   
   
-    <li class="md-nav__item">
-      <a href="Blog/Linux%E5%91%BD%E4%BB%A4/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    linux command
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         
   
   <span class="md-ellipsis">
@@ -607,6 +513,53 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      磁盘管理
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      系统信息
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      系统管理
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -619,7 +572,7 @@
   
   
     <li class="md-nav__item">
-      <a href="Blog/%E6%9C%8D%E5%8A%A1%E5%99%A8%E9%87%8D%E8%A3%85/" class="md-nav__link">
+      <a href="../%E6%9C%8D%E5%8A%A1%E5%99%A8%E9%87%8D%E8%A3%85/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -657,6 +610,8 @@
   
   
   
+    
+  
   
     <label class="md-nav__title" for="__toc">
       <span class="md-nav__icon md-icon"></span>
@@ -665,80 +620,29 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#about-me" class="md-nav__link">
+  <a href="#_1" class="md-nav__link">
     <span class="md-ellipsis">
-      About Me
+      磁盘管理
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#education" class="md-nav__link">
+  <a href="#_2" class="md-nav__link">
     <span class="md-ellipsis">
-      Education
+      系统信息
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#publication" class="md-nav__link">
+  <a href="#_3" class="md-nav__link">
     <span class="md-ellipsis">
-      Publication
+      系统管理
     </span>
   </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#award" class="md-nav__link">
-    <span class="md-ellipsis">
-      Award
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Award">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#2021" class="md-nav__link">
-    <span class="md-ellipsis">
-      2021
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#2022" class="md-nav__link">
-    <span class="md-ellipsis">
-      2022
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#2023" class="md-nav__link">
-    <span class="md-ellipsis">
-      2023
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#2024" class="md-nav__link">
-    <span class="md-ellipsis">
-      2024
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
   
 </li>
       
@@ -760,46 +664,102 @@
   
 
 
-  <h1>Home</h1>
+<h1 id="linux">Linux 系统常用命令<a class="headerlink" href="#linux" title="Permanent link">&para;</a></h1>
+<h2 id="_1">磁盘管理<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h2>
+<ol>
+<li>显示磁盘挂载与容量
+<div class="language-shell highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>df<span class="w"> </span>-h
+</span></code></pre></div>
+<img alt="alt text" src="../assets/Linux%E5%91%BD%E4%BB%A4/image.png" /></li>
+<li>查看可用的块设备与挂载
+<div class="language-shell highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>lsblk
+</span></code></pre></div>
+<img alt="alt text" src="../assets/Linux%E5%91%BD%E4%BB%A4/image-1.png" /></li>
+<li>具体查看每一个块设备的信息
+<div class="language-shell highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>fdisk<span class="w"> </span>-l
+</span></code></pre></div>
+<img alt="alt text" src="../assets/Linux%E5%91%BD%E4%BB%A4/image-2.png" /></li>
+<li>查看某个文件夹之下的文件（夹）大小
+<div class="language-shell highlight"><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>du<span class="w"> </span>-h<span class="w"> </span>--max-depth<span class="o">=</span><span class="m">1</span><span class="w"> </span>/path/to/directory
+</span></code></pre></div>
+<img alt="alt text" src="../assets/Linux%E5%91%BD%E4%BB%A4/image-3.png" /></li>
+</ol>
+<h2 id="_2">系统信息<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h2>
+<ol>
+<li>查看Linux内核版本， 内核构建的信息
+<div class="language-shell highlight"><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a>uname<span class="w"> </span>-a
+</span><span id="__span-4-2"><a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a>cat<span class="w"> </span>/proc/version<span class="w"> </span><span class="c1"># 信息全一点</span>
+</span></code></pre></div>
+<img alt="alt text" src="../assets/Linux%E5%91%BD%E4%BB%A4/image-4.png" /></li>
+<li>查看操作系统版本
+<div class="language-shell highlight"><pre><span></span><code><span id="__span-5-1"><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a>cat<span class="w"> </span>/etc/issue
+</span></code></pre></div>
+<img alt="alt text" src="../assets/Linux%E5%91%BD%E4%BB%A4/image-6.png" /></li>
+<li>查看每一颗CPU的信息
+<div class="language-shell highlight"><pre><span></span><code><span id="__span-6-1"><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a>cat<span class="w"> </span>/proc/cpuinfo
+</span></code></pre></div>
+<img alt="alt text" src="../assets/Linux%E5%91%BD%E4%BB%A4/image-7.png" /></li>
+<li>查看CPU整体信息，核心数，型号等
+<div class="language-shell highlight"><pre><span></span><code><span id="__span-7-1"><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a>lscpu
+</span></code></pre></div>
+<img alt="alt text" src="../assets/Linux%E5%91%BD%E4%BB%A4/image-8.png" /></li>
+<li>服务器名称
+<div class="language-shell highlight"><pre><span></span><code><span id="__span-8-1"><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a>hostname
+</span></code></pre></div>
+<img alt="alt text" src="../assets/Linux%E5%91%BD%E4%BB%A4/image-9.png" /></li>
+<li>网络信息
+<div class="language-shell highlight"><pre><span></span><code><span id="__span-9-1"><a id="__codelineno-9-1" name="__codelineno-9-1" href="#__codelineno-9-1"></a>ifconfig
+</span></code></pre></div></li>
+<li>查看内存信息
+<div class="language-shell highlight"><pre><span></span><code><span id="__span-10-1"><a id="__codelineno-10-1" name="__codelineno-10-1" href="#__codelineno-10-1"></a>free<span class="w"> </span>-h
+</span></code></pre></div>
+<img alt="alt text" src="../assets/Linux%E5%91%BD%E4%BB%A4/image-10.png" /></li>
+<li>top相关
+<div class="language-shell highlight"><pre><span></span><code><span id="__span-11-1"><a id="__codelineno-11-1" name="__codelineno-11-1" href="#__codelineno-11-1"></a>top<span class="w"> </span><span class="c1"># 查看系统资源使用与进程信息</span>
+</span><span id="__span-11-2"><a id="__codelineno-11-2" name="__codelineno-11-2" href="#__codelineno-11-2"></a>htop<span class="w"> </span><span class="c1"># top的升级版</span>
+</span><span id="__span-11-3"><a id="__codelineno-11-3" name="__codelineno-11-3" href="#__codelineno-11-3"></a>nvtop<span class="w"> </span><span class="c1"># GPU使用情况与进程信息</span>
+</span><span id="__span-11-4"><a id="__codelineno-11-4" name="__codelineno-11-4" href="#__codelineno-11-4"></a>nvitop<span class="w"> </span><span class="c1"># nvtop的升级版</span>
+</span><span id="__span-11-5"><a id="__codelineno-11-5" name="__codelineno-11-5" href="#__codelineno-11-5"></a>vmstat<span class="w"> </span><span class="c1"># 查看系统资源整体使用情况</span>
+</span><span id="__span-11-6"><a id="__codelineno-11-6" name="__codelineno-11-6" href="#__codelineno-11-6"></a>ps<span class="w"> </span>-ef<span class="w"> </span><span class="c1"># 查看进程信息</span>
+</span></code></pre></div>
+<img alt="alt text" src="../assets/Linux%E5%91%BD%E4%BB%A4/image-11.png" />
+<img alt="alt text" src="../assets/Linux%E5%91%BD%E4%BB%A4/image-12.png" /></li>
+<li>其他
+<div class="language-shell highlight"><pre><span></span><code><span id="__span-12-1"><a id="__codelineno-12-1" name="__codelineno-12-1" href="#__codelineno-12-1"></a>lspci<span class="w"> </span><span class="c1"># 查看PCI设备</span>
+</span><span id="__span-12-2"><a id="__codelineno-12-2" name="__codelineno-12-2" href="#__codelineno-12-2"></a>lsusb<span class="w"> </span><span class="c1"># 查看USB设备</span>
+</span><span id="__span-12-3"><a id="__codelineno-12-3" name="__codelineno-12-3" href="#__codelineno-12-3"></a>lsmod<span class="w"> </span><span class="c1"># 查看内核模块</span>
+</span><span id="__span-12-4"><a id="__codelineno-12-4" name="__codelineno-12-4" href="#__codelineno-12-4"></a>mount<span class="w"> </span><span class="p">|</span><span class="w"> </span>column<span class="w"> </span>-t<span class="w"> </span><span class="c1"># 查看挂载信息</span>
+</span></code></pre></div></li>
+</ol>
+<h2 id="_3">系统管理<a class="headerlink" href="#_3" title="Permanent link">&para;</a></h2>
+<ol>
+<li>用户管理
+<div class="language-shell highlight"><pre><span></span><code><span id="__span-13-1"><a id="__codelineno-13-1" name="__codelineno-13-1" href="#__codelineno-13-1"></a>who<span class="w"> </span><span class="c1"># 查看当前登录用户</span>
+</span><span id="__span-13-2"><a id="__codelineno-13-2" name="__codelineno-13-2" href="#__codelineno-13-2"></a>id<span class="w"> </span>xxx<span class="w"> </span><span class="c1"># 查看xxx用户信息</span>
+</span><span id="__span-13-3"><a id="__codelineno-13-3" name="__codelineno-13-3" href="#__codelineno-13-3"></a>last<span class="w"> </span><span class="p">|</span><span class="w"> </span>head<span class="w"> </span>-n<span class="w"> </span><span class="m">50</span><span class="w"> </span><span class="c1"># 查看登录历史</span>
+</span><span id="__span-13-4"><a id="__codelineno-13-4" name="__codelineno-13-4" href="#__codelineno-13-4"></a>adduser<span class="w"> </span>xxx<span class="w"> </span><span class="c1"># 添加用户</span>
+</span><span id="__span-13-5"><a id="__codelineno-13-5" name="__codelineno-13-5" href="#__codelineno-13-5"></a>passwd<span class="w"> </span>xxx<span class="w"> </span><span class="c1"># 修改密码</span>
+</span><span id="__span-13-6"><a id="__codelineno-13-6" name="__codelineno-13-6" href="#__codelineno-13-6"></a>sudo<span class="w"> </span>usermod<span class="w"> </span>-aG<span class="w"> </span>sudo<span class="w"> </span>new_user<span class="w"> </span><span class="c1"># 添加用户到sudo组</span>
+</span></code></pre></div></li>
+<li>查看用户（组）信息与权限
+<div class="language-shell highlight"><pre><span></span><code><span id="__span-14-1"><a id="__codelineno-14-1" name="__codelineno-14-1" href="#__codelineno-14-1"></a>cat<span class="w"> </span>/etc/passwd
+</span><span id="__span-14-2"><a id="__codelineno-14-2" name="__codelineno-14-2" href="#__codelineno-14-2"></a>cat<span class="w"> </span>/etc/shadow<span class="w"> </span><span class="c1">#升级版，更多隐私信息</span>
+</span></code></pre></div>
+一行记录对应着一个用户，每行记录又被冒号(:)分隔为7个字段，其格式和具体含义如下：
+用户名:口令:用户标识号:组标识号:注释性描述:主目录:登录Shell
+<img alt="alt text" src="../assets/Linux%E5%91%BD%E4%BB%A4/image-13.png" /></li>
+</ol>
+<p><div class="language-shell highlight"><pre><span></span><code><span id="__span-15-1"><a id="__codelineno-15-1" name="__codelineno-15-1" href="#__codelineno-15-1"></a>cat<span class="w"> </span>/etc/group
+</span></code></pre></div>
+由冒号(:)隔开若干个字段，这些字段有：
+组名:口令:组标识号:组内用户列表
+<img alt="alt text" src="../assets/Linux%E5%91%BD%E4%BB%A4/image-14.png" /></p>
 
-<h2 id="about-me">About Me<a class="headerlink" href="#about-me" title="Permanent link">&para;</a></h2>
-<p><img alt="" src="picture.png" width="250" /></p>
-<p>I'm a Ph.D. student at Peking University, majoring in computer science and software engnieering. 
-I'm interested in formal verification and LLM code generation, currently working with <a href="https://xiongyingfei.github.io">Prof. Xiong</a>.</p>
-<h2 id="education">Education<a class="headerlink" href="#education" title="Permanent link">&para;</a></h2>
-<ul>
-<li>2020.9~2024.7 PKU Bachelor's Degree </li>
-<li>2024.9~Now PKU Ph.D. </li>
-</ul>
-<h2 id="publication">Publication<a class="headerlink" href="#publication" title="Permanent link">&para;</a></h2>
-<h2 id="award">Award<a class="headerlink" href="#award" title="Permanent link">&para;</a></h2>
-<h3 id="2021">2021<a class="headerlink" href="#2021" title="Permanent link">&para;</a></h3>
-<ul>
-<li>Shenzhen Stock Exchange Scholarship(10%)</li>
-<li>Merit Student(10%)</li>
-</ul>
-<h3 id="2022">2022<a class="headerlink" href="#2022" title="Permanent link">&para;</a></h3>
-<ul>
-<li>Award for Scientific Research(20%)</li>
-</ul>
-<h3 id="2023">2023<a class="headerlink" href="#2023" title="Permanent link">&para;</a></h3>
-<ul>
-<li>The Third Prize of Peking University Scholarship(20%)</li>
-<li>Award for Academic Excellents(20%)</li>
-</ul>
-<h3 id="2024">2024<a class="headerlink" href="#2024" title="Permanent link">&para;</a></h3>
-<ul>
-<li>Excellent Graduate of Peking University(10%)</li>
-</ul>
 
 
 
 
 
-
-
-  
-  
 
 
 
@@ -840,12 +800,12 @@ I'm interested in formal verification and LLM code generation, currently working
     </div>
     
     
-    <script id="__config" type="application/json">{"base": ".", "features": [], "search": "assets/javascripts/workers/search.07f07601.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    <script id="__config" type="application/json">{"base": "../..", "features": [], "search": "../../assets/javascripts/workers/search.07f07601.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
     
     
-      <script src="assets/javascripts/bundle.56dfad97.min.js"></script>
+      <script src="../../assets/javascripts/bundle.56dfad97.min.js"></script>
       
-        <script src="javascripts/katex.js"></script>
+        <script src="../../javascripts/katex.js"></script>
       
         <script src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.7/katex.min.js"></script>
       
