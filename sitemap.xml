@@ -2,50 +2,54 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
     <url>
          <loc>https://cudraniatrec.github.io/</loc>
-         <lastmod>2025-10-28</lastmod>
+         <lastmod>2025-12-03</lastmod>
     </url>
     <url>
          <loc>https://cudraniatrec.github.io/Blog/Huggingface/</loc>
-         <lastmod>2025-10-28</lastmod>
+         <lastmod>2025-12-03</lastmod>
     </url>
     <url>
          <loc>https://cudraniatrec.github.io/Blog/Linux%28wsl2%29%2Bcuda%2Bcudnn%2Bpytorch%E5%AE%89%E8%A3%85/</loc>
-         <lastmod>2025-10-28</lastmod>
+         <lastmod>2025-12-03</lastmod>
     </url>
     <url>
          <loc>https://cudraniatrec.github.io/Blog/Linux%E5%91%BD%E4%BB%A4/</loc>
-         <lastmod>2025-10-28</lastmod>
+         <lastmod>2025-12-03</lastmod>
     </url>
     <url>
          <loc>https://cudraniatrec.github.io/Blog/ProgramSynthesis-unit1/</loc>
-         <lastmod>2025-10-28</lastmod>
+         <lastmod>2025-12-03</lastmod>
     </url>
     <url>
          <loc>https://cudraniatrec.github.io/Blog/ProgramSynthesis-unit2/</loc>
-         <lastmod>2025-10-28</lastmod>
+         <lastmod>2025-12-03</lastmod>
     </url>
     <url>
          <loc>https://cudraniatrec.github.io/Blog/Python%E5%AD%A6%E4%B9%A0/</loc>
-         <lastmod>2025-10-28</lastmod>
+         <lastmod>2025-12-03</lastmod>
     </url>
     <url>
          <loc>https://cudraniatrec.github.io/Blog/conda%20%E5%AE%89%E8%A3%85%E4%B8%8E%E4%BD%BF%E7%94%A8/</loc>
-         <lastmod>2025-10-28</lastmod>
+         <lastmod>2025-12-03</lastmod>
     </url>
     <url>
          <loc>https://cudraniatrec.github.io/Blog/soot-tutorial/</loc>
-         <lastmod>2025-10-28</lastmod>
+         <lastmod>2025-12-03</lastmod>
     </url>
     <url>
          <loc>https://cudraniatrec.github.io/Blog/verl%E5%AE%89%E8%A3%85/</loc>
-         <lastmod>2025-10-28</lastmod>
+         <lastmod>2025-12-03</lastmod>
     </url>
     <url>
          <loc>https://cudraniatrec.github.io/Blog/%E5%9F%BA%E4%BA%8ERust-Analyzer%E7%9A%84LSP%E9%80%9A%E4%BF%A1/</loc>
-         <lastmod>2025-10-28</lastmod>
+         <lastmod>2025-12-03</lastmod>
+    </url>
+    <url>
+         <loc>https://cudraniatrec.github.io/Blog/%E5%A4%A7%E6%96%87%E4%BB%B6%E5%A4%B9%E6%95%B0%E6%8D%AE%E4%BC%A0%E8%BE%93%E6%96%B9%E5%BC%8F/</loc>
+         <lastmod>2025-12-03</lastmod>
     </url>
     <url>
          <loc>https://cudraniatrec.github.io/Blog/%E6%96%B0%E6%9C%8D%E5%8A%A1%E5%99%A8%E9%85%8D%E7%BD%AE/</loc>
-         <lastmod>2025-10-28</lastmod>
+         <lastmod>2025-12-03</lastmod>
     </url>
 </urlset>
